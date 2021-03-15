@@ -1,8 +1,8 @@
 <?php
 
 $config = [
-    "dbName" => "",
-    "dbHost" => "",
-    "dbUser" => "",
+    "dbName" => "kidsnap",
+    "dbHost" => "localhost",
+    "dbUser" => "root",
     "dbPassword" => ""
 ];

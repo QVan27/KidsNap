@@ -1,5 +1,7 @@
 <?php
 
+use App\Controller\HomeController;
+
 if (!empty($_GET["page"])) {
 $page = $_GET["page"];
 } else {
@@ -7,5 +9,12 @@ $page = $_GET["page"];
 }
 
 switch ($page) {
-
+    case 'home':
+        $home = new HomeController();
+        $home->home();
+        break;
+    default:
+        $home = new HomeController();
+        $home->home();
+        break;
 }
