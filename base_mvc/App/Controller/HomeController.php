@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Model\HomeModel;
 use Core\Controller\Controller;
+use App\Controller\UserController;
 
 /**
  * Le CRUD (create, read, update, delete) sont l'ensemble des méthodes permettant de manipuler 
@@ -15,9 +16,16 @@ class HomeController extends Controller{
       *
       */
     public function home()
-    {
+    {   
+        $userController = new UserController();
+        $proController = new ProController();
+
+        $numberUser = $userController->showNumberUser();
+        $numberPro = $proController->showNumberPro();
 
         $this->render("home", [
+            "numberUser"=>$numberUser,
+            "numberPro"=>$numberPro
             ]);
 
     }

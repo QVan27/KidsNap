@@ -1,6 +1,7 @@
 <?php
 
 use App\Controller\HomeController;
+use App\Controller\UserController;
 
 if (!empty($_GET["page"])) {
 $page = $_GET["page"];
@@ -16,5 +17,7 @@ switch ($page) {
     default:
         $home = new HomeController();
         $home->home();
+        $number = new UserController();
+        $number->showNumberUser();
         break;
 }
