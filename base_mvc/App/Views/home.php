@@ -1,19 +1,19 @@
 <?php
 
-echo $numberUser->allUser . ' Utilisateurs';
-echo '</br>';
-echo $numberPro->allPros . ' Professionnels';
+// echo $numberUser->allUser . ' Utilisateurs';
+// echo '</br>';
+// echo $numberPro->allPros . ' Professionnels';
 
 ?>
 
 <section class="banner">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <div class="contentBanner">
+    <img src="asset/image/banner_vector_1.png" alt="" class="imgBannerFirst">
+    <img src="asset/image/banner_vector_2.png" alt="" class="imgBannerSecond">
+    <img src="asset/image/banner_children.png" alt="" class="imgBannerThird">
+    <div class="txtContent">
         <h1>La plateforme connectée pour parents débordés </h1>
         <p>Trouvez une place en crèche, une nounoue ou unye babysitter. Trouvez et partagez des expériences et activités en famille. Accédez à un ensemble d’outils pour mieux gérer votre parentalité</p>
-        <div class="inputSelect">
+        <form action="" class="inputSelect">
             <select name="" id="">
                 <option value="">Trouver un mode de garde</option>
                 <option value="">Une place en crèche</option>
@@ -23,6 +23,12 @@ echo $numberPro->allPros . ' Professionnels';
             </select>
             <input type="text" name="" id="" value="Mon secteur">
             <input type="submit" id="submitted" value="Chercher">
-        </div>
+        </form>
     </div>
+</section>
+
+<section class="first">
+
+    <h1>Comment ça marche ?</h1>
+    .bu
 </section>

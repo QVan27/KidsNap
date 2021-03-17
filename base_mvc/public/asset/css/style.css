@@ -41,9 +41,12 @@ table {
     --black: #221824;
     --violet: #DD06FF;
     --violet-light: #FF69FF;
+    --pink-light: #FFEAFF;
     --grey-light: #eaeef7;
     --grey-deep: #6b82ac;
     --white-light: #fff5ff;
+    --white-cream: #fef0e8;
+
 }
 
 a {
@@ -58,7 +61,7 @@ html, body {
 }
 
 .wrap {
-    max-width: 1440px;
+    max-width: 1950px;
     width: 100%;
     margin: 0 auto;
     min-height: 100%;
@@ -127,6 +130,11 @@ html, body {
     margin-right: 20px;
 }
 
+h1 {
+    font-size: 35px;
+    font-weight: 600;
+}
+
 /* End Commun CSS */
 
 /* Header */
@@ -137,7 +145,7 @@ header {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    padding: 20px 0 20px 0;
+    padding: 15px 0 15px 0;
 }
 
 .nav a {
@@ -220,3 +228,86 @@ header {
 }
 
 /* END FOOTER */
+
+/* START SECTION BANNER */
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    /* max-height: 1024px; */
+    height: 100vh;
+}
+
+.imgBannerFirst {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.imgBannerSecond {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.imgBannerThird {
+    position: absolute;
+    top: 80px;
+    right: 21px;
+    z-index: 2;
+}
+
+.txtContent {
+    position: absolute;
+    z-index: 2;
+    width: 528px;
+    height: 347px;
+    top: 180px;
+    left: 58px;
+}
+
+.txtContent h1 {
+    color: var(--white-light);
+    margin-bottom: 20px;
+}
+.txtContent p {
+    color: var(--black);
+    font-size: 25px;
+    line-height: 140%;
+}
+
+.inputSelect {
+    background-color: var(--white-light);
+    width: 1057px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+.inputSelect input, .inputSelect select {
+    background-color: var(--pink-light);
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 40%;
+    border: none;
+    font-size: 20px;
+}
+
+.inputSelect input#submitted{
+    background-color: var(--violet);
+    color: var(--white-light);
+    font-size: 18px;
+    padding: 5px 20px;
+    width: 15%;
+}
+
+/* END SECTION BANNER */
+
+.first {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 700px;
+}
+
