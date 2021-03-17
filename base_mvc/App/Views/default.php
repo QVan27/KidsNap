@@ -40,34 +40,37 @@
                 </div>
             </main>
 
-            <div class="push"></div>
-        </div>
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="img-footer">
-                    <img src="asset/image/logo-dark.png" alt="">
-                    <div>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <div class="push"></div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="img-footer">
+                <img src="asset/image/logo-dark.png" alt="">
+                <div>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="link-footer">
-                    <h3 class="color-black title-footer">Kids’Nap</h3>
-                    <a href="" class="color-black ">Le blog</a>
-                    <a href="" class="color-black ">Kite presse</a>
-                    <a href="" class="color-black">Nos partenaires</a>
-                </div>
-                <div class="link-footer">
-                    <h3 class="color-black title-footer">Aide</h3>
-                    <a href="" class="color-black ">Nous contacter</a>
-                    <a href="" class="color-black">Mentions légales</a>
                 </div>
             </div>
-        </footer>
-        <script src="../../public/asset/js/map.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" async></script>
-    </body>
+            <div class="link-footer">
+                <h3 class="color-black title-footer">Kids’Nap</h3>
+                <a href="" class="color-black ">Le blog</a>
+                <a href="" class="color-black ">Kite presse</a>
+                <a href="" class="color-black">Nos partenaires</a>
+            </div>
+            <div class="link-footer">
+                <h3 class="color-black title-footer">Aide</h3>
+                <a href="" class="color-black ">Nous contacter</a>
+                <a href="" class="color-black">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+  <script src="../../public/asset/js/map.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+</body>
 
     </html>
