@@ -198,34 +198,33 @@ header {
     display: flex;
     flex-direction: column;
 }
-
-.title-footer {
-    margin-bottom: 15px;
+.title-footer{
+    font-size: 1.5em;
+    font-weight: bold;
 }
-
-.color-black {
+.color-black{
     color: var(--black);
+    margin-bottom: 15px;
 }
 
 .fab {
     cursor: pointer;
+    font-size: 1.5em;
+    padding-right: 10px;
 }
-
 .fa-twitter {
     color: #6CADDE!important;
 }
-
 .fa-facebook-f {
     color: #3b5998!important;
 }
-
-.fa-instagram {
-    color: var(--violet);
+.fa-instagram{
+color: #8134AF !important;
+}
+.fa-linkedin-in{
+    color: #0072b1!important;
 }
 
-.fa-instagram-square {
-    color: var(--violet);
-}
 
 /* END FOOTER */
 
@@ -310,4 +309,12 @@ header {
     background-color: rgba(0, 0, 0, 0.3);
     height: 700px;
 }
+
+
+/* MAP */
+#map {
+    height: 400px;
+    width: 50%;
+}
+/* END MAP */
 
