@@ -28,4 +28,16 @@ use Core\Model\Model;
         return $this->db->getData($statement, true);
     }
 
+    public function getLocationOne($id)
+    {
+        $statement = "SELECT pro_ville FROM pros WHERE id = $id";
+        return $this->db->getData($statement, true);
+    }
+
+    public function getLocationAll()
+    {
+        $statement = "SELECT pro_ville FROM pros";
+        return $this->db->getData($statement);
+    }
+
  }
