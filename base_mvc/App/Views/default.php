@@ -13,36 +13,36 @@
 </head>
 
 <body>
-    <header>
-        <!-- <div class="container-header"> -->
-        <img src="asset/image/logo-dark.png" alt="">
-        <div class="nav nav-header">
-            <nav>
-                <ul>
-                    <div class="left">
-                        <li><a href="">Parents</a></li>
-                        <li><a href="">Pro</a></li>
-                    </div>
-                    <div class="right">
-                        <li><a href="">à propos</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="" class="btn color-1">Connexion</a></li>
-                    </div>
-                </ul>
-            </nav>
-        </div>
-        <!-- </div> -->
-    </header>
+    <div class="wrap">
+        <header>
+            <img src="asset/image/logo-dark.png" alt="">
+            <div class="nav nav-header">
+                <nav>
+                    <ul>
+                        <div class="left">
+                            <li><a href="">Parents</a></li>
+                            <li><a href="" class="margin-left">Pro</a></li>
+                        </div>
+                        <div class="right">
+                            <li><a href="" class="margin-right">À propos</a></li>
+                            <li><a href="" class="margin-right">Contact</a></li>
+                            <li><a href="" class="btn color-1">Connexion</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
 
-    <main class="">
-        <div class="container">
-            <?= $content ?>
-        </div>
-    </main>
+        <main class="">
+            <div class="container">
+                <?= $content ?>
+            </div>
+        </main>
 
-
-    <footer>
+        <div class="push"></div>
+    </div>
+    <footer class="footer">
         <div class="footer-container">
             <div class="img-footer">
                 <img src="asset/image/logo-dark.png" alt="">
