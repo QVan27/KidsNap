@@ -17,5 +17,17 @@ class ProController extends Controller{
         return $nbPro;
     }
 
+    public function showLocation()
+    {
+        $proModel = new ProModel();
+
+        $locations = $proModel->getLocationAll();
+
+        $this->render("map",
+        [
+            "locations" => $locations
+        ]);
+    }
+
 
 }
