@@ -79,8 +79,9 @@ body {
     /* margin: 0 0 0 40px; */
 }
 .left{
+    margin-left: 20px;
     display: flex;
-    align-items: flex-end;
+    justify-content: space-between;
 }
 .right{
     display: flex;
@@ -155,13 +156,17 @@ header {
     flex-direction: column;
 }
 .title-footer{
-    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 .color-black{
+    margin-bottom: 15px;
     color: var(--black);
 }
 .fab{
     cursor: pointer;
+    font-size: 1.5em;
+    padding-right: 10px;
 }
 .fa-twitter{
     color: #6CADDE!important;
@@ -170,8 +175,8 @@ header {
     color: #3b5998!important;
 }
 .fa-instagram{
-color: var(--violet);
+color: #8134AF !important;
 }
-.fa-instagram-square{
-    color: var(--violet);
+.fa-linkedin-in{
+    color: #0072b1!important;
 }

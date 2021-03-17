@@ -48,20 +48,20 @@
                 <img src="asset/image/logo-dark.png" alt="">
                 <div>
                     <i class="fab fa-instagram"></i>
-                    <i class="fab fa-instagram-square"></i>
                     <i class="fab fa-twitter"></i>
                     <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-linkedin-in"></i>
                 </div>
             </div>
             <div class="link-footer">
                 <h3 class="color-black title-footer">Kids’Nap</h3>
-                <a href="" class="color-black title-footer">Le blog</a>
-                <a href="" class="color-black title-footer">Kite presse</a>
+                <a href="" class="color-black ">Le blog</a>
+                <a href="" class="color-black ">Kite presse</a>
                 <a href="" class="color-black">Nos partenaires</a>
             </div>
             <div class="link-footer">
                 <h3 class="color-black title-footer">Aide</h3>
-                <a href="" class="color-black title-footer">Nous contacter</a>
+                <a href="" class="color-black ">Nous contacter</a>
                 <a href="" class="color-black">Mentions légales</a>
             </div>
         </div>
