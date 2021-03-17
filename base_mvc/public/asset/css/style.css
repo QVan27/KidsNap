@@ -135,3 +135,9 @@ header {
     font-weight: bold;
     transition: .5s;
 }
+
+/* MAP */
+#map {
+    height: 400px;
+    width: 50%;
+}
