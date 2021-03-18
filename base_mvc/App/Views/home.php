@@ -117,7 +117,7 @@
             <div class="infoCard">
                 <img src="asset/image/pp1.svg" alt="">
                 <div class="detailInfo">
-                    <p>Pierre A.</p>
+                    <p>Guillaume C.</p>
                     <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                 </div>
             </div>
@@ -155,7 +155,7 @@
             <div class="infoCard">
                 <img src="asset/image/pp3.svg" alt="">
                 <div class="detailInfo">
-                    <p>Pierre A.</p>
+                    <p>Justine F.</p>
                     <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                 </div>
             </div>
