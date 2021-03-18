@@ -40,4 +40,10 @@ use Core\Model\Model;
         return $this->db->getData($statement);
     }
 
+    public function getLast()
+    {
+        $statement = "SELECT pro_id FROM pros ORDER BY pro_id DESC LIMIT 1";
+        return $this->db->getData($statement, true);
+    }
+
  }

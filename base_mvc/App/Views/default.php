@@ -99,7 +99,7 @@
                         </h5> <button type="button" data-dismiss="modal" aria-label="Close" class="modal-close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body p-4">
-                        <form method="get">
+                        <form method="post">
                             <div class="choose-type">
                                 <button type="button" role="btn-parent" class="btn-modal btn-block py-4 mb-2 parent">
                                     <h6 class="h4">
@@ -120,10 +120,15 @@
                         <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">Parent</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2"><i class="fas fa-times" aria-hidden="true"></i> Changer</button></h5> <button type="button" data-dismiss="modal" aria-label="Close" class="modal-close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body p-4">
-                        <form method="get">
+                        <form method="post">
                             <input type="email" name="email" placeholder="Email" class="form-control input-light mb-3">
+                            <div class="input-group mb-3"><input placeholder="Nom" name="nom" type="text" class="form-conrtol input-light">
+                            </div>
+                            <div class="input-group mb-3"><input placeholder="Prénom" name="prenom" type="text" class="form-conrtol input-light">
+                            </div>
                             <div class="input-group mb-3"><input placeholder="Mot de passe" name="password" type="password" class="form-control input-light">
                             </div>
+                            
                             <div class="input-group mb-3"><input placeholder="Confirmation du mot de passe" name="password_confirmation" type="password" class="form-control input-light">
                             </div>
                             <!---->
@@ -141,7 +146,7 @@
                         <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">BABYSITTER</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2"><i class="fas fa-times" aria-hidden="true"></i> Changer</button></h5> <button type="button" data-dismiss="modal" aria-label="Close" class="modal-close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body p-4">
-                        <form method="get">
+                        <form method="post">
                             <input type="email" name="email" placeholder="Email" class="form-control input-light mb-3">
                             <div class="input-group mb-3"><input placeholder="Mot de passe" name="password" type="password" class="form-control input-light">
                             </div>
