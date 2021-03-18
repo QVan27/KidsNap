@@ -76,7 +76,7 @@
                         </div>
                         <img src="asset/image/community.svg" alt="">
                     </div>
-                    <a class="btn community" role="btn-modal-login" href="">Rejoindre la communauté Kids'Nap</a>
+                    <a class="btn community" role="btn-modal-register" href="">Rejoindre la communauté Kids'Nap</a>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
     </div>
     <div class="btn-job">
         <h2>Trouvez un job de garde d'enfants</h2>
-        <a href="" class="btn color-1 go">J'y vais !</a>
+        <a href="" role="btn-modal-register" class="btn color-1 go">J'y vais !</a>
     </div>
 </section>
 
@@ -118,7 +118,7 @@
                 <img src="asset/image/pp1.svg" alt="">
                 <div class="detailInfo">
                     <p>Guillaume C.</p>
-                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                    <p><i class="fas fa-star "></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                 </div>
             </div>
             <div class="contentCard">

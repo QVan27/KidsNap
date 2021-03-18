@@ -17,7 +17,7 @@ if (!empty($_GET["status"])) {
 switch ($status) {
     case 'login':
         $login = new UserController();
-        $login->login();
+        // $login->login();
         break;
     default:
         
