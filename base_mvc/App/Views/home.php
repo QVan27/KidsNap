@@ -115,7 +115,7 @@
     <div class="card">
         <div class="wrapCard">
             <div class="infoCard">
-                <img src="asset/image/profileCard.svg" alt="">
+                <img src="asset/image/pp1.svg" alt="">
                 <div class="detailInfo">
                     <p>Pierre A.</p>
                     <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
@@ -134,7 +134,7 @@
     <div class="card">
         <div class="wrapCard">
             <div class="infoCard">
-                <img src="asset/image/profileCard.svg" alt="">
+                <img src="asset/image/pp2.svg" alt="">
                 <div class="detailInfo">
                     <p>Pierre A.</p>
                     <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
@@ -153,7 +153,7 @@
     <div class="card">
         <div class="wrapCard">
             <div class="infoCard">
-                <img src="asset/image/profileCard.svg" alt="">
+                <img src="asset/image/pp3.svg" alt="">
                 <div class="detailInfo">
                     <p>Pierre A.</p>
                     <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
