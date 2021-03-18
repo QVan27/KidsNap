@@ -1,3 +1,26 @@
+
+// Category
+const showRequiredCategory = (event) => {
+    const getId = event.id;
+    const links = document.querySelectorAll(".select-category button");
+    for (i = 0; i < links.length; i++) {
+      if (links[i].hasAttribute("class")) {
+        links[i].classList.remove("active");
+      }
+    }
+    event.classList.add("active");
+    const getCategory = document.querySelector(`.category-${getId}`);
+    const categories = document.querySelectorAll('div[class ^= "category-"]');
+    for (i = 0; i < categories.length; i++) {
+      if (categories[i].hasAttribute("class")) {
+        categories[i].classList.remove("showCategory");
+        categories[i].classList.add("hideCategory");
+      }
+    }
+    getCategory.classList.remove("hideCategory");
+    getCategory.classList.add("showCategory");
+  };
+
 $(document).ready(function () {
     init();
 });
@@ -86,4 +109,31 @@ const initModal = () => {
 
 }
 
-
+// content Card show and hide on click
+// card 1
+$(".showMore1").click(function(){
+  $(".hideContent1").hide();
+  $(".showContent1").show();
+});
+$(".hideMore1").click(function(){
+  $(".hideContent1").show();
+  $(".showContent1").hide();
+});
+// card 2
+$(".showMore2").click(function(){
+  $(".hideContent2").hide();
+  $(".showContent2").show();
+});
+$(".hideMore2").click(function(){
+  $(".hideContent2").show();
+  $(".showContent2").hide();
+});
+// card 3
+$(".showMore3").click(function(){
+  $(".hideContent3").hide();
+  $(".showContent3").show();
+});
+$(".hideMore3").click(function(){
+  $(".hideContent3").show();
+  $(".showContent3").hide();
+});
