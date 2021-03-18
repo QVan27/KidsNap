@@ -96,16 +96,18 @@
         </div>
 </section>
 
-<section>
-    <h2>Ils parlent de nous :</h2>
-    <div class="nous">
-        <img src="asset/image/paris_normandie.svg" alt="logo journal paris-normandie">
-        <img src="asset/image/logo-region-normandie.svg" alt="logo région Normandie">
-        <img src="asset/image/Thinkerview.svg" alt="logo Thinkerview">
-        <img src="asset/image/fr3.svg" alt="logo France 3 Normandie">
-    </div>
-    <div class="btn-job">
-        <h2>Trouvez un job de garde d'enfants</h2>
-        <a href="" class="btn color-1 go">J'y vais !</a>
-    </div>
+<section class="second">
+
+        <h2>Ils parlent de nous :</h2>
+        <div class="nous">
+            <img src="asset/image/paris_normandie.svg" alt="logo journal paris-normandie">
+            <img src="asset/image/logo-region-normandie.svg" alt="logo région Normandie">
+            <img src="asset/image/Thinkerview.svg" alt="logo Thinkerview">
+            <img src="asset/image/fr3.svg" alt="logo France 3 Normandie">
+        </div>
+        <div class="btn-job">
+            <h2>Trouvez un job de garde d'enfants</h2>
+            <a href="" class="btn color-1 go">J'y vais !</a>
+        </div>
+
 </section>

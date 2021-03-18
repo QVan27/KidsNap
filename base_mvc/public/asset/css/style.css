@@ -343,7 +343,7 @@ header {
 /* END SECTION BANNER */
 
 .first {
-    height: 700px;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
     padding: 80px 0;
@@ -517,7 +517,9 @@ h2{
     margin-bottom: 50px;
 }
 
-
+.second{
+    height: 100%;
+}
 .btn-job{
     text-align: center;
     margin-top: 100px;
