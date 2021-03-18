@@ -96,7 +96,7 @@
         </div>
 </section>
 
-<section>
+<section class="second">
     <h2>Ils parlent de nous :</h2>
     <div class="nous">
         <img src="asset/image/paris_normandie.svg" alt="logo journal paris-normandie">
