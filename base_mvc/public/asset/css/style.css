@@ -215,7 +215,7 @@ header {
     flex-direction: column;
 }
 .title-footer{
-    font-size: 1.5em;
+    font-size: 1.5625em;
     font-weight: bold;
 }
 .color-black{
@@ -333,6 +333,29 @@ color: #8134AF !important;
     width: 50%;
 }
 /* END MAP */
+h2{
+    text-align: center;
+    font-size:  1.875em;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.nous{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+
+.btn-job{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.go{
+   padding-left: 20px;
+   padding-right: 20px;
+} 
 
 /* MODAL */
 
@@ -596,3 +619,4 @@ color: #8134AF !important;
 .modal-lost_password {
     display: none;
 }
+
