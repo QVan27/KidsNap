@@ -14,14 +14,14 @@
         <h1>La plateforme connectée pour parents débordés </h1>
         <p>Trouvez une place en crèche, une nounoue ou unye babysitter. Trouvez et partagez des expériences et activités en famille. Accédez à un ensemble d’outils pour mieux gérer votre parentalité</p>
         <form action="" class="inputSelect">
-            <select name="" id="">
+            <select name="" id="selectMode">
                 <option value="">Trouver un mode de garde</option>
                 <option value="">Une place en crèche</option>
                 <option value="">Une nounou au top</option>
                 <option value="">Un super baby-sitter</option>
                 <option value="">Une agence de garde d'enfants</option>
             </select>
-            <input type="text" name="" id="" value="Mon secteur">
+            <input type="text" name="" id="placeMap" value="Mon secteur">
             <input type="submit" id="submitted" value="Chercher">
         </form>
     </div>
@@ -111,8 +111,62 @@
 </section>
 
 <section class="third">
-    <div class="vector-third">
-        <img src="asset/image/third_vector.png" alt="">
-        <!-- <img src="asset/image/third_vector_2.png" alt=""> -->
+    <img src="asset/image/third_vector.png" class="vector-third" alt="">
+    <div class="card">
+        <div class="wrapCard">
+            <div class="infoCard">
+                <img src="asset/image/profileCard.svg" alt="">
+                <div class="detailInfo">
+                    <p>Pierre A.</p>
+                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                </div>
+            </div>
+            <div class="contentCard">
+                <span class="hideContent1">
+                    <p>Application bien faite et ergonomique. Au top pour des jeunes parents... <a type="" class="showMore1">plus</a></p>
+                </span>
+                <span class="showContent1">
+                    <p>Application bien faite et ergonomique. Au top pour des jeunes parents comme nous. <a type="" class="hideMore1">moins</a></p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="wrapCard">
+            <div class="infoCard">
+                <img src="asset/image/profileCard.svg" alt="">
+                <div class="detailInfo">
+                    <p>Pierre A.</p>
+                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+                </div>
+            </div>
+            <div class="contentCard">
+                <span class="hideContent2">
+                    <p>Supper appli, avec la géolocalisation j'ai trouvé une Baby-sitter... <a type="" class="showMore2">plus</a></p>
+                </span>
+                <span class="showContent2">
+                    <p>Supper appli, avec la géolocalisation j'ai trouvé une Baby-sitter près de chez nous en 5 minutes. <a type="" class="hideMore2">moins</a></p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="wrapCard">
+            <div class="infoCard">
+                <img src="asset/image/profileCard.svg" alt="">
+                <div class="detailInfo">
+                    <p>Pierre A.</p>
+                    <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                </div>
+            </div>
+            <div class="contentCard">
+                <span class="hideContent3">
+                    <p>Grâce à l'équipe de Kids'Nap nous avons trouvé une solution de garde pour... <a type="" class="showMore3">plus</a></p>
+                </span>
+                <span class="showContent3">
+                    <p>Grâce à l'équipe de Kids'Nap nous avons trouvé une solution de garde pour Arthur en 1 semaine. L'équipe est disponible et à l'écoute, l'application est simple d'utilisation et fluide. <a type="" class="hideMore3">moins</a></p>
+                </span>
+            </div>
+        </div>
     </div>
 </section>

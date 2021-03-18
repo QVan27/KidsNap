@@ -100,5 +100,31 @@ const initModal = () => {
 
 }
 
-
-
+// content Card show and hide on click
+// card 1
+$(".showMore1").click(function(){
+  $(".hideContent1").hide();
+  $(".showContent1").show();
+});
+$(".hideMore1").click(function(){
+  $(".hideContent1").show();
+  $(".showContent1").hide();
+});
+// card 2
+$(".showMore2").click(function(){
+  $(".hideContent2").hide();
+  $(".showContent2").show();
+});
+$(".hideMore2").click(function(){
+  $(".hideContent2").show();
+  $(".showContent2").hide();
+});
+// card 3
+$(".showMore3").click(function(){
+  $(".hideContent3").hide();
+  $(".showContent3").show();
+});
+$(".hideMore3").click(function(){
+  $(".hideContent3").show();
+  $(".showContent3").hide();
+});
