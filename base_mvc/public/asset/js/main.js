@@ -23,24 +23,33 @@ const initModal = () => {
 
     modalCloseButton.click((e) => {
         modalsWrapper.toggleClass('active');
-    })
-
-    modalsWrapper.click((e) => {
-        if (e.target == document.querySelector('.modal-wrapper')) {
-            modalsWrapper.toggleClass('active');
-        }
+        modalLogin.css('display', 'none');
+        modalMdp.css('display', 'none');
+        modalParent.css('display', 'none');
+        modalRegister.css('display', 'none');
+        modalBaby.css('display', 'none');
+        modalChoose.css('display','none');
     })
 
     $('[role="btn-modal-login"]').click((e) => {
         e.preventDefault();
-        // navResponsive.classList.remove('active');
         modalsWrapper.css('display', 'flex').toggleClass('active');
+        modalLogin.css('display', 'flex');
     });
+    $('[role="btn-modal-register"]').click((e) => {
+        e.preventDefault();
+        modalsWrapper.css('display', 'flex').toggleClass('active');
+        modalRegister.css('display', 'flex');
+        modalChoose.css('display', 'flex');
+        modalLogin.css('display', 'none');
+    });
+
 
     btnRegister.click((e) => {
         e.preventDefault();
         modalLogin.css('display', 'none');
         modalRegister.css('display', 'flex');
+        modalChoose.css('display', 'flex');
     });
     
     btnMdp.click((e) => {
