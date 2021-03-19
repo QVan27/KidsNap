@@ -22,8 +22,8 @@
                     <nav>
                         <ul>
                             <div class="left">
-                                <li><a href="">Parents</a></li>
-                                <li><a href="" class="margin-left">Pro</a></li>
+                                <li><a href="index.php?page=home">Parents</a></li>
+                                <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
                             </div>
                             <div class="right">
                                 <li><a href="" class="margin-right">À propos</a></li>

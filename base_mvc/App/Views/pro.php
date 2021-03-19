@@ -7,81 +7,79 @@
 ?>
 
 <section class="banner">
-    <img src="asset/image/banner_vector_1.png" alt="" class="imgBannerFirst">
-    <img src="asset/image/banner_vector_2.png" alt="" class="imgBannerSecond">
+    <img src="asset/image/pro_banner_vector_1.png" alt="" class="imgBannerFirst">
+    <img src="asset/image/pro_banner_vector_2.png" alt="" class="imgBannerSecond">
     <img src="asset/image/banner_children.svg" alt="" class="imgBannerThird">
     <div class="txtContent">
-        <h1>La plateforme connectée pour parents débordés </h1>
-        <p>Trouvez une place en crèche, une nounoue ou unye babysitter. Trouvez et partagez des expériences et activités en famille. Accédez à un ensemble d’outils pour mieux gérer votre parentalité</p>
-        <form action="" class="inputSelect">
-            <select name="" id="selectMode">
-                <option value="">Trouver un mode de garde</option>
-                <option value="">Une place en crèche</option>
-                <option value="">Une nounou au top</option>
-                <option value="">Un super baby-sitter</option>
-                <option value="">Une agence de garde d'enfants</option>
-            </select>
-            <input type="text" name="" id="placeMap" value="Mon secteur">
-            <input type="submit" id="submitted" value="Chercher">
-        </form>
+        <h1>La plateforme connectée pour professionnels épanouis</h1>
+        <p>Mettez en avant vos modes de gardes et services auprès d’une grande communauté de parents.
+            Gérez vos disponibilités et communiquez facilement avec ces derniers.
+            Créez votre propre communauté et partagez votre quotidien.</p>
+        <div class="pro">
+            <a href="" role="btn-modal-login">Lancer vous dès maintenant</a>
+            <a href="mailto:contact@kidsnap.com">Contacter notre équipe</a>
+        </div>
     </div>
 </section>
 
 <section class="first">
-    <h2>Comment ça marche ?</h2>
+    <h2>Quels avantages ?</h2>
 
     <div class="container firstContent" id="firstContent">
         <div class="select-category">
-            <button id="garde" class="active" onclick="showRequiredCategory(this)"><i class="fas fa-hand-holding-heart"></i> Mode de garde</button>
-            <button id="reseaux" onclick="showRequiredCategory(this)"><i class="far fa-address-card"></i> Créez vos réseaux</button>
-            <button id="communaute" onclick="showRequiredCategory(this)"><i class="fas fa-people-carry"></i> Communauté</button>
+            <button id="visibility" class="active" onclick="showRequiredCategory(this)">Augmenter votre visibilité <i class="fas fa-search"></i></button>
+            <button id="boost" onclick="showRequiredCategory(this)">Booster votre activité <i class="fas fa-tachometer-alt"></i></button>
+            <button id="reseau" onclick="showRequiredCategory(this)">Créer vos réseaux <i class="fas fa-share-alt"></i></button>
+            <button id="dispo" onclick="showRequiredCategory(this)">Publier vos dispo <i class="fas fa-upload"></i></button>
         </div>
         <div class="content-category">
-            <div class="category-garde showCategory">
+            <div class="category-visibility showCategory">
                 <div class="fullContent">
-                    <div class="txtImg">
+                    <div class="txtImg proCat">
                         <div class="txtCat">
-                            <p>Retrouvez l’intégralité des professionnels sur Kids’Nap : Micro-crèches, assistant(e)s maternel(le)s, Maison d’assistantes maternelles, baby-sitters, nounous qualifiés, agence de services, ainsi que leur disponibilités en instantané sur une carte interractive.</p>
-                            <p><i class="fas fa-check-double"></i> Tous les profils sont vérifiés, appelés et validés par notre équipe.</p>
+                            <p>Touchez plus rapidement les parents en recherche de solutions de garde pour leurs enfants grâce à notre communauté en croissance quotidienne.</p>
+                            <p>Soyez visible sur une carte intéractive combinant un système de recherche poussé pour nos parents. </p>
                         </div>
-                        <img src="asset/image/map.svg" alt="">
+                        <img src="asset/image/visibility.svg" alt="">
                     </div>
-                    <a class="btn" href="">Je trouve mon mode de garde maintenant</a>
                 </div>
             </div>
-            <div class="category-reseaux hideCategory">
+            <div class="category-boost hideCategory">
                 <div class="fullContent">
-                    <div class="txtImg">
+                    <div class="txtImg proCat">
                         <div class="txtCat">
-                            <p>Un système de recherche multi-critère puissant et par compétences vous permet de trouver exactement le mode de garde qui correspond à vos besoins horaires, mode de vie, secteur géographique.
-                            </p>
-                            <p><i class="fas fa-link"></i> Entrez directement en contact avec les professionnels désirés, puis échangez via une messagerie interne sécurisée.</p>
+                            <p>Vous êtes une micro-crèche, MAM, Assistante maternelle ?</p>
+                            <p>Optimisez vos places disponibles (vacances, mercredi, ...), remplissez vos plannings et aidez les parents de la communauté en répondant à tout ou une partie de leur besoin de garde !</p>
                         </div>
-                        <img src="asset/image/reseau.svg" alt="">
+                        <img src="asset/image/boost.svg" alt="">
                     </div>
-                    <a class="btn" href="">Je trouve mon mode de garde maintenant</a>
                 </div>
             </div>
-            <div class="category-communaute hideCategory">
+            <div class="category-reseau hideCategory">
                 <div class="fullContent">
-                    <div class="txtImg">
+                    <div class="txtImg proCat">
                         <div class="txtCat">
-                            <p>Kids'Nap c’est avant tout une communauté, partagez entre parents vos bons plans, organisez des co-gardes avec vos amis, donner vous des coup de pouce via le réseau Kidsplace et notre interface simple d’utilisation et 100% gratuite!
+                            <p>Créez ou rejoignez des communautés, échangez avec elles, partagez vos bons plans, recommandations et actualités !
                             </p>
-                            <h3>Recommandation</h3>
-                            <p>Trouvez des professionnels recommandés par vos amis, vos collègues ou la communauté Kids'Nap.
-                            </p>
-                            <h3>Bons plans</h3>
-                            <p>Découvrez chaque jours des bons plans sur des produits bébés, parents ou famille, bio, made in France, sélectionnés avec soin, mais aussi des suggestions d’évènements pour le weekend, d’activités éphémères pour enfants ou à faire en famille.</p>
+                            
                         </div>
-                        <img src="asset/image/community.svg" alt="">
+                        <img src="asset/image/reseaux.svg" alt="">
                     </div>
-                    <a class="btn community" role="btn-modal-login" href="">Rejoindre la communauté Kids'Nap</a>
+                </div>
+            </div>
+            <div class="category-dispo hideCategory">
+                <div class="fullContent">
+                    <div class="txtImg proCat">
+                        <div class="txtCat">
+                            <p>Kids’Nap vous permets d’afficher vos disponibilités via des créneaux horaires mais aussi d’indiquer vos indisponibilités pour que les parents vous trouvent en quelques clics lors de leurs recherches !</p>
+                        </div>
+                        <img src="asset/image/calendar.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="pinkStats">
+    <div class="pinkStats bluePro">
         <div class="boxStats">
             <p><img src="asset/image/group.png" alt=""> <?= $numberUser->allUser; ?></p>
             <p>Utilisateurs</p>
@@ -111,7 +109,7 @@
 </section>
 
 <section class="third">
-    <img src="asset/image/third_vector.png" class="vector-third" alt="">
+    <img src="asset/image/third_vector_pro.png" class="vector-third" alt="">
     <div class="card">
         <div class="wrapCard">
             <div class="infoCard">
