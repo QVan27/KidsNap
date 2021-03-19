@@ -809,8 +809,8 @@ h2 {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.btn-secondary, .dg-btn--ok {
-    color: #212529;
+.btn-secondary, .btn-secondary a, .dg-btn--ok {
+    color: var(--white-light);
     background-color: #ff8a6d;
     border-color: #ff8a6d;
 }
