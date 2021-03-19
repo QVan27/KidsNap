@@ -2,7 +2,7 @@
 
 use App\Controller\HomeController;
 use App\Controller\UserController;
-use App\Controller\ProController;
+use App\Controller\MapController;
 
 if (!empty($_GET["page"])) {
 $page = $_GET["page"];
@@ -30,9 +30,13 @@ switch ($page) {
         $home->home();
         break;
     case 'map' :
-        $locations = new ProController();
+        $locations = new MapController();
         $locations->showLocation();
         break;
+        case 'co' :
+            $locations = new MapController();
+            $locations->showco();
+            break;
     default:
         $home = new HomeController();
         $home->home();

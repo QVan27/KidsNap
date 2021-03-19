@@ -881,3 +881,8 @@ h2 {
 .modal-lost_password {
     display: none;
 }
+/* map */
+#map{
+    height: 300px;
+    width:auto;
+}
