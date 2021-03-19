@@ -65,7 +65,7 @@
             <div class="link-footer">
                 <h3 class="color-black title-footer">Aide</h3>
                 <a href="" class="color-black ">Nous contacter</a>
-                <a href="" class="color-black">Mentions légales</a>
+                <a href="index.php?page=mentions" class="color-black">Mentions légales</a>
             </div>
         </div>
 

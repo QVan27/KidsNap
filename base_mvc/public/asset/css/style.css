@@ -581,9 +581,11 @@ div.hideCategory {
 .showContent1 {
     display: none;
 }
+
 .showContent2 {
     display: none;
 }
+
 .showContent3 {
     display: none;
 }
@@ -592,8 +594,8 @@ div.hideCategory {
     color: var(--violet);
     cursor: pointer;
 }
-/*  SECTION THIRD */
 
+/*  SECTION THIRD */
 
 /* Pro SECTION BANNER */
 
@@ -627,16 +629,21 @@ div.hideCategory {
 #visibility i, #garde i, .txtCat .fa-link {
     color: var(--green);
 }
+
 #boost i, #reseaux i {
     color: var(--red);
 }
+
 #reseau i, #communaute i {
     color: var(--blue-btn);
 }
+
 #dispo i {
     color: var(--violet-light);
 }
+
 /* Pro SECTION BANNER */
+
 /* MAP */
 
 #map {
@@ -660,11 +667,11 @@ h2 {
     margin-bottom: 50px;
 }
 
-
-.second{
+.second {
     height: 100%;
 }
-.btn-job{
+
+.btn-job {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -937,3 +944,34 @@ h2 {
 .modal-lost_password {
     display: none;
 }
+
+/* SECTION MENTIONS */
+
+#mentions {
+    padding: 80px 50px;
+}
+
+#mentions h3 {
+    margin: 20px 0 5px 0;
+    font-weight: 500;
+}
+
+#mentions h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#mentions p {
+    font-weight: 400;
+    font-size: ;
+}
+
+#mentions a {
+    font-weight: 400;
+    color: var(--violet);
+}
+#mentions strong {
+    font-weight: 500;
+}
+
+/* SECTION MENTIONS */

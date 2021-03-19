@@ -37,6 +37,10 @@ switch ($page) {
         $pro = new ProController();
         $pro->showPro();
         break;
+    case 'mentions':
+        $mentions = new HomeController();
+        $mentions->showMentions();
+        break;
     default:
         $home = new HomeController();
         $home->home();
