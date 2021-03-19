@@ -30,4 +30,13 @@ class HomeController extends Controller{
 
     }
 
+    public function showMentions()
+    {
+
+        $this->render("mentions",
+        [
+           
+        ]);
+    }
+
 }
