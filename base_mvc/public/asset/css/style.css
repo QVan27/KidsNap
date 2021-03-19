@@ -902,11 +902,11 @@ h2 {
 }
 
 .choose-type button.parent {
-    background-image: url(/mvc/Kidsnap/KidsNap/base_mvc/public/asset/image/register-parent.jpg);
+    background-image: url(../image/register-parent.jpg);
 }
 
 .choose-type button.babysitter {
-    background-image: url(/mvc/Kidsnap/KidsNap/base_mvc/public/asset/image/register-babysitter.jpg);
+    background-image: url(../image/register-babysitter.jpg);
 }
 
 .text-secondary {
