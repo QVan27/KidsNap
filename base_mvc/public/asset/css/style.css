@@ -52,6 +52,8 @@ table {
     --white-cream: #fef0e8;
     --white: #fff;
     --grey: #adbdcc;
+    --blue-btn: #6C63FF;
+    --blue-pro: #C9C6FF;
     --blue-primary: #0a2540;
     --blue-secondary: #00d4ff;
     --green: #8bff96;
@@ -384,7 +386,7 @@ header {
 }
 
 .select-category button {
-    width: 250px;
+    width: 300px;
     font-size: 1.1rem;
     letter-spacing: 1px;
     background-color: #fff;
@@ -399,7 +401,7 @@ header {
 div[class^='category-'] {
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -427,9 +429,9 @@ div[class^='category-'] a {
     justify-content: space-between;
 }
 
-.txtCat {
+/* .txtCat {
     width: 60%;
-}
+} */
 
 .txtCat h3 {
     margin-bottom: 15px;
@@ -498,6 +500,16 @@ div.hideCategory {
     margin-right: 20px;
     width: 20%;
 }
+
+/* #garde i {
+    color: var(--green);
+}
+#communaute i {
+    color: var(--red);
+}
+#reseaux i {
+    color: var(--blue-btn);
+} */
 
 /* END SECTION FIRST */
 
@@ -582,6 +594,49 @@ div.hideCategory {
 }
 /*  SECTION THIRD */
 
+
+/* Pro SECTION BANNER */
+
+.pro {
+    background-color: var(--white-light);
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+.pro a {
+    padding: 12px 12px;
+    background-color: var(--blue-btn);
+    color: var(--white);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.bluePro {
+    background-color: var(--blue-pro);
+}
+
+.txtImg.proCat {
+    display: flex;
+    flex-direction: column;
+}
+
+#visibility i, #garde i, .txtCat .fa-link {
+    color: var(--green);
+}
+#boost i, #reseaux i {
+    color: var(--red);
+}
+#reseau i, #communaute i {
+    color: var(--blue-btn);
+}
+#dispo i {
+    color: var(--violet-light);
+}
+/* Pro SECTION BANNER */
 /* MAP */
 
 #map {

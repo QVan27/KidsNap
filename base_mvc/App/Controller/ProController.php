@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Model\ProModel;
 use Core\Controller\Controller;
+use App\Controller\UserController;
+
 
 class ProController extends Controller{
 
@@ -26,6 +28,21 @@ class ProController extends Controller{
         $this->render("map",
         [
             "locations" => $locations
+        ]);
+    }
+    public function showPro()
+    {
+
+        $userController = new UserController();
+        $proController = new ProController();
+
+        $numberUser = $userController->showNumberUser();
+        $numberPro = $proController->showNumberPro();
+
+        $this->render("pro",
+        [
+            "numberUser"=>$numberUser,
+            "numberPro"=>$numberPro
         ]);
     }
 
