@@ -18,7 +18,7 @@
     <body>
         <div class="wrap">
             <header>
-                <img src="asset/image/logo-dark.png" alt="">
+            <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
                 <div class="nav nav-header">
                     <nav>
                         <ul>
