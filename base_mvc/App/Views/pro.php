@@ -61,7 +61,7 @@
                         <div class="txtCat">
                             <p>Créez ou rejoignez des communautés, échangez avec elles, partagez vos bons plans, recommandations et actualités !
                             </p>
-                            
+
                         </div>
                         <img src="asset/image/reseaux.svg" alt="">
                     </div>
@@ -113,9 +113,9 @@
     <div class="card">
         <div class="wrapCard">
             <div class="infoCard">
-                <img src="asset/image/profileCard.svg" alt="">
+                <img src="asset/image/pp1.svg" alt="">
                 <div class="detailInfo">
-                    <p>Pierre A.</p>
+                    <p>Guillaume C.</p>
                     <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                 </div>
             </div>
@@ -132,7 +132,7 @@
     <div class="card">
         <div class="wrapCard">
             <div class="infoCard">
-                <img src="asset/image/profileCard.svg" alt="">
+                <img src="asset/image/pp2.svg" alt="">
                 <div class="detailInfo">
                     <p>Pierre A.</p>
                     <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
@@ -151,9 +151,9 @@
     <div class="card">
         <div class="wrapCard">
             <div class="infoCard">
-                <img src="asset/image/profileCard.svg" alt="">
+                <img src="asset/image/pp3.svg" alt="">
                 <div class="detailInfo">
-                    <p>Pierre A.</p>
+                    <p>Justine F.</p>
                     <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                 </div>
             </div>
