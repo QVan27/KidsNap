@@ -50,13 +50,13 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="img-footer">
-                <img src="asset/image/logo-dark.png" alt="">
-                <div>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
+                    <div>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
             </div>
             <div class="link-footer">
                 <h3 class="color-black title-footer">Kids’Nap</h3>
@@ -66,7 +66,7 @@
             </div>
             <div class="link-footer">
                 <h3 class="color-black title-footer">Aide</h3>
-                <a href="" class="color-black ">Nous contacter</a>
+                <a href="index.php?page=contact" class="color-black ">Nous contacter</a>
                 <a href="index.php?page=mentions" class="color-black">Mentions légales</a>
             </div>
         </div>
