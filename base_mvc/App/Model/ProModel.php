@@ -17,32 +17,20 @@ use Core\Model\Model;
      * 
      * @var string
      */
-    protected $table = "pros";
+    protected $table = "pro";
 
     /**
      * Compte tous les professionnels
      */
     public function countAll()
     {
-        $statement = "SELECT COUNT(*) AS allPros FROM pros";
+        $statement = "SELECT COUNT(*) AS allPros FROM pro";
         return $this->db->getData($statement, true);
-    }
-
-    public function getLocationOne($id)
-    {
-        $statement = "SELECT pro_ville FROM pros WHERE id = $id";
-        return $this->db->getData($statement, true);
-    }
-
-    public function getLocationAll()
-    {
-        $statement = "SELECT pro_ville FROM pros";
-        return $this->db->getData($statement);
     }
 
     public function getLast()
     {
-        $statement = "SELECT pro_id FROM pros ORDER BY pro_id DESC LIMIT 1";
+        $statement = "SELECT pro_id FROM pro ORDER BY pro_id DESC LIMIT 1";
         return $this->db->getData($statement, true);
     }
 

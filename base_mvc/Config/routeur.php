@@ -18,11 +18,12 @@ if (!empty($_GET["status"])) {
 
 switch ($status) {
     case 'login':
-        
+        $login = new UserController;
+        $login->login($_POST);
         break;
     case 'proRegister':
-        $proResigt = new UserController;
-        $proRegist->registerPro($_POST); // probleme, double table à remplir
+        $proRegist = new UserController;
+        $proRegist->registerPro($_POST);
         break;
     case 'parentRegister':
         $parentRegist = new UserController;
