@@ -715,7 +715,6 @@ div.hideCategory {
 
 /*  SECTION THIRD */
 
-
 /* Pro SECTION BANNER */
 
 .pro {
@@ -751,13 +750,12 @@ div.hideCategory {
     color: var(--green);
 }
 
-#boost i,
-#reseaux i {
+
+#boost i, #reseaux i {
     color: var(--red);
 }
 
-#reseau i,
-#communaute i {
+#reseau i, #communaute i {
     color: var(--blue-btn);
 }
 
@@ -766,8 +764,8 @@ div.hideCategory {
 }
 
 
-/* Pro SECTION BANNER */
 
+/* Pro SECTION BANNER */
 
 /* MAP */
 
@@ -1084,6 +1082,7 @@ h4 {
 }
 
 
+
 /* FORMULAIRE ==============================*/
 .third{
     height: 100%;
@@ -1191,3 +1190,35 @@ input[type="submit"]:hover{
 .submitButtonContact{
     text-align: center;
 }
+
+/* SECTION MENTIONS */
+
+#mentions {
+    padding: 80px 50px;
+}
+
+#mentions h3 {
+    margin: 20px 0 5px 0;
+    font-weight: 500;
+}
+
+#mentions h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#mentions p {
+    font-weight: 400;
+    font-size: ;
+}
+
+#mentions a {
+    font-weight: 400;
+    color: var(--violet);
+}
+#mentions strong {
+    font-weight: 500;
+}
+
+/* SECTION MENTIONS */
+

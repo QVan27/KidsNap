@@ -15,10 +15,11 @@
 
 </head>
 
+
 <body>
     <div class="wrap">
         <header>
-            <img src="asset/image/logo-dark.png" alt="">
+            <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
             <div class="nav nav-header">
                 <nav>
                     <ul>
@@ -35,6 +36,7 @@
                 </nav>
             </div>
         </header>
+
 
 
         <main class="">
@@ -65,7 +67,7 @@
             <div class="link-footer">
                 <h3 class="color-black title-footer">Aide</h3>
                 <a href="" class="color-black ">Nous contacter</a>
-                <a href="" class="color-black">Mentions légales</a>
+                <a href="index.php?page=mentions" class="color-black">Mentions légales</a>
             </div>
         </div>
 
