@@ -1,4 +1,84 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -7,9 +87,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
 }
 
+
 /* HTML5 display-role reset for older browsers */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
@@ -17,15 +108,20 @@ body {
     line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -35,9 +131,12 @@ table {
     border-spacing: 0;
 }
 
-*, :after, :before {
+*,
+ :after,
+ :before {
     box-sizing: border-box;
 }
+
 
 /* Commun CSS */
 
@@ -69,7 +168,8 @@ a {
     text-decoration: none;
 }
 
-html, body {
+html,
+body {
     /* font-size: 1em; */
     font-family: 'Montserrat', sans-serif;
     height: 100%;
@@ -84,9 +184,11 @@ html, body {
     margin-bottom: -50px;
 }
 
+
 /* Sticky footer   ---->    https://la-cascade.io/sticky-footer-de-5-facons/ */
 
-.footer, .push {
+.footer,
+.push {
     height: 50px;
 }
 
@@ -165,7 +267,9 @@ i {
     color: var(--violet-light);
 }
 
+
 /* End Commun CSS */
+
 
 /* Header */
 
@@ -211,7 +315,9 @@ header {
     display: flex;
 }
 
+
 /* END HEADER */
+
 
 /* FOOTER ================================================ */
 
@@ -261,7 +367,9 @@ header {
     color: #0072b1!important;
 }
 
+
 /* END FOOTER */
+
 
 /* START SECTION BANNER */
 
@@ -323,7 +431,8 @@ header {
     margin-top: 25px;
 }
 
-.inputSelect input, .inputSelect select {
+.inputSelect input,
+.inputSelect select {
     background-color: var(--pink-light);
     padding: 10px 10px;
     border-radius: 5px;
@@ -341,7 +450,9 @@ header {
     cursor: pointer;
 }
 
+
 /* END SECTION BANNER */
+
 
 /* START SECTION FIRST */
 
@@ -429,6 +540,7 @@ div[class^='category-'] a {
     justify-content: space-between;
 }
 
+
 /* .txtCat {
     width: 60%;
 } */
@@ -501,6 +613,7 @@ div.hideCategory {
     width: 20%;
 }
 
+
 /* #garde i {
     color: var(--green);
 }
@@ -511,11 +624,15 @@ div.hideCategory {
     color: var(--blue-btn);
 } */
 
+
 /* END SECTION FIRST */
+
 
 /* START SECTION SECOND */
 
+
 /*  SECTION SECOND */
+
 
 /* START SECTION THIRD */
 
@@ -595,6 +712,7 @@ div.hideCategory {
     cursor: pointer;
 }
 
+
 /*  SECTION THIRD */
 
 /* Pro SECTION BANNER */
@@ -626,9 +744,12 @@ div.hideCategory {
     flex-direction: column;
 }
 
-#visibility i, #garde i, .txtCat .fa-link {
+#visibility i,
+#garde i,
+.txtCat .fa-link {
     color: var(--green);
 }
+
 
 #boost i, #reseaux i {
     color: var(--red);
@@ -642,6 +763,8 @@ div.hideCategory {
     color: var(--violet-light);
 }
 
+
+
 /* Pro SECTION BANNER */
 
 /* MAP */
@@ -650,6 +773,7 @@ div.hideCategory {
     height: 400px;
     width: 50%;
 }
+
 
 /* END MAP */
 
@@ -681,6 +805,7 @@ h2 {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 
 /* MODAL */
 
@@ -788,7 +913,8 @@ h2 {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.mb-3, .my-3 {
+.mb-3,
+.my-3 {
     margin-bottom: 1rem!important;
 }
 
@@ -816,7 +942,9 @@ h2 {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.btn-secondary, .btn-secondary a, .dg-btn--ok {
+.btn-secondary,
+.btn-secondary a,
+.dg-btn--ok {
     color: var(--white-light);
     background-color: #ff8a6d;
     border-color: #ff8a6d;
@@ -833,7 +961,8 @@ h2 {
     justify-content: flex-end!important;
 }
 
-.mt-3, .my-3 {
+.mt-3,
+.my-3 {
     margin-top: 1rem!important;
 }
 
@@ -847,7 +976,8 @@ h2 {
     text-align: center!important;
 }
 
-.pt-3, .py-3 {
+.pt-3,
+.py-3 {
     padding-top: 1rem!important;
 }
 
@@ -876,15 +1006,18 @@ h2 {
     border-radius: 0.3rem;
 }
 
-.mb-2, .my-2 {
+.mb-2,
+.my-2 {
     margin-bottom: .5rem!important;
 }
 
-.pt-4, .py-4 {
+.pt-4,
+.py-4 {
     padding-top: 1.5rem!important;
 }
 
-.pb-4, .py-4 {
+.pb-4,
+.py-4 {
     padding-bottom: 1.5rem!important;
 }
 
@@ -900,12 +1033,14 @@ h2 {
     position: relative;
 }
 
-.small, small {
+.small,
+small {
     font-size: 80%;
     font-weight: 400;
 }
 
-.h4, h4 {
+.h4,
+h4 {
     font-size: 1.35rem;
 }
 
@@ -930,7 +1065,8 @@ h2 {
     border-color: #ff8a6d;
 }
 
-.btn-group-sm>.btn, .btn-sm {
+.btn-group-sm>.btn,
+.btn-sm {
     padding: .25rem .7rem;
     font-size: .7875rem;
     line-height: 1.5;
@@ -943,6 +1079,116 @@ h2 {
 
 .modal-lost_password {
     display: none;
+}
+
+
+
+/* FORMULAIRE ==============================*/
+.third{
+    height: 100%;
+    padding: 50px 30px;
+}
+.img-vector{
+    position: absolute;
+    z-index: 0;
+}
+.img-vector-top{
+    top: 0;
+    left: 0;
+}
+.img-vector-bottom{
+    bottom: 0;
+    right: 0;
+}
+.wrap-sheet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    /* margin-top: 50px; */
+}
+
+#sheet{
+    background-color: var(--white);
+    width: 90%;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+.sheet-two{
+    background-color: var(--white);
+    width: 80%;
+    position: relative;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px 20px;
+    margin: 0 auto 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-title{
+    font-size: 1.5625em;
+    font-weight: 500;
+    line-height: 30px;
+}
+.contact-para {
+    font-size: 1.375em;
+    line-height: 27px;
+    text-align: center;
+    margin: 20px 0 50px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 922px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px lightgrey;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 85%;
+    height: 150px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 30px;
+    resize: none;
+    text-align: center;
+    outline: none;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    height: 200px;
+    box-shadow: inset 3px 3px lightgrey;
+    font-size: 15px;
+}
+
+ input[type="submit"] {
+    width: 200px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--blue-btn);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+} 
+input[type="submit"]:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.submitButtonContact{
+    text-align: center;
 }
 
 /* SECTION MENTIONS */
@@ -975,3 +1221,4 @@ h2 {
 }
 
 /* SECTION MENTIONS */
+

@@ -15,26 +15,28 @@
 
 </head>
 
-    <body>
-        <div class="wrap">
-            <header>
+
+<body>
+    <div class="wrap">
+        <header>
             <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
-                <div class="nav nav-header">
-                    <nav>
-                        <ul>
-                            <div class="left">
-                                <li><a href="index.php?page=home">Parents</a></li>
-                                <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
-                            </div>
-                            <div class="right">
-                                <li><a href="" class="margin-right">À propos</a></li>
-                                <li><a href="" class="margin-right">Contact</a></li>
-                                <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
-                            </div>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            <div class="nav nav-header">
+                <nav>
+                    <ul>
+                        <div class="left">
+                            <li><a href="index.php?page=home">Parents</a></li>
+                            <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
+                        </div>
+                        <div class="right">
+                            <li><a href="" class="margin-right">À propos</a></li>
+                            <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
+                            <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
 
 
         <main class="">

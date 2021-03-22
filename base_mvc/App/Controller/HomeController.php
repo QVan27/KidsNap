@@ -29,6 +29,12 @@ class HomeController extends Controller{
             ]);
 
     }
+    public function showContact()
+    {
+        $this->render("contact", [
+            
+        ]);
+    }
 
     public function showMentions()
     {
