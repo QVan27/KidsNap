@@ -41,7 +41,7 @@ switch ($page) {
     case 'contact':
         $contact = new HomeController();
         $contact->showContact();
-
+        break;
     case 'mentions':
         $mentions = new HomeController();
         $mentions->showMentions();

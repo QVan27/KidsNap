@@ -1,5 +1,5 @@
-<section id="third" class="third">
-    <img class="img-vector-top img-vector" src="asset/image/contact_vector_top.png" alt="">
+<img class="img-vector-top img-vector" src="asset/image/contact_vector_top.png" alt="">
+<section id="formulaire" class="fourth">
     <img class="img-vector-bottom img-vector" src="asset/image/contact_vector_bottom.png" alt="">
     <div class="wrap-sheet">
         <div id="sheet" class="sheet-one">

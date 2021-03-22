@@ -19,11 +19,11 @@
 <body>
     <div class="wrap">
         <header>
-            <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
             <div class="nav nav-header">
                 <nav>
                     <ul>
                         <div class="left">
+                            <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
                             <li><a href="index.php?page=home">Parents</a></li>
                             <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
                         </div>
