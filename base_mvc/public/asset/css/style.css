@@ -1223,7 +1223,7 @@ input[type="submit"]:hover{
 
 #mentions p {
     font-weight: 400;
-    font-size: ;
+    /* font-size: ; */
 }
 
 #mentions a {
