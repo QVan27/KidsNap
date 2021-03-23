@@ -46,5 +46,16 @@ use Core\Model\Model;
         return $this->db->getData($statement, true);
     }
 
+    public function existingUser($email, $roleParent)
+    {
+        $statement = "SELECT * FROM users WHERE user_mail = '$email' AND user_parent = '$roleParent'";
+        return $this->db->getData($statement, true);
+    }
+
+    public function update($id, $roleParent)
+    {
+        $statement = "UPDATE users SET user_parent = '$roleParent' WHERE user_id = '$id'";
+        return $this->db->postData($statement, $roleParent);
+    }
 
  }

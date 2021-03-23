@@ -17,21 +17,33 @@ use Core\Model\Model;
      * 
      * @var string
      */
-    protected $table = "pro";
+    protected $table = "pros";
 
     /**
      * Compte tous les professionnels
      */
     public function countAll()
     {
-        $statement = "SELECT COUNT(*) AS allPros FROM pro";
+        $statement = "SELECT COUNT(*) AS allPros FROM pros";
         return $this->db->getData($statement, true);
     }
 
     public function getLast()
     {
-        $statement = "SELECT pro_id FROM pro ORDER BY pro_id DESC LIMIT 1";
+        $statement = "SELECT pro_id FROM pros ORDER BY pro_id DESC LIMIT 1";
         return $this->db->getData($statement, true);
+    }
+
+    public function existingPro($email, $rolePro)
+    {
+        $statement = "SELECT * FROM users WHERE user_mail = '$email' AND user_pro = '$rolePro'";
+        return $this->db->getData($statement, true);
+    }
+
+    public function update($id, $rolePro)
+    {
+        $statement = "UPDATE users SET user_pro = '$rolePro' WHERE user_id = '$id'";
+        return $this->db->postData($statement, $rolePro);
     }
 
  }

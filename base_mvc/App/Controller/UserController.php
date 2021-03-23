@@ -23,17 +23,13 @@ class UserController extends Controller
 
     public function login($data)
     {
-        if (isset($data["user_mail"])) 
-        {
+        if (isset($data["user_mail"])) {
             $user = $this->userModel->getUserByMail($data["user_mail"]);
 
-            if ($user && password_verify($data["user_password"], $user->user_password)) 
-            {
+            if ($user && password_verify($data["user_password"], $user->user_password)) {
                 $_SESSION["user"] = $user;
                 header("Location:index.php");
-            } 
-            else 
-            {
+            } else {
                 $error = "Utilisateur ou mot de passe incorrect.";
             }
         }
@@ -48,25 +44,38 @@ class UserController extends Controller
 
     public function registerParent($data)
     {
-        if (isset($data["user_mail"]) && isset($data["user_nom"]) && isset($data["user_prenom"])) {
+        var_dump($data);
+        if (!empty($data["user_mail"]) && !empty($data["user_nom"]) && !empty($data["user_prenom"])) {
 
             $userModel = new UserModel();
+            $proModel = new ProModel();
+
             $user = $this->encodeChars($data);
             $user["user_password"] = password_hash($data["user_password"], PASSWORD_DEFAULT);
             $user["user_parent"] = true;
             $user["user_pro"] = false;
-            var_dump($user);
-            unset($user["password_confirmation"]);
-            $userModel->create($user);
+            $existUser = $userModel->existingUser($user["user_mail"], $user["user_parent"]);
+            $existPro = $proModel->existingPro($user["user_mail"], $user["user_pro"]);
 
-            //header("Location:index.php?page=login&status=login");
+            if (!empty($existUser)) {
+                $error = "Utilisateur parent déjà existant";
+            } elseif (!empty($existPro)) {
+                $userModel->update($existPro["user_id"], $user["user_parent"]);
+                //header("Location:index.php?page=login&status=login");
+            } else {
+                unset($user["password_confirmation"]);
+                $userModel->create($user);
+
+                //header("Location:index.php?page=login&status=login");
+            }
         }
+        
     }
 
     public function registerPro($data)
     {
-        if (isset($data["user_mail"]) && isset($data["user_nom"]) && isset($data["user_prenom"])) {
-            if (isset($data["pro_tarif"]) && isset($data["pro_nb_place"])) {
+        if (!empty($data["user_mail"]) && !empty($data["user_nom"]) && !empty($data["user_prenom"])) {
+            if (!empty($data["pro_tarif"]) && !empty($data["pro_nb_place"])) {
 
                 $userModel = new UserModel();
                 $proModel = new ProModel();
@@ -81,42 +90,56 @@ class UserController extends Controller
                     "user_pro" => true,
                 );
 
+                $existUser = $userModel->existingUser($dataUser["user_mail"], $dataUser["user_parent"]);
+                $existPro = $proModel->existingPro($dataUser["user_mail"], $dataUser["user_pro"]);
 
-                $user = $this->encodeChars($dataUser);
-                $user["user_password"] = password_hash($dataUser["user_password"], PASSWORD_DEFAULT);
-                unset($user["password_confirmation"]);
-                $userModel->create($user);
-                $userID = $userModel->getLast();
+                if (!empty($existUser)) {
 
-                if (empty($data["justificatif"])) {
-                    $data["justificatif"] = NULL;
+                    $proModel->update($existUser["user_id"], $dataUser["user_pro"]);
+                    //header("Location:index.php?page=login&status=login");
+
+                } elseif (!empty($existPro)) {
+
+                    $error = "Utilisateur professionel déjà inscrit";
+
+                } else {
+
+                    $user = $this->encodeChars($dataUser);
+                    $user["user_password"] = password_hash($dataUser["user_password"], PASSWORD_DEFAULT);
+                    unset($user["password_confirmation"]);
+                    $userModel->create($user);
+                    $userID = $userModel->getLast();
+
+                    if (empty($data["justificatif"])) {
+                        $data["justificatif"] = NULL;
+                    }
+
+                    $dataPro = array(
+                        "pro_tarif" => $data["pro_tarif"],
+                        "pro_nb_place" => $data["pro_nb_place"],
+                        "user_id" => $userID->user_id,
+                        "justificatif" => $data["justificatif"],
+                    );
+
+                    /* Code to get the file, not working */
+                    /*var_dump($_FILES);
+
+                    $targetDir = "public/asset/files/";
+                    $fileName = basename($_FILES["justificatif"]["name"]);
+                    $targetFilePath = $targetDir . $fileName;
+                    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+                    $allowType = array('pdf');
+                    if (in_array($fileType, $allowType)) {
+                        move_uploaded_file($_FILES["justificatif"]["tmp_name"], $targetFilePath);
+                    }
+
+                    $dataPro["justificatif"] = $fileName; */
+
+                    $pro = $this->encodeChars($dataPro);
+                    $proModel->create($pro);
+
+                    //header("Location:index.php?page=login&status=login");
                 }
-
-                $dataPro = array(
-                    "pro_tarif" => $data["pro_tarif"],
-                    "pro_nb_place" => $data["pro_nb_place"],
-                    "user_id" => $userID->user_id,
-                    "justificatif" => $data["justificatif"],
-                );
-
-                /* Code to get the file, not working */
-                /*var_dump($_FILES);
-
-                $targetDir = "public/asset/files/";
-                $fileName = basename($_FILES["justificatif"]["name"]);
-                $targetFilePath = $targetDir . $fileName;
-                $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-                $allowType = array('pdf');
-                if (in_array($fileType, $allowType)) {
-                    move_uploaded_file($_FILES["justificatif"]["tmp_name"], $targetFilePath);
-                }
-
-                $dataPro["justificatif"] = $fileName; */
-
-                $pro = $this->encodeChars($dataPro);
-                $proModel->create($pro);
-
-                //header("Location:index.php?page=login&status=login");
             }
         }
     }
