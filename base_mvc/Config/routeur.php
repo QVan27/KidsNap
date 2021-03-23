@@ -25,6 +25,30 @@ switch ($status) {
         break;
 }
 
+if (!empty($_GET["status"])) {
+    $status = $_GET["status"];
+} else {
+    $status = "";
+}
+
+switch ($status) {
+    case 'login':
+        $login = new UserController;
+        $login->login($_POST);
+        break;
+    case 'proRegister':
+        $proRegist = new UserController;
+        $proRegist->registerPro($_POST);
+        break;
+    case 'parentRegister':
+        $parentRegist = new UserController;
+        $parentRegist->registerParent($_POST);
+        break;
+    default:
+        
+        break;
+}
+
 switch ($page) {
     case 'home':
         $home = new HomeController();

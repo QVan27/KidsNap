@@ -28,16 +28,22 @@ use Core\Model\Model;
         return $this->db->getData($statement, true);
     }
 
-    public function getLocationOne($id)
+    public function getLast()
     {
-        $statement = "SELECT pro_ville FROM pros WHERE id = $id";
+        $statement = "SELECT pro_id FROM pros ORDER BY pro_id DESC LIMIT 1";
         return $this->db->getData($statement, true);
     }
 
-    public function getLocationAll()
+    public function existingPro($email, $rolePro)
     {
-        $statement = "SELECT pro_ville FROM pros";
-        return $this->db->getData($statement);
+        $statement = "SELECT * FROM users WHERE user_mail = '$email' AND user_pro = '$rolePro'";
+        return $this->db->getData($statement, true);
+    }
+
+    public function update($id, $rolePro)
+    {
+        $statement = "UPDATE users SET user_pro = '$rolePro' WHERE user_id = '$id'";
+        return $this->db->postData($statement, $rolePro);
     }
 
  }

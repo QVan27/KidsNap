@@ -126,9 +126,14 @@
                     </div>
                     <div class="modal-body p-4">
                         <form method="post">
-                            <input type="email" name="email" placeholder="Email" class="form-control input-light mb-3">
-                            <div class="input-group mb-3"><input placeholder="Mot de passe" name="password" type="password" class="form-control input-light">
+                            <input type="email" name="user_mail" placeholder="Email" class="form-control input-light mb-3">
+                            <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-conrtol input-light">
                             </div>
+                            <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-conrtol input-light">
+                            </div>
+                            <div class="input-group mb-3"><input placeholder="Mot de passe" name="user_password" type="password" class="form-control input-light">
+                            </div>
+                            
                             <div class="input-group mb-3"><input placeholder="Confirmation du mot de passe" name="password_confirmation" type="password" class="form-control input-light">
                             </div>
                             <!---->
@@ -146,12 +151,24 @@
                         <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">BABYSITTER</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2"><i class="fas fa-times" aria-hidden="true"></i> Changer</button></h5> <button type="button" data-dismiss="modal" aria-label="Close" class="modal-close"><span aria-hidden="true">×</span></button>
                     </div>
                     <div class="modal-body p-4">
-                        <form method="post">
-                            <input type="email" name="email" placeholder="Email" class="form-control input-light mb-3">
-                            <div class="input-group mb-3"><input placeholder="Mot de passe" name="password" type="password" class="form-control input-light">
+                        <form method="post" ctype="multipart/form-data">
+                            <input type="email" name="user_mail" placeholder="Email" class="form-control input-light mb-3">
+                            <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-conrtol input-light">
+                            </div>
+                            <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-conrtol input-light">
+                            </div>
+                            <div class="input-group mb-3"><input placeholder="Mot de passe" name="user_password" type="password" class="form-control input-light">
                             </div>
                             <div class="input-group mb-3"><input placeholder="Confirmation du mot de passe" name="password_confirmation" type="password" class="form-control input-light">
                             </div>
+
+                            <div class="input-group mb-3"><input placeholder="Tarif par heure" name="pro_tarif" type="text" class="form-conrtol input-light">
+                            </div>
+                            <div class="input-group mb-3"><input placeholder="Nombre de place totale" name="pro_nb_place" type="text" class="form-conrtol input-light">
+                            </div>
+                            <div class="input-group mb-3"><input name="justificatif" type="file" class="form-conrtol input-light" accept="application/pdf">
+                            </div>
+
                             <!---->
                             <div class="row mt-4 justify-content-end">
                                 <div class="col-auto"><button type="submit" class="btn-modal btn-secondary text-uppercase font-weight-bold">
