@@ -15,26 +15,28 @@
 
 </head>
 
-    <body>
-        <div class="wrap">
-            <header>
-            <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
-                <div class="nav nav-header">
-                    <nav>
-                        <ul>
-                            <div class="left">
-                                <li><a href="index.php?page=home">Parents</a></li>
-                                <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
-                            </div>
-                            <div class="right">
-                                <li><a href="" class="margin-right">À propos</a></li>
-                                <li><a href="" class="margin-right">Contact</a></li>
-                                <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
-                            </div>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="nav nav-header">
+                <nav>
+                    <ul>
+                        <div class="left">
+                            <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
+                            <li><a href="index.php?page=home">Parents</a></li>
+                            <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
+                        </div>
+                        <div class="right">
+                            <li><a href="" class="margin-right">À propos</a></li>
+                            <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
+                            <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
 
 
         <main class="">
@@ -48,13 +50,13 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="img-footer">
-                <img src="asset/image/logo-dark.png" alt="">
-                <div>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
+                <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
+                    <div>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
             </div>
             <div class="link-footer">
                 <h3 class="color-black title-footer">Kids’Nap</h3>
@@ -64,7 +66,7 @@
             </div>
             <div class="link-footer">
                 <h3 class="color-black title-footer">Aide</h3>
-                <a href="" class="color-black ">Nous contacter</a>
+                <a href="index.php?page=contact" class="color-black ">Nous contacter</a>
                 <a href="index.php?page=mentions" class="color-black">Mentions légales</a>
             </div>
         </div>
