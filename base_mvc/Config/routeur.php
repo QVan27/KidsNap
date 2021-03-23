@@ -3,6 +3,7 @@
 use App\Controller\HomeController;
 use App\Controller\UserController;
 use App\Controller\ProController;
+use App\Controller\DashboardController;
 
 if (!empty($_GET["page"])) {
     $page = $_GET["page"];
@@ -40,6 +41,14 @@ switch ($page) {
     case 'mentions':
         $mentions = new HomeController();
         $mentions->showMentions();
+        break;
+    case 'dashboard-parents':
+        $dashboard = new DashboardController();
+        $dashboard->showParents();
+        break;
+    case 'dashboard-pros':
+        $dashboard = new DashboardController();
+        $dashboard->showPros();
         break;
     default:
         $home = new HomeController();
