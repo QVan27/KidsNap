@@ -28,7 +28,7 @@
                             <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
                         </div>
                         <div class="right">
-                            <li><a href="" class="margin-right">À propos</a></li>
+                            <!-- <li><a href="" class="margin-right">À propos</a></li> -->
                             <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
                             <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
                         </div>
@@ -61,7 +61,7 @@
             <div class="link-footer">
                 <h3 class="color-black title-footer">Kids’Nap</h3>
                 <a href="" class="color-black ">Le blog</a>
-                <a href="" class="color-black ">Kite presse</a>
+                <a href="" class="color-black ">Kit presse</a>
                 <a href="" class="color-black">Nos partenaires</a>
             </div>
             <div class="link-footer">
