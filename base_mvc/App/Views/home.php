@@ -13,7 +13,7 @@
     <div class="txtContent">
         <h1>La plateforme connectée pour parents débordés </h1>
         <p>Trouvez une place en crèche, une nounoue ou unye babysitter. Trouvez et partagez des expériences et activités en famille. Accédez à un ensemble d’outils pour mieux gérer votre parentalité</p>
-        <form action="" class="inputSelect">
+        <form action="index.php?page=map" class="inputSelect" method="post">
             <select name="" id="selectMode">
                 <option value="">Trouver un mode de garde</option>
                 <option value="">Une place en crèche</option>
@@ -46,7 +46,7 @@
                         </div>
                         <img src="asset/image/map.svg" alt="">
                     </div>
-                    <a class="btn" href="">Je trouve mon mode de garde maintenant</a>
+                    <a class="btn" href="index.php?page=map">Je trouve mon mode de garde maintenant</a>
                 </div>
             </div>
             <div class="category-reseaux hideCategory">
@@ -59,7 +59,7 @@
                         </div>
                         <img src="asset/image/reseau.svg" alt="">
                     </div>
-                    <a class="btn" href="">Je trouve mon mode de garde maintenant</a>
+                    <a class="btn" href="index.php?page=map">Je trouve mon mode de garde maintenant</a>
                 </div>
             </div>
             <div class="category-communaute hideCategory">
