@@ -21,13 +21,10 @@ class ProController extends Controller{
 
     public function showLocation()
     {
-        $proModel = new ProModel();
-
-        $locations = $proModel->getLocationAll();
 
         $this->render("map",
         [
-            "locations" => $locations
+            
         ]);
     }
     public function showPro()

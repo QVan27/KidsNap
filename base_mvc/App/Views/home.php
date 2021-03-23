@@ -21,7 +21,7 @@
                 <option value="">Un super baby-sitter</option>
                 <option value="">Une agence de garde d'enfants</option>
             </select>
-            <input type="text" name="" id="placeMap" value="Mon secteur">
+            <input type="text" name="" id="placeMap" placeholder="Mon secteur">
             <input type="submit" id="submitted" value="Chercher">
         </form>
     </div>
@@ -32,9 +32,9 @@
 
     <div class="container firstContent" id="firstContent">
         <div class="select-category">
-            <button id="garde" class="active" onclick="showRequiredCategory(this)"><i class="fas fa-hand-holding-heart"></i> Mode de garde</button>
-            <button id="reseaux" onclick="showRequiredCategory(this)"><i class="far fa-address-card"></i> Créez vos réseaux</button>
-            <button id="communaute" onclick="showRequiredCategory(this)"><i class="fas fa-people-carry"></i> Communauté</button>
+            <button id="garde" class="active" onclick="showRequiredCategory(this)">Mode de garde <i class="fas fa-hand-holding-heart"></i></button>
+            <button id="reseaux" onclick="showRequiredCategory(this)">Créez vos réseaux <i class="far fa-address-card"></i></button>
+            <button id="communaute" onclick="showRequiredCategory(this)">Communauté <i class="fas fa-people-carry"></i></button>
         </div>
         <div class="content-category">
             <div class="category-garde showCategory">
