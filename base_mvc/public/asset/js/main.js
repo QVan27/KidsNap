@@ -156,21 +156,3 @@ menuBtn.onclick = function () {
     menu.src = "asset/image/menu.png";
   }
 };
-
-// var menuBtn = document.getElementById("menuBtn");
-// var sideNav = document.getElementById("sideNav");
-// var menu = document.getElementById("menu");
-// sideNav.style.top = "-100%";
-// menuBtn.onclick = function () {
-//   if (sideNav.style.top === "-100%") {
-//     sideNav.style.top = "0";
-//   //   menu.src = "../../wp-content/themes/cvtech/asset/img/close.png";
-//   $('#open').css('display', 'none');
-//   $('#close').css('display', 'inline');
-//   } else {
-//     sideNav.style.top = "-100%";
-//   //   menu.src = "../../wp-content/themes/cvtech/asset/img/menu.png";
-//   $('#open').css('display', 'inline');
-//   $('#close').css('display', 'none');
-//   }
-// };

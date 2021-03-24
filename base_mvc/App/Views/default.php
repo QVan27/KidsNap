@@ -28,7 +28,6 @@
                             <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
                         </div>
                         <div class="right">
-                            <!-- <li><a href="" class="margin-right">À propos</a></li> -->
                             <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
                             <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
                         </div>
