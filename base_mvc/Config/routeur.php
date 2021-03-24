@@ -5,13 +5,13 @@ use App\Controller\UserController;
 use App\Controller\MapController;
 
 if (!empty($_GET["page"])) {
-$page = $_GET["page"];
+    $page = $_GET["page"];
 } else {
     $page = "home";
 }
 if (!empty($_GET["status"])) {
     $status = $_GET["status"];
-}else{
+} else {
     $status = "";
 }
 switch ($status) {
@@ -20,7 +20,7 @@ switch ($status) {
         // $login->login();
         break;
     default:
-        
+
         break;
 }
 
@@ -29,14 +29,14 @@ switch ($page) {
         $home = new HomeController();
         $home->home();
         break;
-    case 'map' :
+    case 'map':
         $locations = new MapController();
         $locations->showLocation();
         break;
-        case 'co' :
-            $locations = new MapController();
-            $locations->showco();
-            break;
+    case 'co':
+        $locations = new MapController();
+        $locations->showco();
+        break;
     default:
         $home = new HomeController();
         $home->home();

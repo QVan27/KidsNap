@@ -886,3 +886,6 @@ h2 {
     height: 300px;
     width:auto;
 }
+#name{
+    display:none;
+}
