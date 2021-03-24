@@ -46,4 +46,16 @@ use Core\Model\Model;
         return $this->db->postData($statement, $rolePro);
     }
 
+    public function getUserPro($id)
+    {
+        $statement = "SELECT * FROM users WHERE user_id = '$id'";
+        return $this->db->getData($statement, true);
+    }
+
+    public function getMapPro($id)
+    {
+        $statement = "SELECT * FROM map WHERE user_id = '$id'";
+        return $this->db->getData($statement, true);
+    }
+
  }
