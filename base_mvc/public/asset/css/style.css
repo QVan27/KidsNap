@@ -1426,6 +1426,10 @@ h2 {
 #name{
     display:none;
 }
+.boxHead_bis{
+    display: flex;
+}  
+
 /* MAP */
 /* RESPONSIVE */
 

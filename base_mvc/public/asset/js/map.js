@@ -60,8 +60,6 @@ window.onload = () => {
                 }
                 $('#name').css('display', 'flex');
                 if (data.length > 1) {
-                    // combo.id = 'name';
-                    // select.appendChild(combo);
                     for (let index = 0; index < data.length; index++) {
                         $('#name').append('<option value="' + data[index].display_name + '" id="test">' + data[index].display_name + '</option>');
 
