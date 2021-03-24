@@ -1,11 +1,3 @@
-<?php
-
-// echo $numberUser->allUser . ' Utilisateurs';
-// echo '</br>';
-// echo $numberPro->allPros . ' Professionnels';
-
-?>
-
 <section class="banner">
     <img src="asset/image/banner_vector_1.png" alt="" class="imgBannerFirst">
     <img src="asset/image/banner_vector_2.png" alt="" class="imgBannerSecond">

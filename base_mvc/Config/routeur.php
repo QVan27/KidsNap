@@ -4,6 +4,7 @@ use App\Controller\HomeController;
 use App\Controller\UserController;
 use App\Controller\ProController;
 use App\Controller\DashboardController;
+use App\Controller\MapController;
 
 if (!empty($_GET["page"])) {
     $page = $_GET["page"];
@@ -12,17 +13,8 @@ if (!empty($_GET["page"])) {
 }
 if (!empty($_GET["status"])) {
     $status = $_GET["status"];
-}else{
+} else {
     $status = "";
-}
-switch ($status) {
-    case 'login':
-        $login = new UserController();
-        // $login->login();
-        break;
-    default:
-        
-        break;
 }
 
 if (!empty($_GET["status"])) {
@@ -55,7 +47,7 @@ switch ($page) {
         $home->home();
         break;
     case 'map':
-        $locations = new ProController();
+        $locations = new MapController();
         $locations->showLocation();
         break;
     case 'pro':
@@ -80,6 +72,12 @@ switch ($page) {
     case 'dashboard-pros':
         $dashboard = new DashboardController();
         $dashboard->showPros();
+        $locations = new MapController();
+        $locations->showLocation();
+        break;
+    case 'co':
+        $locations = new MapController();
+        $locations->showco();
         break;
     default:
         $home = new HomeController();
