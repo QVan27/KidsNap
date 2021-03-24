@@ -1,5 +1,5 @@
-<section class="dashboardParents">
-    <div class="headParents">
+<section class="profilParents">
+    <div class="headprofil">
         <img src="asset/image/vector_dash.png" alt="">
         <h2>Bonjour, de quoi avez-vous besoin aujourd'hui ?</h2>
         <div class="btnParents">
@@ -11,7 +11,6 @@
     <div class=" sheet-dash">
         <div class="pp">
             <img class="pp-size" src="asset/image/pp4.svg" alt="photo profil">
-            <p class="ppmail">Jeanne Marie - 24ans</p>
             <p class="ppmail">jeannemarie@gmail.com</p>
             <a href="index.php?page=profil-parents" class="btnprofil">Modifier profil</a>
         </div>
