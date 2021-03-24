@@ -16,8 +16,8 @@
             Gérez vos disponibilités et communiquez facilement avec ces derniers.
             Créez votre propre communauté et partagez votre quotidien.</p>
         <div class="pro">
-            <a href="" role="btn-modal-login">Lancer vous dès maintenant</a>
-            <a href="mailto:contact@kidsnap.com">Contacter notre équipe</a>
+            <a href="" role="btn-modal-login" class="margin-b">Lancer vous dès maintenant</a>
+            <a href="index.php?page=contact">Contacter notre équipe</a>
         </div>
     </div>
 </section>

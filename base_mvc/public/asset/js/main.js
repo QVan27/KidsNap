@@ -137,3 +137,40 @@ $(".hideMore3").click(function(){
   $(".hideContent3").show();
   $(".showContent3").hide();
 });
+
+// menu burger
+var menuBtn = document.getElementById("menuBtn");
+var sideNav = document.getElementById("sideNav");
+var menu = document.getElementById("menu");
+
+// hide sideNav right
+sideNav.style.right = "-100%";
+
+// onClick show sideNav
+menuBtn.onclick = function () {
+  if (sideNav.style.right === "-100%") {
+    sideNav.style.right = "0";
+    menu.src = "asset/image/close.png";
+  } else {
+    sideNav.style.right = "-100%";
+    menu.src = "asset/image/menu.png";
+  }
+};
+
+// var menuBtn = document.getElementById("menuBtn");
+// var sideNav = document.getElementById("sideNav");
+// var menu = document.getElementById("menu");
+// sideNav.style.top = "-100%";
+// menuBtn.onclick = function () {
+//   if (sideNav.style.top === "-100%") {
+//     sideNav.style.top = "0";
+//   //   menu.src = "../../wp-content/themes/cvtech/asset/img/close.png";
+//   $('#open').css('display', 'none');
+//   $('#close').css('display', 'inline');
+//   } else {
+//     sideNav.style.top = "-100%";
+//   //   menu.src = "../../wp-content/themes/cvtech/asset/img/menu.png";
+//   $('#open').css('display', 'inline');
+//   $('#close').css('display', 'none');
+//   }
+// };
