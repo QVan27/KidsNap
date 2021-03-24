@@ -78,6 +78,9 @@ switch ($page) {
         $locations = new MapController();
         $locations->showco();
         break;
+    case 'test':
+        $test = new ProController();
+        $test->getPros();
     default:
         $home = new HomeController();
         $home->home();
