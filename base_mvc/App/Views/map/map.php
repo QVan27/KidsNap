@@ -4,10 +4,25 @@
         <img src="asset/image/vector_dash.png" alt="">
         <div class="boxHead">
             <h3>Recherche de garde pour enfants</h3>
-            <form action="" method="">
-                <input type="text" name="" id="" placeholder="Dans quel secteur ?">
+            <div class="boxHead_bis">
+            <p>
+                <label for="champ-ville">Ville : </label>
+                <input type="text" id="champ-ville">
+            </p>
+            <p>
+                <label for="champ-distance">Distance : </label>
+                <input type="range" min="1" max="200" id="champ-distance">
+            </p>
+            <p id="valeur-distance"></p>
+            <form action="" method="post" id="form_map">
+                <input type="text" placeholder="Adresse" id="adresse" value="">
                 <button type="submit"><i class="fas fa-paper-plane"></i></button>
             </form>
+
+            <select name="Selection" id="name">
+
+            </select>
+            </div>      
         </div>
     </div>
     <div class="contentSearch">
@@ -35,7 +50,7 @@
                     </div>
                 </div>
                 <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-</p>
+                </p>
                 <div class="btnInfo">
                     <a href="" class="voirPlus">Voir plus</a>
                     <div class="rightInfoCard">
