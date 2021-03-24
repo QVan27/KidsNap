@@ -17,7 +17,7 @@
             Créez votre propre communauté et partagez votre quotidien.</p>
         <div class="pro">
             <a href="" role="btn-modal-login" class="margin-b">Lancer vous dès maintenant</a>
-            <a href="index.php?page=contact">Contacter notre équipe</a>
+            <a href="index.php?page=contact" class="margin-b">Contacter notre équipe</a>
         </div>
     </div>
 </section>
