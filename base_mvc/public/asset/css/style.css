@@ -1373,3 +1373,61 @@ h2 {
 }
 
 /* MAP */
+
+
+/* DASH */
+.dash-text{
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.dash-sheet{
+    width: 50%;
+    height: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px 15px;
+    background: var(--white);
+    border-radius: 10px;
+    position: absolute;
+}
+.sheet-dash{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    background-color: #F2F2F2;
+}
+.sheet-wrap{
+    display: flex;
+    justify-content: center;
+}
+.pp-size{
+    width: 150px;
+}
+.ppmail{
+    margin: 10px 0;
+}
+.btnprofil{
+    width: 151px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--black);
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #FF69FF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+}
+.pp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -80px;
+    left: 146px;
+    z-index: 2;
+}
