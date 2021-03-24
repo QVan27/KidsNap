@@ -27,13 +27,28 @@
                             <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
                         </div>
                         <div class="right">
-                            <!-- <li><a href="" class="margin-right">À propos</a></li> -->
                             <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
                             <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
                         </div>
                     </ul>
                 </nav>
             </div>
+
+            <!-- Menu Burger start -->
+            <div id="sideNav">
+                <nav>
+                    <ul>
+                        <li><a href="index.php?page=home">Parents</a></li>
+                        <li><a href="index.php?page=pro">Pro</a></li>
+                        <li><a href="index.php?page=contact">Contact</a></li>
+                        <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="menuBtn">
+                <img src="asset/image/menu.png" id="menu" alt="icon-menu">
+            </div>
+            <!-- End -->
         </header>
 
 
@@ -50,12 +65,12 @@
         <div class="footer-container">
             <div class="img-footer">
                 <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
-                    <div>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
             <div class="link-footer">
                 <h3 class="color-black title-footer">Kids’Nap</h3>
@@ -132,7 +147,7 @@
                             </div>
                             <div class="input-group mb-3"><input placeholder="Mot de passe" name="user_password" type="password" class="form-control input-light">
                             </div>
-                            
+
                             <div class="input-group mb-3"><input placeholder="Confirmation du mot de passe" name="password_confirmation" type="password" class="form-control input-light">
                             </div>
                             <!---->

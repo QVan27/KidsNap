@@ -137,3 +137,22 @@ $(".hideMore3").click(function(){
   $(".hideContent3").show();
   $(".showContent3").hide();
 });
+
+// menu burger
+var menuBtn = document.getElementById("menuBtn");
+var sideNav = document.getElementById("sideNav");
+var menu = document.getElementById("menu");
+
+// hide sideNav right
+sideNav.style.right = "-100%";
+
+// onClick show sideNav
+menuBtn.onclick = function () {
+  if (sideNav.style.right === "-100%") {
+    sideNav.style.right = "0";
+    menu.src = "asset/image/close.png";
+  } else {
+    sideNav.style.right = "-100%";
+    menu.src = "asset/image/menu.png";
+  }
+};

@@ -1,11 +1,3 @@
-<?php
-
-// echo $numberUser->allUser . ' Utilisateurs';
-// echo '</br>';
-// echo $numberPro->allPros . ' Professionnels';
-
-?>
-
 <section class="banner">
     <img src="asset/image/pro_banner_vector_1.png" alt="" class="imgBannerFirst">
     <img src="asset/image/pro_banner_vector_2.png" alt="" class="imgBannerSecond">
@@ -16,8 +8,8 @@
             Gérez vos disponibilités et communiquez facilement avec ces derniers.
             Créez votre propre communauté et partagez votre quotidien.</p>
         <div class="pro">
-            <a href="" role="btn-modal-login">Lancer vous dès maintenant</a>
-            <a href="mailto:contact@kidsnap.com">Contacter notre équipe</a>
+            <a href="" role="btn-modal-login" class="margin-b">Lancer vous dès maintenant</a>
+            <a href="index.php?page=contact" class="margin-b">Contacter notre équipe</a>
         </div>
     </div>
 </section>
