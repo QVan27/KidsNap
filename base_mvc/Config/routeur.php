@@ -79,6 +79,10 @@ switch ($page) {
         $locations = new MapController();
         $locations->showco();
         break;
+    case 'profil-parents':
+        $dashboard = new DashboardController();
+        $dashboard->showProfil();
+        break;
     default:
         $home = new HomeController();
         $home->home();
