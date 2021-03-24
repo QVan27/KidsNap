@@ -20,7 +20,7 @@ class DashboardController extends Controller{
            
         ]);
     }
-
+    
     /**
      * Show Pros dashboard
      *
@@ -28,11 +28,19 @@ class DashboardController extends Controller{
      */
     public function showPros()
     {
-
+        
         $this->render("dashboard-pros",
         [
-           
+            
+            ]);
+        }
+        
+    public function showProfil()
+    {
+    
+        $this->render("profil-parents",
+        [
+               
         ]);
     }
-
 }

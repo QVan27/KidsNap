@@ -11,8 +11,9 @@
     <div class=" sheet-dash">
         <div class="pp">
             <img class="pp-size" src="asset/image/pp4.svg" alt="photo profil">
+            <p class="ppmail">Jeanne Marie - 24ans</p>
             <p class="ppmail">jeannemarie@gmail.com</p>
-            <a href="index.php?page=profil" class="btnprofil">Modifier profil</a>
+            <a href="index.php?page=profil-parents" class="btnprofil">Modifier profil</a>
         </div>
         <div class="sheet-wrap">
             <div id="sheet-two" class="dash-sheet">

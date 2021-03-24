@@ -81,6 +81,10 @@ switch ($page) {
         $dashboard = new DashboardController();
         $dashboard->showPros();
         break;
+    case 'profil-parents':
+        $dashboard = new DashboardController();
+        $dashboard->showProfil();
+        break;
     default:
         $home = new HomeController();
         $home->home();
