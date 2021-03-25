@@ -13,7 +13,7 @@
             <p class="ppmail">Pierre Kiroule - 50 ans</p>
             <p class="ppmail">pierrekiroule@gmail.com</p>
             <p class="ppmail">Crèche</p>
-            <a href="index.php?page=profil-parents" class="btnprofil btnprofil1">Modifier profil</a>
+            <a href="index.php?page=profil-pros" class="btnprofil btnprofil1">Modifier profil</a>
         </div>
         <div class="sheet-wrap">
             <div id="sheet-two" class="dash-sheet">

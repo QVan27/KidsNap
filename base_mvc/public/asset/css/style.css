@@ -1721,7 +1721,7 @@ h2 {
     justify-content: center;
     background-color: #F2F2F2;
 }
-#formprofil{
+#formprofilparents, #formprofilpros{
     margin: 20px 0;
 }
 
@@ -1734,7 +1734,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-#formprofil input{
+#formprofilparents input, #formprofilpros input{
     width: 100%;
     margin-top: 10px;
 }
@@ -1746,26 +1746,49 @@ h2 {
 .inputname{
     margin-right: 20px;
 }
-
+/* BUTTON PARENTS */
 .buttonprofil{
     border-radius: 10px;
     border: none;
     color: var(--white);
-    /* width: 100%; */
     padding: 10px;
     cursor: pointer;
+    transition: all .6s ease-in-out;
 }
-#enregistrer{
+#enregistrerParents{
     background-color: var(--violet-light);
     margin-bottom: 10px;
 }
-#enregistrer:hover{
+#enregistrerParents:hover{
     background-color: var(--violet);
 }
-#supprimer{
+#supprimerParents{
     background-color: #8882ff;
 }
-#supprimer:hover{
+#supprimerParents:hover{
     background-color: var(--blue-btn);
 }
-/* PROFIL PARENTS */
+
+
+/* BUTTON PROS */
+.btnpros{
+    background-color: var(--blue-btn);
+}
+
+.btnpros:hover{
+    background-color: #2658F0;
+}
+#enregistrerPros{
+    background-color: var(--violet-light);
+    margin-bottom: 10px;
+}
+#enregistrerPros:hover{
+    background-color: var(--violet);
+}
+#supprimerPros{
+    background-color: var(--blue-btn);
+}
+#supprimerPros:hover{
+    background-color: #2658F0;
+}
+/* PROFIL PARENTS - PROS*/

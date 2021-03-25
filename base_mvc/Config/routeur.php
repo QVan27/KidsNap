@@ -82,7 +82,11 @@ switch ($page) {
 
     case 'profil-parents':
         $dashboard = new DashboardController();
-        $dashboard->showProfil();
+        $dashboard->showProfilParents();
+        break;
+    case 'profil-pros':
+        $dashboard = new DashboardController();
+        $dashboard->showProfilPros();
         break;
 
     default:
