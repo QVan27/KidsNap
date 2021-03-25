@@ -1760,3 +1760,115 @@ h2 {
 }
 /* DASH PROS */
 
+/* PROFIL PARENTS ====================================================*/
+/* HEADER PROFIL PARENTS */
+.profilParents{
+    width: 100%;
+}
+.headprofil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.profil-text{
+    text-transform: uppercase;
+}
+
+.btnmodif{
+    width: 13%;
+    font-size: .7875rem;
+    line-height: 1.5;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: var(--white);
+    background-color: var(--violet-light);
+    border: none;
+    transition: all .6s ease-in-out;
+}
+.btnmodif:hover{
+    background-color: var(--violet);
+}
+.fa-image{
+    color: var(--white)!important;
+    margin-right: 5px;
+}
+/* BODY PROFIL PARENTS */
+
+.formProfil{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #F2F2F2;
+}
+#formprofilparents, #formprofilpros{
+    margin: 20px 0;
+}
+
+.inputprofil{
+    border-radius: 10px;
+    padding: 10px 10px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#formprofilparents input, #formprofilpros input{
+    width: 100%;
+    margin-top: 10px;
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputname{
+    margin-right: 20px;
+}
+/* BUTTON PARENTS */
+.buttonprofil{
+    border-radius: 10px;
+    border: none;
+    color: var(--white);
+    padding: 10px;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+#enregistrerParents{
+    background-color: var(--violet-light);
+    margin-bottom: 10px;
+}
+#enregistrerParents:hover{
+    background-color: var(--violet);
+}
+#supprimerParents{
+    background-color: #8882ff;
+}
+#supprimerParents:hover{
+    background-color: var(--blue-btn);
+}
+
+
+/* BUTTON PROS */
+.btnpros{
+    background-color: var(--blue-btn);
+}
+
+.btnpros:hover{
+    background-color: #2658F0;
+}
+#enregistrerPros{
+    background-color: var(--violet-light);
+    margin-bottom: 10px;
+}
+#enregistrerPros:hover{
+    background-color: var(--violet);
+}
+#supprimerPros{
+    background-color: var(--blue-btn);
+}
+#supprimerPros:hover{
+    background-color: #2658F0;
+}
+/* PROFIL PARENTS - PROS*/
