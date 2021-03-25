@@ -1,5 +1,6 @@
 <section class="profilParents">
     <div class="headprofil">
+        <img class="border" src="asset/image/vector_dash_blue.png" alt="">
         <img class="pp-size" src="asset/image/pp12.svg" alt="">
         <a href="" class="btnmodif btnprofil btnpros"><i class="far fa-image"></i>Modifier ma photo de profil</a>
         <h3 class="dash-text profil-text">Mes paramètres</h3>
