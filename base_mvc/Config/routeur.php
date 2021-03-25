@@ -79,6 +79,9 @@ switch ($page) {
         $locations = new MapController();
         $locations->showco();
         break;
+    case 'test':
+        $test = new ProController();
+        $test->getPros();
     case 'profil-parents':
         $dashboard = new DashboardController();
         $dashboard->showProfil();
