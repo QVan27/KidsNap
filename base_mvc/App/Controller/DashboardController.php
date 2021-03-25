@@ -35,10 +35,19 @@ class DashboardController extends Controller{
             ]);
         }
         
-    public function showProfil()
+    public function showProfilParents()
     {
     
         $this->render("profil-parents",
+        [
+               
+        ]);
+    }
+    
+    public function showProfilPros()
+    {
+    
+        $this->render("profil-pros",
         [
                
         ]);
