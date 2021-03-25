@@ -44,7 +44,6 @@ class UserController extends Controller
 
     public function registerParent($data)
     {
-        var_dump($data);
         if (!empty($data["user_mail"]) && !empty($data["user_nom"]) && !empty($data["user_prenom"])) {
 
             $userModel = new UserModel();
@@ -69,7 +68,6 @@ class UserController extends Controller
                 //header("Location:index.php?page=login&status=login");
             }
         }
-        
     }
 
     public function registerPro($data)
@@ -96,12 +94,30 @@ class UserController extends Controller
                 if (!empty($existUser)) {
 
                     $proModel->update($existUser["user_id"], $dataUser["user_pro"]);
+
+                    if (empty($data["justificatif"])) {
+                        $data["justificatif"] = NULL;
+                    }
+
+                    $dataPro = array(
+                        "pro_tarif" => $data["pro_tarif"],
+                        "pro_nb_place" => $data["pro_nb_place"],
+                        "user_id" => $existUser["user_id"],
+                        "justificatif" => $data["justificatif"],
+                        "pro_content" => $data["pro_content"],
+                        "pro_type" => $data["pro_type"],
+                    );
+
+                    $pro = $this->encodeChars($dataPro);
+                    $proModel->create($pro);
+
+
                     //header("Location:index.php?page=login&status=login");
 
                 } elseif (!empty($existPro)) {
 
                     $error = "Utilisateur professionel déjà inscrit";
-
+                    
                 } else {
 
                     $user = $this->encodeChars($dataUser);
@@ -119,6 +135,8 @@ class UserController extends Controller
                         "pro_nb_place" => $data["pro_nb_place"],
                         "user_id" => $userID->user_id,
                         "justificatif" => $data["justificatif"],
+                        "pro_content" => $data["pro_content"],
+                        "pro_type" => $data["pro_type"],
                     );
 
                     /* Code to get the file, not working */

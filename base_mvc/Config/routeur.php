@@ -59,11 +59,12 @@ switch ($page) {
         $contact = new HomeController();
         $contact->showContact();
         break;
+
     case 'mentions':
         $mentions = new HomeController();
         $mentions->showMentions();
-
         break;
+
     case 'dashboard-parents':
         $dashboard = new DashboardController();
         $dashboard->showParents();
@@ -77,6 +78,13 @@ switch ($page) {
     case 'co':
         $locations = new MapController();
         $locations->showco();
+        break;
+    case 'test':
+        $test = new ProController();
+        $test->getPros();
+    case 'profil-parents':
+        $dashboard = new DashboardController();
+        $dashboard->showProfil();
         break;
     default:
         $home = new HomeController();
