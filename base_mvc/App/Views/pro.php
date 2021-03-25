@@ -78,7 +78,7 @@
         </div>
         <div class="boxStats">
             <p><img src="asset/image/team.png" alt=""> <?= $numberUser->allUser; ?></p>
-            <p>Partenaires</p>
+            <p>Parents</p>
         </div>
         <div class="boxStats">
             <p><img src="asset/image/chat.png" alt=""> <?= $numberUser->allUser; ?></p>
