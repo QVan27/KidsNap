@@ -1,23 +1,58 @@
 <section class="profilParents">
     <div class="headprofil">
-        <img src="asset/image/vector_dash.png" alt="">
-        <h2>Bonjour, de quoi avez-vous besoin aujourd'hui ?</h2>
-        <div class="btnParents">
-            <a href="index.php?page=map" class="btn color-2 btnParents1">une place en crèche</a>
-            <a href="index.php?page=map" class="btn color-2 btnParents2">une assistante marternelle</a>
-        </div>
-        <h3 class="dash-text">Profil</h3>
+        <img class="pp-size" src="asset/image/pp4.svg" alt="">
+        <a href="" class="btnmodif btnprofil"><i class="far fa-image"></i>Modifier ma photo de profil</a>
+        <h3 class="dash-text profil-text">Mes paramètres</h3>
     </div>
-    <div class=" sheet-dash">
-        <div class="pp">
-            <img class="pp-size" src="asset/image/pp4.svg" alt="photo profil">
-            <p class="ppmail">jeannemarie@gmail.com</p>
-            <a href="index.php?page=profil-parents" class="btnprofil">Modifier profil</a>
-        </div>
-        <div class="sheet-wrap">
-            <div id="sheet-two" class="dash-sheet">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br><br> dolores debitis sunt harum velit iste eius explicabo. Eum aut veniam corporis fugiat? <br><br>Repudiandae accusamus ipsam amet accusantium aspernatur enim modi pariatur, optio necessitatibus beatae atque, <br><br>nihil non asperiores velit! Nam non quisquam blanditiis deserunt accusantium cum similique quas quae quam?</p>
+    <div class="formProfil">
+        <form id="formprofil" action="">
+
+            <!-- NOM -->
+            <div class="form-group ">
+                <label for="nom"></label>
+                <input type="text" name="nom" id="nomProfil" class="inputprofil inputname" placeholder="Nom*">
+                <!-- </div> -->
+
+                <!-- PRENOM -->
+                <!-- <div class="form-group"> -->
+                <label for="prenom"></label>
+                <input type="text" name="prenom" id="prenomProfil" class="inputprofil" placeholder="Prénom*">
             </div>
-        </div>
+
+            <!-- EMAIL -->
+            <div class="form-group">
+                <label for="mail"></label>
+                <input type="mail" name="mail" id="mailProfil" class="inputprofil" placeholder="Email*">
+            </div>
+
+            <!-- ADRESSE -->
+            <div class="form-group">
+                <label for="adresse"></label>
+                <input type="text" name="adresse" id="adresseProfil" class="inputprofil" placeholder="Adresse*">
+            </div>
+
+            <!-- CODE POSTAL -->
+            <div class="form-group">
+                <label for="code"></label>
+                <input type="text" name="code" id="villeProfil" class="inputprofil inputname" placeholder="Code postal*">
+                <!-- </div> -->
+
+                <!-- VILLE -->
+                <!-- <div class="form-group"> -->
+                <label for="ville"></label>
+                <input type="text" name="code" id="cpProfil" class="inputprofil" placeholder="Ville*">
+            </div>
+
+            <!-- TELEPHONE -->
+            <div class="form-group">
+                <label for="telephone"></label>
+                <input type="text" name="telephone" id="telephoneProfil" class="inputprofil" placeholder="Téléphone*">
+            </div>
+
+            <!-- ENVOYER -->
+            <div class="submitButtonprofil">
+                <input type="submit" name="envoyer" id="enregistrer" value="Enregistrer" class="buttonprofil">
+                <input type="submit" name="supprimer" id="supprimer" value="Supprimer mon compte" class="buttonprofil">
+            </div>
     </div>
 </section>
