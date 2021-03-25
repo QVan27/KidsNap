@@ -44,7 +44,6 @@ class UserController extends Controller
 
     public function registerParent($data)
     {
-        var_dump($data);
         if (!empty($data["user_mail"]) && !empty($data["user_nom"]) && !empty($data["user_prenom"])) {
 
             $userModel = new UserModel();
@@ -105,6 +104,8 @@ class UserController extends Controller
                         "pro_nb_place" => $data["pro_nb_place"],
                         "user_id" => $existUser["user_id"],
                         "justificatif" => $data["justificatif"],
+                        "pro_content" => $data["pro_content"],
+                        "pro_type" => $data["pro_type"],
                     );
 
                     $pro = $this->encodeChars($dataPro);
@@ -134,6 +135,8 @@ class UserController extends Controller
                         "pro_nb_place" => $data["pro_nb_place"],
                         "user_id" => $userID->user_id,
                         "justificatif" => $data["justificatif"],
+                        "pro_content" => $data["pro_content"],
+                        "pro_type" => $data["pro_type"],
                     );
 
                     /* Code to get the file, not working */

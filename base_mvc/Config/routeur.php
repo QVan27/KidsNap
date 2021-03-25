@@ -80,10 +80,16 @@ switch ($page) {
         $locations->showco();
         break;
 
+    case 'test':
+        $test = new ProController();
+        $test->getPros();
+        break;
+
     case 'profil-parents':
         $dashboard = new DashboardController();
         $dashboard->showProfilParents();
         break;
+    
     case 'profil-pros':
         $dashboard = new DashboardController();
         $dashboard->showProfilPros();

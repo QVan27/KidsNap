@@ -176,6 +176,10 @@
                             <div class="input-group mb-3"><input placeholder="Confirmation du mot de passe" name="password_confirmation" type="password" class="form-control input-light">
                             </div>
 
+                            <div class="input-group mb-3"><input placeholder="Type de service" name="pro_type" type="text" class="form-conrtol input-light">
+                            </div>
+                            <div class="input-group mb-3"><input placeholder="Description rapide" name="pro_content" type="text" class="form-conrtol input-light">
+                            </div>
                             <div class="input-group mb-3"><input placeholder="Tarif par heure" name="pro_tarif" type="text" class="form-conrtol input-light">
                             </div>
                             <div class="input-group mb-3"><input placeholder="Nombre de place totale" name="pro_nb_place" type="text" class="form-conrtol input-light">

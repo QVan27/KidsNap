@@ -1,139 +1,136 @@
-
-// Category
+// Category change class active and hide / show
 const showRequiredCategory = (event) => {
-    const getId = event.id;
-    const links = document.querySelectorAll(".select-category button");
-    for (i = 0; i < links.length; i++) {
-      if (links[i].hasAttribute("class")) {
-        links[i].classList.remove("active");
-      }
+  const getId = event.id;
+  const links = document.querySelectorAll(".select-category button");
+  for (i = 0; i < links.length; i++) {
+    if (links[i].hasAttribute("class")) {
+      links[i].classList.remove("active");
     }
-    event.classList.add("active");
-    const getCategory = document.querySelector(`.category-${getId}`);
-    const categories = document.querySelectorAll('div[class ^= "category-"]');
-    for (i = 0; i < categories.length; i++) {
-      if (categories[i].hasAttribute("class")) {
-        categories[i].classList.remove("showCategory");
-        categories[i].classList.add("hideCategory");
-      }
+  }
+  event.classList.add("active");
+  const getCategory = document.querySelector(`.category-${getId}`);
+  const categories = document.querySelectorAll('div[class ^= "category-"]');
+  for (i = 0; i < categories.length; i++) {
+    if (categories[i].hasAttribute("class")) {
+      categories[i].classList.remove("showCategory");
+      categories[i].classList.add("hideCategory");
     }
-    getCategory.classList.remove("hideCategory");
-    getCategory.classList.add("showCategory");
-  };
+  }
+  getCategory.classList.remove("hideCategory");
+  getCategory.classList.add("showCategory");
+};
 
 $(document).ready(function () {
-    init();
+  init();
 });
 
 const init = () => {
-    initModal();
-}
+  initModal();
+};
 const initModal = () => {
-    const modalsWrapper = $('.modal-wrapper');
-    const modalCloseButton = $('.modal-wrapper .modal-close');
-    const btnRegister = $('.modal-wrapper [role="btn-register"]');
-    const btnLogin = $('.modal-wrapper [role="btn-login"]');
-    const btnMdp = $('.modal-wrapper [role="btn-mdp"]');
-    const btnBack = $('.modal-wrapper [role="btn-changer"]');
-    const btnParent = $('.modal-wrapper [role="btn-parent"]');
-    const btnBaby = $('.modal-wrapper [role="btn-baby"]');
-    const modalLogin = $('.modal-wrapper .modal-login');
-    const modalRegister = $('.modal-wrapper .modal-register');
-    const modalMdp = $('.modal-wrapper .modal-lost_password');
-    const modalChoose = $('.modal-wrapper #modal-choose');
-    const modalParent = $('.modal-wrapper #modal-parent');
-    const modalBaby = $('.modal-wrapper #modal-baby');
+  const modalsWrapper = $(".modal-wrapper");
+  const modalCloseButton = $(".modal-wrapper .modal-close");
+  const btnRegister = $('.modal-wrapper [role="btn-register"]');
+  const btnLogin = $('.modal-wrapper [role="btn-login"]');
+  const btnMdp = $('.modal-wrapper [role="btn-mdp"]');
+  const btnBack = $('.modal-wrapper [role="btn-changer"]');
+  const btnParent = $('.modal-wrapper [role="btn-parent"]');
+  const btnBaby = $('.modal-wrapper [role="btn-baby"]');
+  const modalLogin = $(".modal-wrapper .modal-login");
+  const modalRegister = $(".modal-wrapper .modal-register");
+  const modalMdp = $(".modal-wrapper .modal-lost_password");
+  const modalChoose = $(".modal-wrapper #modal-choose");
+  const modalParent = $(".modal-wrapper #modal-parent");
+  const modalBaby = $(".modal-wrapper #modal-baby");
 
-    modalCloseButton.click((e) => {
-        modalsWrapper.toggleClass('active');
-        modalLogin.css('display', 'none');
-        modalMdp.css('display', 'none');
-        modalParent.css('display', 'none');
-        modalRegister.css('display', 'none');
-        modalBaby.css('display', 'none');
-        modalChoose.css('display','none');
-    })
+  modalCloseButton.click((e) => {
+    modalsWrapper.toggleClass("active");
+    modalLogin.css("display", "none");
+    modalMdp.css("display", "none");
+    modalParent.css("display", "none");
+    modalRegister.css("display", "none");
+    modalBaby.css("display", "none");
+    modalChoose.css("display", "none");
+  });
 
-    $('[role="btn-modal-login"]').click((e) => {
-        e.preventDefault();
-        modalsWrapper.css('display', 'flex').toggleClass('active');
-        modalLogin.css('display', 'flex');
-    });
-    $('[role="btn-modal-register"]').click((e) => {
-        e.preventDefault();
-        modalsWrapper.css('display', 'flex').toggleClass('active');
-        modalRegister.css('display', 'flex');
-        modalChoose.css('display', 'flex');
-        modalLogin.css('display', 'none');
-    });
+  $('[role="btn-modal-login"]').click((e) => {
+    e.preventDefault();
+    modalsWrapper.css("display", "flex").toggleClass("active");
+    modalLogin.css("display", "flex");
+  });
+  $('[role="btn-modal-register"]').click((e) => {
+    e.preventDefault();
+    modalsWrapper.css("display", "flex").toggleClass("active");
+    modalRegister.css("display", "flex");
+    modalChoose.css("display", "flex");
+    modalLogin.css("display", "none");
+  });
 
+  btnRegister.click((e) => {
+    e.preventDefault();
+    modalLogin.css("display", "none");
+    modalRegister.css("display", "flex");
+    modalChoose.css("display", "flex");
+  });
 
-    btnRegister.click((e) => {
-        e.preventDefault();
-        modalLogin.css('display', 'none');
-        modalRegister.css('display', 'flex');
-        modalChoose.css('display', 'flex');
-    });
-    
-    btnMdp.click((e) => {
-        e.preventDefault();
-        modalLogin.css('display', 'none');
-        modalMdp.css('display', 'flex');
-    });
+  btnMdp.click((e) => {
+    e.preventDefault();
+    modalLogin.css("display", "none");
+    modalMdp.css("display", "flex");
+  });
 
-    btnLogin.click((e) => {
-        e.preventDefault();
-        modalLogin.css('display', 'flex');
-        modalRegister.css('display', 'none');
-        modalMdp.css('display', 'none');
-    });
+  btnLogin.click((e) => {
+    e.preventDefault();
+    modalLogin.css("display", "flex");
+    modalRegister.css("display", "none");
+    modalMdp.css("display", "none");
+  });
 
-    btnBack.click((e) => {
-        e.preventDefault();
-        modalChoose.css('display', 'flex');
-        modalParent.css('display', 'none');
-        modalBaby.css('display', 'none');
-    });
+  btnBack.click((e) => {
+    e.preventDefault();
+    modalChoose.css("display", "flex");
+    modalParent.css("display", "none");
+    modalBaby.css("display", "none");
+  });
 
-    btnParent.click((e) => {
-        e.preventDefault();
-        modalChoose.css('display', 'none');
-        modalParent.css('display', 'flex');
-    });
+  btnParent.click((e) => {
+    e.preventDefault();
+    modalChoose.css("display", "none");
+    modalParent.css("display", "flex");
+  });
 
-    btnBaby.click((e) => {
-        e.preventDefault();
-        modalChoose.css('display', 'none');
-        modalBaby.css('display', 'flex');
-    });
+  btnBaby.click((e) => {
+    e.preventDefault();
+    modalChoose.css("display", "none");
+    modalBaby.css("display", "flex");
+  });
+};
 
-}
-
-// content Card show and hide on click
+// content Card home show and hide on click
 // card 1
-$(".showMore1").click(function(){
+$(".showMore1").click(function () {
   $(".hideContent1").hide();
   $(".showContent1").show();
 });
-$(".hideMore1").click(function(){
+$(".hideMore1").click(function () {
   $(".hideContent1").show();
   $(".showContent1").hide();
 });
 // card 2
-$(".showMore2").click(function(){
+$(".showMore2").click(function () {
   $(".hideContent2").hide();
   $(".showContent2").show();
 });
-$(".hideMore2").click(function(){
+$(".hideMore2").click(function () {
   $(".hideContent2").show();
   $(".showContent2").hide();
 });
 // card 3
-$(".showMore3").click(function(){
+$(".showMore3").click(function () {
   $(".hideContent3").hide();
   $(".showContent3").show();
 });
-$(".hideMore3").click(function(){
+$(".hideMore3").click(function () {
   $(".hideContent3").show();
   $(".showContent3").hide();
 });
@@ -142,10 +139,8 @@ $(".hideMore3").click(function(){
 var menuBtn = document.getElementById("menuBtn");
 var sideNav = document.getElementById("sideNav");
 var menu = document.getElementById("menu");
-
 // hide sideNav right
 sideNav.style.right = "-100%";
-
 // onClick show sideNav
 menuBtn.onclick = function () {
   if (sideNav.style.right === "-100%") {
@@ -156,3 +151,42 @@ menuBtn.onclick = function () {
     menu.src = "asset/image/menu.png";
   }
 };
+
+// toggleBtn check 1 / 2 if yes hide else fadeIn (map)
+// https://qastack.fr/programming/5016313/how-to-determine-if-a-number-is-odd-in-javascript
+$(document).ready(function () {
+  x = 0;
+  $(".toggle-state").click(function () {
+    x++;
+    if (x % 2 == 1) {
+      $("#map").hide();
+      $(".cardSearch").css("width", "100%");
+      $(".cardSearch").css("display", "flex");
+      $(".cardSearch").css("flex-wrap", "wrap");
+      $(".cardSearch").css("justify-content", "space-between");
+      $(".proCard").css("width", "49%");
+    } else {
+      $("#map").fadeIn(500);
+      $("#map").css("min-width", "50%");
+      // $(".cardSearch").css("width", "100%");
+      $(".proCard").css("width", "99%");
+    }
+  });
+});
+
+// $(window).resize(function () {
+//   var windowwidth = $(window).width();
+
+//   if (windowwidth < "400") {
+//     $(".cardSearch").css("display", "flex");
+//     $(".cardSearch").css("flex-wrap", "nowrap");
+//     $(".cardSearch").css("flex-direction", "column");
+//     $(".proCard").css("min-width", "100%");
+//     //  alert('see it works');
+//   } else if (windowwidth > "400") {
+//     $("#map").fadeIn(500);
+//     $("#map").css("min-width", "50%");
+//     $(".cardSearch").css("width", "100%");
+//     $(".proCard").css("width", "99%");
+//   }
+// });
