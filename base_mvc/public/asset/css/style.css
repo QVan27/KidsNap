@@ -1635,6 +1635,11 @@ h2 {
     }
     .cardSearch {
         width: 100%;
+        /* flex-direction: column; */
+        /* flex-wrap: nowrap; */
+    }
+    .proCard {
+        width: 100%;
     }
     #map {
         width: 100%;

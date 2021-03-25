@@ -1,4 +1,4 @@
-// Category change class active and hide / show 
+// Category change class active and hide / show
 const showRequiredCategory = (event) => {
   const getId = event.id;
   const links = document.querySelectorAll(".select-category button");
@@ -152,7 +152,7 @@ menuBtn.onclick = function () {
   }
 };
 
-// toggleBtn check 1 / 2 if yes hide else fadeIn (map)  
+// toggleBtn check 1 / 2 if yes hide else fadeIn (map)
 // https://qastack.fr/programming/5016313/how-to-determine-if-a-number-is-odd-in-javascript
 $(document).ready(function () {
   x = 0;
@@ -167,8 +167,26 @@ $(document).ready(function () {
       $(".proCard").css("width", "49%");
     } else {
       $("#map").fadeIn(500);
-      $(".cardSearch").css("width", "50%");
+      $("#map").css("min-width", "50%");
+      // $(".cardSearch").css("width", "100%");
       $(".proCard").css("width", "99%");
     }
   });
 });
+
+// $(window).resize(function () {
+//   var windowwidth = $(window).width();
+
+//   if (windowwidth < "400") {
+//     $(".cardSearch").css("display", "flex");
+//     $(".cardSearch").css("flex-wrap", "nowrap");
+//     $(".cardSearch").css("flex-direction", "column");
+//     $(".proCard").css("min-width", "100%");
+//     //  alert('see it works');
+//   } else if (windowwidth > "400") {
+//     $("#map").fadeIn(500);
+//     $("#map").css("min-width", "50%");
+//     $(".cardSearch").css("width", "100%");
+//     $(".proCard").css("width", "99%");
+//   }
+// });
