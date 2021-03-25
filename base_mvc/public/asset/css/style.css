@@ -53,7 +53,7 @@ table {
     --white: #fff;
     --grey: #adbdcc;
     --blue-btn: #6C63FF;
-    --blue-pro: #C9C6FF;
+    --blue-pro: #b8b4ff;
     --blue-primary: #0a2540;
     --blue-secondary: #00d4ff;
     --green: #8bff96;
@@ -112,8 +112,8 @@ html, body {
 
 #menuBtn {
     display: none;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background: linear-gradient(#DD06FF, #FF71FF);
     text-align: center;
     position: fixed;
@@ -126,7 +126,7 @@ html, body {
 
 #menuBtn img {
     width: 20px;
-    margin-top: 15px;
+    margin-top: 11px;
 }
 
 /* MENU BURGER */
@@ -144,7 +144,6 @@ html, body {
 /* ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 } */
-
 
 .btn {
     width: 200px;
@@ -1214,7 +1213,7 @@ h2 {
 /* MAP */
 
 .searchParents {
-    height: 100vh;
+    height: 100%;
 }
 
 .headSearch {
@@ -1253,6 +1252,7 @@ h2 {
     border-radius: 30px;
     padding-left: 20px;
     font-size: 16px;
+    margin: 0 5px;
 }
 
 .boxHead button {
@@ -1275,7 +1275,7 @@ h2 {
 }
 
 .partnerTitle {
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
 }
@@ -1328,16 +1328,28 @@ h2 {
 }
 
 .cardSearch {
-    background-color: #007221;
-    width: 49%;
-    height: 302px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    padding: 10px 20px;
+    /* background-color: #007221; */
+    width: 50%;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    /* text-align: center; */
+    overflow-x: hidden;
+}
+
+.proCard {
+    width: 99%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #FFFFFF;
+    min-height: 290px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    margin: 5px auto;
 }
 
 .infoCardSearch {
@@ -1413,25 +1425,35 @@ h2 {
     color: var(--red);
 }
 
-.map {
-    width: 49%;
-    background-color: #0072b1;
-    border-radius: 10px;
-    /* height: 100%; */
-}
-#map{
+#map {
+    width: 50%;
     height: 600px;
-    width:600px;
+    border-radius: 10px;
 }
-#name{
-    display:none;
+
+#name {
+    display: none;
 }
-.boxHead_bis{
+
+.boxHead_bis {
     display: flex;
-}  
+    align-items: center;
+}
+
+.boxHead_bis p {
+    display: flex;
+    align-items: center;
+}
 
 /* MAP */
+
 /* RESPONSIVE */
+
+@media screen and (max-width: 1320px) {
+    .contentSearch, .boxHead {
+        width: auto;
+    }
+}
 
 @media screen and (max-width: 1180px) {
     .banner {
@@ -1491,17 +1513,38 @@ h2 {
     }
 }
 
-
 @media screen and (max-width: 1065px) {
     .img-vector-top {
         display: none;
     }
+    .btnInfo a.phoneCard, .btnInfo p.price {
+        display: none;
+    }
 }
+
+@media screen and (max-width: 860px) {
+    .contentSearch, .boxHead {
+        width: auto;
+    }
+    .boxHead_bis {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        color: var(--black);
+    }
+    .searchPartners {
+        margin-top: 100px;
+    }
+    .partnerTitle {
+        width: 95%;
+        margin: 0 auto;
+    } 
+}
+
 @media screen and (max-width: 800px) {
     .pro {
         flex-direction: column;
         width: auto;
-
     }
 }
 
@@ -1522,6 +1565,22 @@ h2 {
     }
 }
 
+@media screen and (max-width: 620px) {
+    .btnInfo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btnInfo a {
+        margin: 5px auto;
+    }
+    .sendCard {
+        padding: 5px 5px;
+    }
+    .rightInfoCard {
+        width: auto;
+    }
+}
+
 @media screen and (max-width: 540px) {
     .left li, .right li {
         display: none;
@@ -1530,7 +1589,6 @@ h2 {
         display: inline;
         /* z-index: 0; */
     }
-
     #firstContent {
         flex-direction: column;
         align-items: center;
@@ -1567,7 +1625,23 @@ h2 {
         width: 100%;
     }
 }
-
+@media screen and (max-width: 400px) {
+    .sendCard {
+        height: auto;
+    }
+    .cardMap {
+        height: 100vh;
+        flex-direction: column-reverse;
+    }
+    .cardSearch {
+        width: 100%;
+    }
+    #map {
+        width: 100%;
+    }    
+    .label {
+        display: none;
+    }
+}
 
 /* RESPONSIVE */
-
