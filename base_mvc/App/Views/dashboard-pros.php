@@ -10,7 +10,7 @@
     <div class=" sheet-dash">
         <div class="pp">
             <img class="pp-size" src="asset/image/pp12.svg" alt="photo profil">
-            <p class="ppmail">Pierre Kiroule - 50 ans</p>
+            <p class="ppmail">Pierre Kiroule</p>
             <p class="ppmail">pierrekiroule@gmail.com</p>
             <p class="ppmail">Crèche</p>
             <a href="index.php?page=profil-pros" class="btnprofil btnprofil1">Modifier profil</a>
