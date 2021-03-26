@@ -11,11 +11,7 @@ if (!empty($_GET["page"])) {
 } else {
     $page = "home";
 }
-if (!empty($_GET["status"])) {
-    $status = $_GET["status"];
-} else {
-    $status = "";
-}
+
 
 if (!empty($_GET["status"])) {
     $status = $_GET["status"];
@@ -78,6 +74,10 @@ switch ($page) {
     case 'co':
         $locations = new MapController();
         $locations->showco();
+        break;
+    case 'logout':
+        $leave = new UserController();
+        $leave->logout();
         break;
 
     case 'test':

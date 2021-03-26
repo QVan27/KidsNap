@@ -20,8 +20,60 @@ const showRequiredCategory = (event) => {
   getCategory.classList.add("showCategory");
 };
 
+
 $(document).ready(function () {
   init();
+  const link = document.getElementById('link_login');
+  link.addEventListener('click', function () {
+    let selectedItem = window.location.href
+    var str1 = selectedItem.replace('&status=login', '');
+    var str2 = str1.replace('&status=proRegister', '');
+    var str3 = str2.replace('&status=parentRegister', '');
+    const nextURL = str3 + '&status=login';
+    const nextTitle = 'Kids\'nap';
+    const nextState = { additionalInformation: 'Updated the URL with JS' };
+    
+
+    // This will create a new entry in the browser's history, without reloading
+    window.history.pushState(nextState, nextTitle, nextURL);
+
+    // This will replace the current entry in the browser's history, without reloading
+    window.history.replaceState(nextState, nextTitle, nextURL);
+  })
+  const link_pro = document.getElementById('link_pro');
+  link_pro.addEventListener('click', function () {
+    let selectedItem = window.location.href
+    var str1 = selectedItem.replace('&status=login', '');
+    var str2 = str1.replace('&status=proRegister', '');
+    var str3 = str2.replace('&status=parentRegister', '');
+    const nextURL = str3 + '&status=proRegister';
+    const nextTitle = 'Kids\'nap';
+    const nextState = { additionalInformation: 'Updated the URL with JS' };
+    
+
+    // This will create a new entry in the browser's history, without reloading
+    window.history.pushState(nextState, nextTitle, nextURL);
+
+    // This will replace the current entry in the browser's history, without reloading
+    window.history.replaceState(nextState, nextTitle, nextURL);
+  })
+  const link_parent = document.getElementById('link_parent');
+  link_parent.addEventListener('click', function () {
+    let selectedItem = window.location.href
+    var str1 = selectedItem.replace('&status=login', '');
+    var str2 = str1.replace('&status=proRegister', '');
+    var str3 = str2.replace('&status=parentRegister', '');
+    const nextURL = str3 + '&status=parentRegister';
+    const nextTitle = 'Kids\'nap';
+    const nextState = { additionalInformation: 'Updated the URL with JS' };
+    
+
+    // This will create a new entry in the browser's history, without reloading
+    window.history.pushState(nextState, nextTitle, nextURL);
+
+    // This will replace the current entry in the browser's history, without reloading
+    window.history.replaceState(nextState, nextTitle, nextURL);
+  })
 });
 
 const init = () => {

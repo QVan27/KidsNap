@@ -37,7 +37,7 @@
                                     <a href="index.php?page=logout" class="margin-right">Déconnexion</a>
                                 <?php endif; ?>
                                 <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
-                                <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
+                                <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
                             </div>
                         </ul>
                     </nav>
@@ -50,7 +50,7 @@
                             <li><a href="index.php?page=home">Parents</a></li>
                             <li><a href="index.php?page=pro">Pro</a></li>
                             <li><a href="index.php?page=contact">Contact</a></li>
-                            <li><a href="" role="btn-modal-login" class="btn color-1">Connexion</a></li>
+                            <li><a href="" role="btn-modal-login" id="link_login" class="btn color-1">Connexion</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -129,15 +129,15 @@
                         <div class="modal-body p-4">
                             <form method="post">
                                 <div class="choose-type">
-                                    <button type="button" role="btn-parent" class="btn-modal btn-block py-4 mb-2 parent">
+                                    <button type="button" role="btn-parent" id="link_parent"class="btn-modal btn-block py-4 mb-2 parent">
                                         <h6 class="h4">
                                             PARENT<br> <small>A la recherche de solutions de garde et plus</small></h6>
                                     </button>
-                                    <button type="button" role="btn-baby" class="btn-modal btn-block py-4 mb-2 babysitter">
+                                    <button type="button" role="btn-baby" id="link_pro"class="btn-modal btn-block py-4 mb-2 babysitter">
                                         <h6 class="h4">
                                             BABYSITTER<br> <small>Pour garder des enfants</small></h6>
                                     </button>
-                                    <a type="button" role="btn-login" class="btn-modal btn-block mt-3">J'ai déjà un compte</a>
+                                    <a type="button" role="btn-login" id="link_login" class="btn-modal btn-block mt-3">J'ai déjà un compte</a>
                                 </div>
                             </form>
                         </div>
