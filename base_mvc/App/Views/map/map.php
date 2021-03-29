@@ -8,10 +8,10 @@
             <div class="boxHead_bis">
                 <p>Du : <input type="text" id="fromDate" autocomplete="off"></p>
                 <p>Au : <input type="text" id="toDate" autocomplete="off"></p>
-                <p>
+                <!-- <p>
                     <label for="champ-ville">Ville : </label>
                     <input type="text" id="champ-ville">
-                </p>
+                </p> -->
                 <p>
                     <label for="champ-distance">Distance : </label>
                     <input type="range" min="1" max="200" id="champ-distance">
@@ -22,7 +22,7 @@
                     <button type="button"><i class="fas fa-paper-plane"></i></button>
                 </form>
 
-                <select name="Selection" id="name">
+                <select name="Selection" id="name" class="select_adresse">
 
                 </select>
             </div>

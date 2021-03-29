@@ -20,33 +20,13 @@ window.onload = () => {
     let valeurDistance = document.getElementById('valeur-distance')
     let adresse = document.getElementById('adresse')
     let name = document.getElementById('name')
-    let select = document.getElementById('select')
-    var combo = document.createElement('select');
-    $('#form_map').submit(function(e){
-        e.preventDefault();
-    })
+    let option = document.getElementById('test')
 
-
-    champVille.addEventListener("change", function () {
-        // On envoie le requête ajax vers Nominatim
-        ajaxGet(`https://nominatim.openstreetmap.org/search?q=${this.value}&format=json&addressdetails=1&limit=1&polygon_svg=1`)
-            .then(reponse => {
-                // On convertit la réponse en objet Javascript
-                let data = JSON.parse(reponse)
-
-                // On stocke les coordonnées dans ville
-                ville = [data[0].lat, data[0].lon]
-
-                // On centre la carte sur la ville
-                carte.panTo(ville)
-            })
-    })
     adresse.addEventListener("change", function (e) {
         ajaxGet(`https://nominatim.openstreetmap.org/search?q=${this.value}&format=json`)
             .then(reponse => {
                 // On convertit la réponse en objet Javascript
                 let data = JSON.parse(reponse)
-                console.log(data)
                 // Icon options
                 var iconOptions = {
                     iconUrl: 'asset/image/marker_creche.png',
@@ -80,11 +60,43 @@ window.onload = () => {
                 carte.panTo(ville)
             })
     })
-    name.addEventListener("change", function (e) {
+    name.addEventListener("change", function () {
         let selectedItem = $(this).children("option:selected").val();
         var howManyCommasDoIHave = selectedItem.replace(/,/g, '');
-        adresse.value = howManyCommasDoIHave
+        ajaxGet(`https://nominatim.openstreetmap.org/search?q=${howManyCommasDoIHave}&format=json`)
+            .then(reponse => {
+                // On convertit la réponse en objet Javascript
+                let data = JSON.parse(reponse)
+                console.log(data)
+
+                var iconOptions = {
+                    iconUrl: 'asset/image/marker_creche.png',
+                    iconSize: [45, 50]
+                }
+
+                // Creating a custom icon
+                var customIcon = L.icon(iconOptions);
+                var markerOptions = {
+                    icon: customIcon
+                }
+                ville = [data[0].lat, data[0].lon]
+
+                let marker = L.marker([data[0].lat, data[0].lon], markerOptions).addTo(carte)
+                marker.bindPopup(data[0].display_name)
+
+                carte.panTo(ville)
+            })
+        adresse.value = ''
+
+        $('#name')
+            .find('option')
+            .remove()
+            .end()
+            .css('display', 'none')
+            ;
+            
     })
+
 
 
     champDistance.addEventListener("change", function () {
