@@ -140,9 +140,9 @@ class UserController extends Controller
                     );
 
                     /* Code to get the file, not working */
-                    /*var_dump($_FILES);
+                var_dump($_FILES);
 
-                    $targetDir = "public/asset/files/";
+                    /*$targetDir = "public/asset/files/";
                     $fileName = basename($_FILES["justificatif"]["name"]);
                     $targetFilePath = $targetDir . $fileName;
                     $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);

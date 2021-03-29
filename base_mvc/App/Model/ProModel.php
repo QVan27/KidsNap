@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model;
 
 use Core\Model\Model;
@@ -10,7 +11,8 @@ use Core\Model\Model;
  * @method create($data) | Enregistre un professionnels dans la BDD
  */
 
- class ProModel extends Model{
+class ProModel extends Model
+{
 
     /**
      * Nom de la table
@@ -25,6 +27,25 @@ use Core\Model\Model;
     public function countAll()
     {
         $statement = "SELECT COUNT(*) AS allPros FROM pros";
+        return $this->db->getData($statement, true);
+    }
+
+    
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function getAll()
+    {
+        $statement = "SELECT * FROM pros";
+        return $this->db->getData($statement, true);
+    }
+
+    public function countAllParents()
+    {
+        $statement = "SELECT COUNT(*) AS allParents FROM users WHERE user_parent = 1";
         return $this->db->getData($statement, true);
     }
 
@@ -57,5 +78,4 @@ use Core\Model\Model;
         $statement = "SELECT * FROM map WHERE user_id = '$id'";
         return $this->db->getData($statement, true);
     }
-
- }
+}

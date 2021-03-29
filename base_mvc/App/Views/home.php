@@ -80,7 +80,7 @@
             <p>Utilisateurs</p>
         </div>
         <div class="boxStats">
-            <p><img src="asset/image/team.png" alt=""> <?= $numberUser->allUser; ?></p>
+            <p><img src="asset/image/team.png" alt=""> <?= $numberParent->allParents; ?></p>
             <p>Parents</p>
         </div>
         <div class="boxStats">
