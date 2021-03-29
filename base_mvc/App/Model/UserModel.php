@@ -34,6 +34,12 @@ use Core\Model\Model;
         return $this->db->getData($statement, true);
     }
 
+    public function getAllPro()
+    {
+        $statement = "SELECT * FROM pros INNER JOIN users ON pros.user_id = users.user_id WHERE user_pro = 1";
+        return $this->db->getData($statement);
+    }
+
     /**
      * Récupère un utilisateur en fonction de son email
      *

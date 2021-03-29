@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Model\ProModel;
 use Core\Controller\Controller;
 use App\Controller\UserController;
-
+use App\Model\UserModel;
 
 class ProController extends Controller
 {
@@ -18,6 +18,11 @@ class ProController extends Controller
     public function showNumberPro()
     {
         $nbPro = $this->proModel->countAll();
+        return $nbPro;
+    }
+    public function showNumberParent()
+    {
+        $nbPro = $this->proModel->countAllParents();
         return $nbPro;
     }
 
@@ -34,50 +39,58 @@ class ProController extends Controller
     {
 
         $userController = new UserController();
-        $proController = new ProController();
+        $userModel = new UserModel();
 
-        $numberUser = $userController->showNumberUser();
-        $numberPro = $proController->showNumberPro();
+        $numberUser = $userModel->countAll();
+        $numberPro = $this->proModel->countAll();
+        $numberParent = $this->proModel->countAllParents();
 
         $this->render(
             "pro",
             [
                 "numberUser" => $numberUser,
-                "numberPro" => $numberPro
+                "numberPro" => $numberPro,
+                "numberParent" => $numberParent
             ]
         );
     }
 
     public function getPros()
     {
-        $proModel = new ProModel();
+        // $proModel = new ProModel();
+        $userModel = new UserModel();
 
-        $pros = $proModel->readAll();
+        // $pros = $proModel->readAll();
+        $users = $userModel->getAllPro();
+        // var_dump($users);
 
+// var_dump($pros);
+        // echo '<pre>';
+        // print_r($pros);
+        // echo '</pre>';
 
-        echo '<pre>';
-        print_r($pros);
-        echo '</pre>';
+        // $userPros = array();
+        // $i = 0;
 
-        $userPros = array();
-        $i = 0;
+        // foreach ($pros as $pro) {
+        //     $user = $proModel->getUserPro($pro->user_id);
+        //     $map = $proModel->getMapPro($pro->user_id);
+        //     if (empty($map)) {
 
-        foreach ($pros as $pro) {
-            $user = $proModel->getUserPro($pro->user_id);
-            $map = $proModel->getMapPro($pro->user_id);
-            if (empty($map)) {
-
-                $userPros[$i] = $user;
-            } else {
-                $userPros[$i] = $user . $map;
-            }
-            $i++;
-        }
+        //         $userPros[$i] = $user;
+        //     } else {
+        //         $userPros[$i] = $user . $map;
+        //     }
+        //     $i++;
+        // }
 
         $this->render(
-            "test",
+
+            "map.map",
+
             [
-                "infoPro" => $userPros,
+                "users" => $users,
+                // "pros" => $pros,
             ]
         );
     }

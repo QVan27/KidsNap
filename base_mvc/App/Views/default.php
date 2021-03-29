@@ -128,7 +128,7 @@
                                     </button>
                                     <button type="button" role="btn-baby" class="btn-modal btn-block py-4 mb-2 babysitter">
                                         <h6 class="h4">
-                                            BABYSITTER<br> <small>Pour garder des enfants</small></h6>
+                                        PROFESSIONNEL<br> <small>Pour garder des enfants</small></h6>
                                     </button>
                                     <a type="button" role="btn-login" class="btn-modal btn-block mt-3">J'ai déjà un compte</a>
                                 </div>
@@ -143,9 +143,9 @@
                         <div class="modal-body p-4">
                             <form method="post">
                                 <input type="email" name="user_mail" placeholder="Email" class="form-control input-light mb-3">
-                                <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-control input-light">
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-control input-light">
                                 </div>
                                 <div class="input-group mb-3"><input placeholder="Mot de passe" name="user_password" type="password" class="form-control input-light">
                                 </div>
@@ -164,29 +164,38 @@
                     <div class="modal-content" id="modal-baby">
                         <!---->
                         <div class="modal-header px-4">
-                            <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">BABYSITTER</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2">Changer</button></h5> <button type="button" class="modal-close"><span aria-hidden="true">×</span></button>
+                            <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">PROFESSIONNEL</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2">Changer</button></h5> <button type="button" class="modal-close"><span aria-hidden="true">×</span></button>
                         </div>
                         <div class="modal-body p-4">
                             <form method="post" enctype="multipart/form-data">
                                 <input type="email" name="user_mail" placeholder="Email" class="form-control input-light mb-3">
-                                <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-control input-light">
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-control input-light">
                                 </div>
                                 <div class="input-group mb-3"><input placeholder="Mot de passe" name="user_password" type="password" class="form-control input-light">
                                 </div>
                                 <div class="input-group mb-3"><input placeholder="Confirmation du mot de passe" name="password_confirmation" type="password" class="form-control input-light">
                                 </div>
 
-                                <div class="input-group mb-3"><input placeholder="Type de service" name="pro_type" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3">
+                                    <select name="pro_type" id="selectMode" class="form-control input-light">
+                                    <option value="" disabled selected>Type de service</option>
+                                        <option value="Creche">Crèche</option>
+                                        <option value="Assistante maternelle">Assistant(e) Maternel(le)</option>
+                                    </select>
+                                  
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Description rapide" name="pro_content" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3">
+                                <textarea name="pro_content" placeholder="Description" id="" class="form-control input-light">
+                                </textarea>
+                               
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Tarif par heure" name="pro_tarif" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Tarif par heure" name="pro_tarif" type="text" class="form-control input-light">
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Nombre de place totale" name="pro_nb_place" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Nombre de place totale" name="pro_nb_place" type="text" class="form-control input-light">
                                 </div>
-                                <div class="input-group mb-3"><input name="justificatif" type="file" class="form-conrtol input-light" accept="application/pdf">
+                                <div class="input-group mb-3"><input name="justificatif" type="file" class="form-control input-light" accept="application/pdf">
                                 </div>
 
                                 <!---->

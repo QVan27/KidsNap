@@ -279,20 +279,16 @@ $(function () {
   return datepicker.regional.fr;
 });
 
-// $(function () {
-//   $(".dialog").dialog({
-//     autoOpen: false,
-//     show: {
-//       effect: "blind",
-//       duration: 1000,
-//     },
-//     hide: {
-//       effect: "explode",
-//       duration: 1000,
-//     },
-//   });
 
-//   $(".opener").on("click", function () {
-//     $(".dialog").dialog("open");
-//   });
-// });
+// Affiche les modals en fonction des cartes
+$(".voirPlus").on("click", function () {
+  var id = this.id;
+  var modal = "#modalCard";
+
+  modal += id;
+  $(modal).fadeIn();
+});
+
+$(".fa-times").on("click", function () {
+  $(".modalProfil").fadeOut();
+});

@@ -142,7 +142,23 @@ class UserController extends Controller
                         "pro_type" => $data["pro_type"],
                     );
 
+
+                    /* Code to get the file, not working */
+                var_dump($_FILES);
+
+                    /*$targetDir = "public/asset/files/";
+                    $fileName = basename($_FILES["justificatif"]["name"]);
+                    $targetFilePath = $targetDir . $fileName;
+                    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+                    $allowType = array('pdf');
+                    if (in_array($fileType, $allowType)) {
+                        move_uploaded_file($_FILES["justificatif"]["tmp_name"], $targetFilePath);
+                    }
+
+                    $dataPro["justificatif"] = $fileName; */
+
                     // md5 & uniqueid  pour le nom du fichier
+
 
                     $pro = $this->encodeChars($dataPro);
                     $proModel->create($pro);
