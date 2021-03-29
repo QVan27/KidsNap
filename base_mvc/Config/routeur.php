@@ -69,23 +69,32 @@ switch ($page) {
         $dashboard = new DashboardController();
         $dashboard->showParents();
         break;
+
     case 'dashboard-pros':
         $dashboard = new DashboardController();
         $dashboard->showPros();
-        $locations = new MapController();
-        $locations->showLocation();
         break;
+
     case 'co':
         $locations = new MapController();
         $locations->showco();
         break;
+
     case 'test':
         $test = new ProController();
         $test->getPros();
+        break;
+
     case 'profil-parents':
         $dashboard = new DashboardController();
-        $dashboard->showProfil();
+        $dashboard->showProfilParents();
         break;
+    
+    case 'profil-pros':
+        $dashboard = new DashboardController();
+        $dashboard->showProfilPros();
+        break;
+
     default:
         $home = new HomeController();
         $home->home();
