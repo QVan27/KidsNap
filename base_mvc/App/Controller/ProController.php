@@ -85,7 +85,9 @@ class ProController extends Controller
         // }
 
         $this->render(
+
             "map.map",
+
             [
                 "users" => $users,
                 // "pros" => $pros,
