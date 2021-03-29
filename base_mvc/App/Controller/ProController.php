@@ -75,7 +75,7 @@ class ProController extends Controller
         }
 
         $this->render(
-            "",
+            "test",
             [
                 "infoPro" => $userPros,
             ]

@@ -167,7 +167,7 @@
                             <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">BABYSITTER</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2">Changer</button></h5> <button type="button" class="modal-close"><span aria-hidden="true">×</span></button>
                         </div>
                         <div class="modal-body p-4">
-                            <form method="post" ctype="multipart/form-data">
+                            <form method="post" enctype="multipart/form-data">
                                 <input type="email" name="user_mail" placeholder="Email" class="form-control input-light mb-3">
                                 <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-conrtol input-light">
                                 </div>
