@@ -58,11 +58,9 @@ class UserController extends Controller
 
             if (!empty($existUser)) {
                 $error = "Utilisateur parent déjà existant";
-
             } elseif (!empty($existPro)) {
 
                 $error = "Utilisateur pro déjà existant";
-
             } else {
                 unset($user["password_confirmation"]);
                 $userModel->create($user);
@@ -90,21 +88,15 @@ class UserController extends Controller
                     "user_pro" => true,
                 );
 
-                echo '<pre>';
-                print_r($data);
-                echo '</pre>';
-
                 $existUser = $userModel->existingUser($dataUser["user_mail"], $dataUser["user_parent"]);
                 $existPro = $proModel->existingPro($dataUser["user_mail"], $dataUser["user_pro"]);
 
                 if (!empty($existUser)) {
 
                     $error = "Utilisateur parent déjà inscrit";
-
                 } elseif (!empty($existPro)) {
 
                     $error = "Utilisateur professionel déjà inscrit";
-
                 } else {
 
                     $user = $this->encodeChars($dataUser);
@@ -113,18 +105,13 @@ class UserController extends Controller
                     $userModel->create($user);
                     $userID = $userModel->getLast();
 
-                    echo '<pre>';
-                    print_r($_FILES);
-                    echo '</pre>';
-
-
-
                     if (!empty($_FILES["justificatif"])) {
                         $targetDir = "../public/asset/files/";
                         $fileName = basename($_FILES["justificatif"]["name"]);
                         $targetFilePath = $targetDir . $fileName;
                         $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
                         $allowType = array('pdf');
+                        
                         if (in_array($fileType, $allowType)) {
                             move_uploaded_file($_FILES["justificatif"]["tmp_name"], $targetFilePath);
                         }
@@ -141,23 +128,6 @@ class UserController extends Controller
                         "pro_content" => $data["pro_content"],
                         "pro_type" => $data["pro_type"],
                     );
-
-
-                    /* Code to get the file, not working */
-                var_dump($_FILES);
-
-                    /*$targetDir = "public/asset/files/";
-                    $fileName = basename($_FILES["justificatif"]["name"]);
-                    $targetFilePath = $targetDir . $fileName;
-                    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-                    $allowType = array('pdf');
-                    if (in_array($fileType, $allowType)) {
-                        move_uploaded_file($_FILES["justificatif"]["tmp_name"], $targetFilePath);
-                    }
-
-                    $dataPro["justificatif"] = $fileName; */
-
-                    // md5 & uniqueid  pour le nom du fichier
 
 
                     $pro = $this->encodeChars($dataPro);
