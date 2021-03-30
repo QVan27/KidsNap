@@ -24,9 +24,11 @@
                 </div>
             </div>
         </section>
-        <?php else: ?>
+    <?php else : ?>
         <?php header('Location: index.php?page=home') ?>
 
 
     <?php endif; ?>
+<?php else : ?>
+    <?php header('Location: index.php?page=home') ?>
 <?php endif; ?>

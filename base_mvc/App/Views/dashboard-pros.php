@@ -32,4 +32,6 @@
 
 
     <?php endif; ?>
+<?php else : ?>
+    <?php header('Location: index.php?page=home') ?>
 <?php endif; ?>
