@@ -1,3 +1,4 @@
+
 <?php if (isset($_SESSION["user"])) : ?>
     <?php if ($_SESSION["user"]->user_pro == 1) : ?>
         <section class="dashboardPros">
@@ -8,11 +9,12 @@
                     <a href="index.php?page=calendrier" class="btn color-2 btnPros">Disponibilité</a>
                 </div>
                 <h3 class="dash-text">Profil</h3>
+
             </div>
             <div class=" sheet-dash">
                 <div class="pp">
                     <img class="pp-size" src="asset/image/pp12.svg" alt="photo profil">
-                    <p class="ppmail">Pierre Kiroule - 50 ans</p>
+                    <p class="ppmail">Pierre Kiroule</p>
                     <p class="ppmail">pierrekiroule@gmail.com</p>
                     <p class="ppmail">Crèche</p>
                     <a href="index.php?page=profil-pros" class="btnprofil btnprofil1">Modifier profil</a>
