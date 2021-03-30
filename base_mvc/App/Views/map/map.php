@@ -1,3 +1,4 @@
+<!-- <?php var_dump($userPros); ?> -->
 <section class="searchParents">
 
     <div class="headSearch">
@@ -5,10 +6,12 @@
         <div class="boxHead">
             <h3>Recherche de garde pour enfants</h3>
             <div class="boxHead_bis">
-                <p>
+                <p>Du : <input type="text" id="fromDate" autocomplete="off"></p>
+                <p>Au : <input type="text" id="toDate" autocomplete="off"></p>
+                <!-- <p>
                     <label for="champ-ville">Ville : </label>
                     <input type="text" id="champ-ville">
-                </p>
+                </p> -->
                 <p>
                     <label for="champ-distance">Distance : </label>
                     <input type="range" min="1" max="200" id="champ-distance">
@@ -16,11 +19,10 @@
                 <p id="valeur-distance"></p>
                 <form action="" method="post" id="form_map">
                     <input type="text" placeholder="Adresse" id="adresse" value="">
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    <button type="button"><i class="fas fa-paper-plane"></i></button>
                 </form>
 
-                <select name="Selection" id="name">
-
+                <select name="Selection" id="select_adresse">
                 </select>
             </div>
         </div>
@@ -42,158 +44,45 @@
 
         <div class="cardMap">
             <div class="cardSearch">
-                <div class="proCard">
-                    <div class="infoCardSearch">
-                        <img src="asset/image/jeanne.svg" alt="">
-                        <div class="nomCard">
-                            <p>Jeanne M.</p>
-                            <p>Assistante Maternelle</p>
+                <?php foreach ($users as $user) : ?>
+                    <div class="proCard">
+
+                        <div class="infoCardSearch">
+                            <img src="asset/image/jeanne.svg" alt="">
+                            <div class="nomCard">
+                                <p><?= ucFirst($user->user_prenom) . ' ' . ucFirst($user->user_nom) ?></p>
+                                <p><?= ucFirst($user->pro_type) ?></p>
+                            </div>
+                        </div>
+                        <p class="contentCardSearch"><?= ucFirst($user->pro_content) ?>
+                        </p>
+                        <div class="btnInfo">
+                            <input type="checkbox" id="show">
+                            <label for="show" id="<?= $user->user_id ?>" class="voirPlus">Voir plus</label>
+                            <div class="rightInfoCard">
+                                <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
+                                <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
+                                <p class="price"><?= $user->pro_tarif ?>€ / hr</p>
+                            </div>
+                            <div id="modalCard<?= $user->user_id ?>" class="modalProfil">
+                                <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
+                                <h1 class="txtModalProfil">Profil</h1>
+                                <div class="infoCardSearchProfil">
+                                    <img src="asset/image/jeanne.svg" alt="">
+                                    <div class="nomCard">
+                                        <h2><?= ucFirst($user->user_prenom) . ' ' . ucFirst($user->user_nom) ?></h2>
+                                        <h3><?= ucFirst($user->pro_type) ?></h3>
+                                    </div>
+                                    <p class="contentCardSearchProfil"><?= ucFirst($user->pro_content) ?></p>
+                                    <div class="btnCardProfil">
+                                        <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
+                                        <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-                    </p>
-                    <div class="btnInfo">
-                        <a href="" class="voirPlus">Voir plus</a>
-                        <div class="rightInfoCard">
-                            <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                            <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
-                            <p class="price">10.5€ / hr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="proCard">
-                    <div class="infoCardSearch">
-                        <img src="asset/image/jeanne.svg" alt="">
-                        <div class="nomCard">
-                            <p>Jeanne M.</p>
-                            <p>Assistante Maternelle</p>
-                        </div>
-                    </div>
-                    <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-                    </p>
-                    <div class="btnInfo">
-                        <a href="" class="voirPlus">Voir plus</a>
-                        <div class="rightInfoCard">
-                            <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                            <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
-                            <p class="price">10.5€ / hr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="proCard">
-                    <div class="infoCardSearch">
-                        <img src="asset/image/jeanne.svg" alt="">
-                        <div class="nomCard">
-                            <p>Jeanne M.</p>
-                            <p>Assistante Maternelle</p>
-                        </div>
-                    </div>
-                    <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-                    </p>
-                    <div class="btnInfo">
-                        <a href="" class="voirPlus">Voir plus</a>
-                        <div class="rightInfoCard">
-                            <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                            <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
-                            <p class="price">10.5€ / hr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="proCard">
-                    <div class="infoCardSearch">
-                        <img src="asset/image/jeanne.svg" alt="">
-                        <div class="nomCard">
-                            <p>Jeanne M.</p>
-                            <p>Assistante Maternelle</p>
-                        </div>
-                    </div>
-                    <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-                    </p>
-                    <div class="btnInfo">
-                        <a href="" class="voirPlus">Voir plus</a>
-                        <div class="rightInfoCard">
-                            <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                            <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
-                            <p class="price">10.5€ / hr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="proCard">
-                    <div class="infoCardSearch">
-                        <img src="asset/image/jeanne.svg" alt="">
-                        <div class="nomCard">
-                            <p>Jeanne M.</p>
-                            <p>Assistante Maternelle</p>
-                        </div>
-                    </div>
-                    <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-                    </p>
-                    <div class="btnInfo">
-                        <a href="" class="voirPlus">Voir plus</a>
-                        <div class="rightInfoCard">
-                            <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                            <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
-                            <p class="price">10.5€ / hr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="proCard">
-                    <div class="infoCardSearch">
-                        <img src="asset/image/jeanne.svg" alt="">
-                        <div class="nomCard">
-                            <p>Jeanne M.</p>
-                            <p>Assistante Maternelle</p>
-                        </div>
-                    </div>
-                    <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-                    </p>
-                    <div class="btnInfo">
-                        <a href="" class="voirPlus">Voir plus</a>
-                        <div class="rightInfoCard">
-                            <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                            <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
-                            <p class="price">10.5€ / hr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="proCard">
-                    <div class="infoCardSearch">
-                        <img src="asset/image/jeanne.svg" alt="">
-                        <div class="nomCard">
-                            <p>Jeanne M.</p>
-                            <p>Assistante Maternelle</p>
-                        </div>
-                    </div>
-                    <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-                    </p>
-                    <div class="btnInfo">
-                        <a href="" class="voirPlus">Voir plus</a>
-                        <div class="rightInfoCard">
-                            <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                            <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
-                            <p class="price">10.5€ / hr</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="proCard">
-                    <div class="infoCardSearch">
-                        <img src="asset/image/jeanne.svg" alt="">
-                        <div class="nomCard">
-                            <p>Jeanne M.</p>
-                            <p>Assistante Maternelle</p>
-                        </div>
-                    </div>
-                    <p class="contentCardSearch">Infirmière de profession en maternité, je suis assistante maternelle agrée depuis 5 ans. Disponible du lundi au vendredi sauf mercredi et pendant conges scolaires.
-                    </p>
-                    <div class="btnInfo">
-                        <a href="" class="voirPlus">Voir plus</a>
-                        <div class="rightInfoCard">
-                            <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                            <a href="" class="sendCard"><i class="fas fa-plus"></i> Envoyer une demande</a>
-                            <p class="price">10.5€ / hr</p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div id="map" class="map"></div>
         </div>

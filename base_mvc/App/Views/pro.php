@@ -8,7 +8,7 @@
             Gérez vos disponibilités et communiquez facilement avec ces derniers.
             Créez votre propre communauté et partagez votre quotidien.</p>
         <div class="pro">
-            <a href="" role="btn-modal-login" class="margin-b">Lancer vous dès maintenant</a>
+            <a href="" role="btn-modal-login" id="link_login" class="margin-b">Lancer vous dès maintenant</a>
             <a href="index.php?page=contact" class="margin-b">Contacter notre équipe</a>
         </div>
     </div>
@@ -77,11 +77,11 @@
             <p>Utilisateurs</p>
         </div>
         <div class="boxStats">
-            <p><img src="asset/image/team.png" alt=""> <?= $numberUser->allUser; ?></p>
-            <p>Partenaires</p>
+            <p><img src="asset/image/team.png" alt=""> <?= $numberParent->allParents; ?></p>
+            <p>Parents</p>
         </div>
         <div class="boxStats">
-            <p><img src="asset/image/chat.png" alt=""> <?= $numberUser->allUser; ?></p>
+            <p><img src="asset/image/chat.png" alt=""> <?= $numberPro->allPros; ?></p>
             <p>Professionnels</p>
         </div>
 </section>
@@ -96,7 +96,7 @@
     </div>
     <div class="btn-job">
         <h2>Trouvez un job de garde d'enfants</h2>
-        <a href="" role="btn-modal-login" class="btn color-1 go">J'y vais !</a>
+        <a href="" role="btn-modal-login" id="link_login" class="btn color-1 go">J'y vais !</a>
     </div>
 </section>
 
