@@ -59,8 +59,8 @@ class UserController extends Controller
             if (!empty($existUser)) {
                 $error = "Utilisateur parent déjà existant";
             } elseif (!empty($existPro)) {
-                $userModel->update($existPro["user_id"], $user["user_parent"]);
-                //header("Location:index.php?page=login&status=login");
+
+                $error = "Utilisateur pro déjà existant";
             } else {
                 unset($user["password_confirmation"]);
                 $userModel->create($user);
@@ -93,31 +93,10 @@ class UserController extends Controller
 
                 if (!empty($existUser)) {
 
-                    $proModel->update($existUser["user_id"], $dataUser["user_pro"]);
-
-                    if (empty($data["justificatif"])) {
-                        $data["justificatif"] = NULL;
-                    }
-
-                    $dataPro = array(
-                        "pro_tarif" => $data["pro_tarif"],
-                        "pro_nb_place" => $data["pro_nb_place"],
-                        "user_id" => $existUser["user_id"],
-                        "justificatif" => $data["justificatif"],
-                        "pro_content" => $data["pro_content"],
-                        "pro_type" => $data["pro_type"],
-                    );
-
-                    $pro = $this->encodeChars($dataPro);
-                    $proModel->create($pro);
-
-
-                    //header("Location:index.php?page=login&status=login");
-
+                    $error = "Utilisateur parent déjà inscrit";
                 } elseif (!empty($existPro)) {
 
                     $error = "Utilisateur professionel déjà inscrit";
-                    
                 } else {
 
                     $user = $this->encodeChars($dataUser);
@@ -126,32 +105,30 @@ class UserController extends Controller
                     $userModel->create($user);
                     $userID = $userModel->getLast();
 
-                    if (empty($data["justificatif"])) {
-                        $data["justificatif"] = NULL;
+                    if (!empty($_FILES["justificatif"])) {
+                        $targetDir = "../public/asset/files/";
+                        $fileName = basename($_FILES["justificatif"]["name"]);
+                        $targetFilePath = $targetDir . $fileName;
+                        $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+                        $allowType = array('pdf');
+                        
+                        if (in_array($fileType, $allowType)) {
+                            move_uploaded_file($_FILES["justificatif"]["tmp_name"], $targetFilePath);
+                        }
+                        $justificatif = $fileName;
+                    } else {
+                        $justificatif = NULL;
                     }
 
                     $dataPro = array(
-                        "pro_tarif" => $data["pro_tarif"],
+                        "pro_tarif" => $data["pro_tarif"] . "€",
                         "pro_nb_place" => $data["pro_nb_place"],
                         "user_id" => $userID->user_id,
-                        "justificatif" => $data["justificatif"],
+                        "justificatif" => $justificatif,
                         "pro_content" => $data["pro_content"],
                         "pro_type" => $data["pro_type"],
                     );
 
-                    /* Code to get the file, not working */
-                    /*var_dump($_FILES);
-
-                    $targetDir = "public/asset/files/";
-                    $fileName = basename($_FILES["justificatif"]["name"]);
-                    $targetFilePath = $targetDir . $fileName;
-                    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-                    $allowType = array('pdf');
-                    if (in_array($fileType, $allowType)) {
-                        move_uploaded_file($_FILES["justificatif"]["tmp_name"], $targetFilePath);
-                    }
-
-                    $dataPro["justificatif"] = $fileName; */
 
                     $pro = $this->encodeChars($dataPro);
                     $proModel->create($pro);

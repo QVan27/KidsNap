@@ -242,3 +242,105 @@ $(document).ready(function () {
 //     $(".proCard").css("width", "99%");
 //   }
 // });
+
+// Calendar datePicker from jQuery UI
+// https://stackoverflow.com/questions/55448166/data-range-picker-to-select-start-and-end-dates
+$(function () {
+  $("#fromDate").datepicker({
+    defaultDate: "+1w",
+    changeMonth: true,
+    numberOfMonths: 1,
+
+    onClose: function (selectedDate) {
+      $("#toDate").datepicker("option", "minDate", selectedDate);
+    },
+  });
+  $("#toDate").datepicker({
+    defaultDate: "+1w",
+    changeMonth: true,
+    numberOfMonths: 1,
+    onClose: function (selectedDate) {
+      $("#fromDate").datepicker("option", "maxDate", selectedDate);
+    },
+  });
+});
+// set calendar in french
+// https://github.com/jquery/jquery-ui/blob/main/ui/i18n/datepicker-fr.js
+(function (factory) {
+  if (typeof define === "function" && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(["../widgets/datepicker"], factory);
+  } else {
+    // Browser globals
+    factory(jQuery.datepicker);
+  }
+})(function (datepicker) {
+  datepicker.regional.fr = {
+    closeText: "Fermer",
+    prevText: "Précédent",
+    nextText: "Suivant",
+    currentText: "Aujourd'hui",
+    monthNames: [
+      "janvier",
+      "février",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "août",
+      "septembre",
+      "octobre",
+      "novembre",
+      "décembre",
+    ],
+    monthNamesShort: [
+      "janv.",
+      "févr.",
+      "mars",
+      "avr.",
+      "mai",
+      "juin",
+      "juil.",
+      "août",
+      "sept.",
+      "oct.",
+      "nov.",
+      "déc.",
+    ],
+    dayNames: [
+      "dimanche",
+      "lundi",
+      "mardi",
+      "mercredi",
+      "jeudi",
+      "vendredi",
+      "samedi",
+    ],
+    dayNamesShort: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+    dayNamesMin: ["D", "L", "M", "M", "J", "V", "S"],
+    weekHeader: "Sem.",
+    dateFormat: "dd/mm/yy",
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: "",
+  };
+  datepicker.setDefaults(datepicker.regional.fr);
+
+  return datepicker.regional.fr;
+});
+
+
+// Affiche les modals en fonction des cartes
+$(".voirPlus").on("click", function () {
+  var id = this.id;
+  var modal = "#modalCard";
+
+  modal += id;
+  $(modal).fadeIn();
+});
+
+$(".fa-times").on("click", function () {
+  $(".modalProfil").fadeOut();
+});

@@ -43,8 +43,10 @@ switch ($page) {
         $home->home();
         break;
     case 'map':
-        $locations = new MapController();
-        $locations->showLocation();
+        // $locations = new MapController();
+        // $locations->showLocation();
+        $pros = new ProController();
+        $pros->getPros();
         break;
     case 'pro':
         $pro = new ProController();

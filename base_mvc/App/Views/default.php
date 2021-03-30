@@ -10,6 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
         <link rel="stylesheet" href="asset/css/style.css">
 
     </head>
@@ -99,7 +101,8 @@
                     <div class="modal-content">
                         <div class="modal-header px-4">
                             <h5 class="modal-title">Connexion</h5>
-                            <button type="button" data-dismiss="modal" aria-label="Close" class="modal-close"><span aria-hidden="true">×</span></button>
+
+                            <button type="button" class="modal-close"><span aria-hidden="true">×</span></button>
                         </div>
                         <div class="modal-body p-4">
                             <form method="post">
@@ -129,6 +132,7 @@
                         <div class="modal-body p-4">
                             <form method="post">
                                 <div class="choose-type">
+
                                     <button type="button" role="btn-parent" id="link_parent"class="btn-modal btn-block py-4 mb-2 parent">
                                         <h6 class="h4">
                                             PARENT<br> <small>A la recherche de solutions de garde et plus</small></h6>
@@ -138,6 +142,7 @@
                                             BABYSITTER<br> <small>Pour garder des enfants</small></h6>
                                     </button>
                                     <a type="button" role="btn-login" id="link_login" class="btn-modal btn-block mt-3">J'ai déjà un compte</a>
+
                                 </div>
                             </form>
                         </div>
@@ -145,14 +150,14 @@
                     <div class="modal-content" id="modal-parent">
                         <!---->
                         <div class="modal-header px-4">
-                            <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">Parent</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2"><i class="fas fa-times" aria-hidden="true"></i> Changer</button></h5> <button type="button" data-dismiss="modal" aria-label="Close" class="modal-close"><span aria-hidden="true">×</span></button>
+                            <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">Parent</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2"> Changer</button></h5> <button type="button" data-dismiss="modal" aria-label="Close" class="modal-close"><span aria-hidden="true">×</span></button>
                         </div>
                         <div class="modal-body p-4">
                             <form method="post">
                                 <input type="email" name="user_mail" placeholder="Email" class="form-control input-light mb-3">
-                                <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-control input-light">
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-control input-light">
                                 </div>
                                 <div class="input-group mb-3"><input placeholder="Mot de passe" name="user_password" type="password" class="form-control input-light">
                                 </div>
@@ -171,29 +176,38 @@
                     <div class="modal-content" id="modal-baby">
                         <!---->
                         <div class="modal-header px-4">
-                            <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">BABYSITTER</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2"><i class="fas fa-times" aria-hidden="true"></i> Changer</button></h5> <button type="button" data-dismiss="modal" aria-label="Close" class="modal-close"><span aria-hidden="true">×</span></button>
+                            <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">PROFESSIONNEL</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2">Changer</button></h5> <button type="button" class="modal-close"><span aria-hidden="true">×</span></button>
                         </div>
                         <div class="modal-body p-4">
-                            <form method="post" ctype="multipart/form-data">
+                            <form method="post" enctype="multipart/form-data">
                                 <input type="email" name="user_mail" placeholder="Email" class="form-control input-light mb-3">
-                                <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Nom" name="user_nom" type="text" class="form-control input-light">
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Prénom" name="user_prenom" type="text" class="form-control input-light">
                                 </div>
                                 <div class="input-group mb-3"><input placeholder="Mot de passe" name="user_password" type="password" class="form-control input-light">
                                 </div>
                                 <div class="input-group mb-3"><input placeholder="Confirmation du mot de passe" name="password_confirmation" type="password" class="form-control input-light">
                                 </div>
 
-                                <div class="input-group mb-3"><input placeholder="Type de service" name="pro_type" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3">
+                                    <select name="pro_type" id="selectMode" class="form-control input-light">
+                                    <option value="" disabled selected>Type de service</option>
+                                        <option value="Creche">Crèche</option>
+                                        <option value="Assistante maternelle">Assistant(e) Maternel(le)</option>
+                                    </select>
+                                  
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Description rapide" name="pro_content" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3">
+                                <textarea name="pro_content" placeholder="Description" id="" class="form-control input-light">
+                                </textarea>
+                               
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Tarif par heure" name="pro_tarif" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Tarif par heure" name="pro_tarif" type="text" class="form-control input-light">
                                 </div>
-                                <div class="input-group mb-3"><input placeholder="Nombre de place totale" name="pro_nb_place" type="text" class="form-conrtol input-light">
+                                <div class="input-group mb-3"><input placeholder="Nombre de place totale" name="pro_nb_place" type="text" class="form-control input-light">
                                 </div>
-                                <div class="input-group mb-3"><input name="justificatif" type="file" class="form-conrtol input-light" accept="application/pdf">
+                                <div class="input-group mb-3"><input name="justificatif" type="file" class="form-control input-light" accept="application/pdf">
                                 </div>
 
                                 <!---->
@@ -233,6 +247,7 @@
         <script src="asset/js/map.js"></script>
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="asset/js/main.js"></script>
     </body>
 

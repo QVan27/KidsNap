@@ -76,14 +76,15 @@
     <div class="pinkStats">
         <div class="boxStats">
             <p><img src="asset/image/group.png" alt=""> <?= $numberUser->allUser; ?></p>
+            <!-- <?php var_dump($nbPro); ?> -->
             <p>Utilisateurs</p>
         </div>
         <div class="boxStats">
-            <p><img src="asset/image/team.png" alt=""> <?= $numberUser->allUser; ?></p>
+            <p><img src="asset/image/team.png" alt=""> <?= $numberParent->allParents; ?></p>
             <p>Parents</p>
         </div>
         <div class="boxStats">
-            <p><img src="asset/image/chat.png" alt=""> <?= $numberUser->allUser; ?></p>
+            <p><img src="asset/image/chat.png" alt=""> <?= $numberPro->allPros; ?></p>
             <p>Professionnels</p>
         </div>
 </section>
