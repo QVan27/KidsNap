@@ -141,9 +141,13 @@ html, body {
     width: 6px;
 }
 
-/* ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-} */
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
 
 .btn {
     width: 200px;
@@ -844,6 +848,19 @@ h2 {
     outline: 0;
 }
 
+textarea[name=pro_content] {
+    /* resize: none; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea[name=pro_content]
+{
+ resize : none;
+ min-width : 100%;
+ max-width : 100%;
+ max-height : 200px;
+}
+
 .form-control {
     display: block;
     width: 100%;
@@ -858,6 +875,8 @@ h2 {
     border: 1px solid #ced4da;
     border-radius: .3rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    max-height: 100%;
+    overflow-y: scroll;
 }
 
 .mb-3, .my-3 {
@@ -1334,13 +1353,8 @@ h2 {
 }
 
 .cardSearch {
-    /* background-color: #007221; */
     width: 50%;
     height: 100%;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-    /* text-align: center; */
     overflow-x: hidden;
 }
 
@@ -1356,6 +1370,7 @@ h2 {
     padding: 10px 20px;
     margin-bottom: 10px;
     margin: 5px auto;
+    overflow: hidden;
 }
 
 .infoCardSearch {
@@ -1426,9 +1441,9 @@ h2 {
     padding: 0 10px;
     color: var(--violet-light);
 }
+
 .sendCard:hover {
     color: var(--white);
-    /* font-weight: bold; */
     background-color: var(--violet-light);
     transition: 1s;
 }
@@ -1474,7 +1489,6 @@ h2 {
     .banner {
         display: flex;
         justify-content: center;
-        /* align-items: flex-start; */
     }
     .inputSelect {
         width: 100%;
@@ -1503,7 +1517,6 @@ h2 {
         width: auto;
     }
     .fullContent {
-        /* display: flex; */
         align-items: center;
     }
     div[class^='category-'] a {
@@ -1515,7 +1528,6 @@ h2 {
         width: 60%;
         height: auto;
         margin: -100px 0 0 -70px;
-        /* text-align: center; */
     }
     .txtContent p {
         color: var(--white);
@@ -1639,6 +1651,9 @@ h2 {
     .sheet-two {
         width: 100%;
     }
+    .modalProfil {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -1651,8 +1666,6 @@ h2 {
     }
     .cardSearch {
         width: 100%;
-        /* flex-direction: column; */
-        /* flex-wrap: nowrap; */
     }
     .proCard {
         width: 100%;
@@ -1777,7 +1790,6 @@ h2 {
 
 /* DASH PROS */
 
-
 .modalProfil {
     display: none;
     width: 410px;
@@ -1798,9 +1810,6 @@ h2 {
     overflow-y: scroll;
 }
 
-#show:checked~.modalProfil {
-    display: block;
-}
 
 input[type="checkbox"] {
     display: none;
@@ -1821,7 +1830,6 @@ input[type="checkbox"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 30px 0 0 0; */
     line-height: 30px;
 }
 
@@ -1841,11 +1849,14 @@ input[type="checkbox"] {
 }
 
 /* PROFIL PARENTS ====================================================*/
+
 /* HEADER PROFIL PARENTS */
-.profilParents{
+
+.profilParents {
     width: 100%;
 }
-.headprofil{
+
+.headprofil {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1857,11 +1868,12 @@ input[type="checkbox"] {
     text-align: center;
     top: 0px;
 }
-.profil-text{
+
+.profil-text {
     text-transform: uppercase;
 }
 
-.btnmodif{
+.btnmodif {
     width: 13%;
     font-size: .7875rem;
     line-height: 1.5;
@@ -1872,26 +1884,30 @@ input[type="checkbox"] {
     border: none;
     transition: all .6s ease-in-out;
 }
-.btnmodif:hover{
+
+.btnmodif:hover {
     background-color: var(--violet);
 }
-.fa-image{
+
+.fa-image {
     color: var(--white)!important;
     margin-right: 5px;
 }
+
 /* BODY PROFIL PARENTS */
 
-.formProfil{
+.formProfil {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: #F2F2F2;
 }
-#formprofilparents, #formprofilpros{
+
+#formprofilparents, #formprofilpros {
     margin: 20px 0;
 }
 
-.inputprofil{
+.inputprofil {
     border-radius: 10px;
     padding: 10px 10px;
     background: #FFFFFF;
@@ -1900,20 +1916,23 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-#formprofilparents input, #formprofilpros input{
+#formprofilparents input, #formprofilpros input {
     width: 100%;
     margin-top: 10px;
 }
-.form-group{
+
+.form-group {
     display: flex;
     justify-content: space-between;
 }
 
-.inputname{
+.inputname {
     margin-right: 20px;
 }
+
 /* BUTTON PARENTS */
-.buttonprofil{
+
+.buttonprofil {
     border-radius: 10px;
     border: none;
     color: var(--white);
@@ -1921,43 +1940,50 @@ input[type="checkbox"] {
     cursor: pointer;
     transition: all .6s ease-in-out;
 }
-#enregistrerParents{
+
+#enregistrerParents {
     background-color: var(--violet-light);
     margin-bottom: 10px;
 }
-#enregistrerParents:hover{
+
+#enregistrerParents:hover {
     background-color: var(--violet);
 }
-#supprimerParents{
+
+#supprimerParents {
     background-color: #8882ff;
 }
-#supprimerParents:hover{
+
+#supprimerParents:hover {
     background-color: var(--blue-btn);
 }
-
 
 /* BUTTON PROS */
-.btnpros{
+
+.btnpros {
     background-color: var(--blue-btn);
 }
 
-.btnpros:hover{
+.btnpros:hover {
     background-color: #2658F0;
 }
-#enregistrerPros{
+
+#enregistrerPros {
     background-color: var(--violet-light);
     margin-bottom: 10px;
 }
-#enregistrerPros:hover{
+
+#enregistrerPros:hover {
     background-color: var(--violet);
 }
-#supprimerPros{
+
+#supprimerPros {
     background-color: var(--blue-btn);
 }
-#supprimerPros:hover{
+
+#supprimerPros:hover {
     background-color: #2658F0;
 }
-/* PROFIL PARENTS - PROS*/
 
 /* DISPONIBILITE ============================================= */
 /* .dispo{
@@ -2057,3 +2083,4 @@ input[type="checkbox"] {
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+/* PROFIL PARENTS - PROS*/
