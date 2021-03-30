@@ -14,6 +14,24 @@
             <p class="ppmail">Jeanne Marie - 24ans</p>
             <p class="ppmail">jeannemarie@gmail.com</p>
             <a href="index.php?page=profil-parents" class="btnprofil">Modifier profil</a>
+
+            <!-- FACTURE MODAL -->
+
+            <a id="mybtn" class="btnprofil">Télécharger ma facture</a>
+            <!-- <button class="btnprofil" id="download"> download pdf</button> -->
+            <div id="window" class="facture-modal">
+
+            <!-- Modal content -->
+            <div class="facture-modal-content">
+                    <span class="facture-close">&times;</span>
+                    <h3 class="facture-text">Ceci est ma facture</h3>
+                    <a id="download" class="btnprofil">Télécharger ma facture</a>
+                </div>
+
+            </div>
+
+            <!-- FACTURE MODAL FIN -->
+
         </div>
         <div class="sheet-wrap">
             <div id="sheet-two" class="dash-sheet">

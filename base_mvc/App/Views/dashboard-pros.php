@@ -3,7 +3,7 @@
         <img src="asset/image/vector_dash_blue.png" alt="">
         <h2 class="dash-pros-titre">Bienvenue sur votre profil !</h2>
         <div class="btnParents">
-            <a href="index.php?page=calendrier" class="btn color-2 btnPros">Disponibilité</a>
+            <a href="index.php?page=disponibilite" class="btn color-2 btnPros"><i class="fas fa-calendar-alt" style="color: var(--white);"></i> Disponibilité</a>
         </div>
         <h3 class="dash-text">Profil</h3>
     </div>
