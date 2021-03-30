@@ -15,15 +15,19 @@ window.onload = () => {
     }).addTo(carte)
 
     // Gestion des champs
-    let champVille = document.getElementById('champ-ville')
     let champDistance = document.getElementById('champ-distance')
     let valeurDistance = document.getElementById('valeur-distance')
     let adresse = document.getElementById('adresse')
-    let name = document.getElementById('name')
-    let option = document.getElementById('test')
+    let select_adresse = document.getElementById('select_adresse')
+    $('#form_map').submit(function (e) {
+        e.preventDefault();
+    })
 
     adresse.addEventListener("change", function (e) {
-        ajaxGet(`https://nominatim.openstreetmap.org/search?q=${this.value}&format=json`)
+        if (adresse === '') {
+           $('#select_adresse').css('display','none');
+        }else{
+            ajaxGet(`https://nominatim.openstreetmap.org/search?q=${this.value}&format=json&polygon_svg=1`)
             .then(reponse => {
                 // On convertit la réponse en objet Javascript
                 let data = JSON.parse(reponse)
@@ -38,32 +42,51 @@ window.onload = () => {
                 var markerOptions = {
                     icon: customIcon
                 }
-                $('#name').css('display', 'flex');
-                if (data.length > 1) {
-                    for (let index = 0; index < data.length; index++) {
-                        $('#name').append('<option value="' + data[index].display_name + '" id="test">' + data[index].display_name + '</option>');
+                if ($('#select_adresse').has('option').length > 0) {
+                    $('#select_adresse').find('option').remove().end();
+                    if (data.length > 1) {
+                        $('#select_adresse').css('display', 'flex');
+                        $('#select_adresse').append('<option value="">Select - Adresse</option>');
+                        for (let index = 0; index < data.length; index++) {
+                            $('#select_adresse').append('<option value="' + data[index].display_name + '" id="test">' + data[index].display_name + '</option>');
+                        }
+                    } else {
+                        ville = [data[0].lat, data[0].lon]
 
+                        let marker = L.marker([data[0].lat, data[0].lon], markerOptions).addTo(carte)
+                        marker.bindPopup(data[0].display_name)
+                        adresse.value = ''
+                        $('#select_adresse').find('option').remove().end().css('display', 'none');
                     }
-
-                } else {
-                    $('#name').innerHTML = "";
-                    ville = [data[0].lat, data[0].lon]
-
-                    let marker = L.marker([data[0].lat, data[0].lon], markerOptions).addTo(carte)
-                    marker.bindPopup(data[0].display_name)
-
                 }
-                // On stocke les coordonnées dans ville
+                else {
+                    if (data.length > 1) {
+                        $('#select_adresse').css('display', 'flex');
+                        $('#select_adresse').append('<option value="">Select - Adresse</option>');
+                        for (let index = 0; index < data.length; index++) {
+                            $('#select_adresse').append('<option value="' + data[index].display_name + '" id="test">' + data[index].display_name + '</option>');
+                        }
+                    } else {
+                        ville = [data[0].lat, data[0].lon]
 
+                        let marker = L.marker([data[0].lat, data[0].lon], markerOptions).addTo(carte)
+                        marker.bindPopup(data[0].display_name)
+                        adresse.value = ''
+                        $('#select_adresse').find('option').remove().end().css('display', 'none');
+                    }
+                }
 
                 // On centre la carte sur la ville
                 carte.panTo(ville)
+
             })
+        }
+       
     })
-    name.addEventListener("change", function () {
+    select_adresse.addEventListener("change", function () {
         let selectedItem = $(this).children("option:selected").val();
         var howManyCommasDoIHave = selectedItem.replace(/,/g, '');
-        ajaxGet(`https://nominatim.openstreetmap.org/search?q=${howManyCommasDoIHave}&format=json`)
+        ajaxGet(`https://nominatim.openstreetmap.org/search?q=${howManyCommasDoIHave}&format=json&addressdetails=1&limit=1&polygon_svg=1`)
             .then(reponse => {
                 // On convertit la réponse en objet Javascript
                 let data = JSON.parse(reponse)
@@ -88,13 +111,13 @@ window.onload = () => {
             })
         adresse.value = ''
 
-        $('#name')
+        $('#select_adresse')
             .find('option')
             .remove()
             .end()
             .css('display', 'none')
             ;
-            
+
     })
 
 
@@ -107,7 +130,7 @@ window.onload = () => {
         // On vérifie si on a une ville
         if (ville != "") {
             // On envoie la requête
-            ajaxGet(`/mvc/Kidsnap/KidsNap/base_mvc//App/Views/map/chargeAgences.php/.php?lat=${ville[0]}&lon=${ville[1]}&distance=${distance}`)
+            ajaxGet(`/mvc/Kidsnap/KidsNap/base_mvc/App/Views/map/chargeAgences.php?lat=${ville[0]}&lon=${ville[1]}&distance=${distance}`)
                 .then(reponse => {
                     // On supprime toutes les couches de la carte
                     carte.eachLayer(function (layer) {
@@ -123,13 +146,14 @@ window.onload = () => {
                     }).addTo(carte)
 
                     // On boucle sur les données
-                    console.log(reponse);
-                    let donnees = JSON.parse(reponse)
 
+                    let donnees = JSON.parse(reponse)
+                    console.log(donnees)
                     Object.entries(donnees).forEach(agence => {
+                        console.log(agence)
                         // On crée le marqueur
                         let marker = L.marker([agence[1].lat, agence[1].lon]).addTo(carte)
-                        marker.bindPopup(agence[1].nom)
+                        marker.bindPopup(agence[1].map_nom)
 
                     })
                     // On centre la carte sur le cercle

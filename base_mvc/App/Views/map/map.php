@@ -22,8 +22,7 @@
                     <button type="button"><i class="fas fa-paper-plane"></i></button>
                 </form>
 
-                <select name="Selection" id="name" class="select_adresse">
-
+                <select name="Selection" id="select_adresse">
                 </select>
             </div>
         </div>
