@@ -17,21 +17,95 @@
 
             <!-- FACTURE MODAL -->
 
-            <a id="mybtn" class="btnprofil">Télécharger ma facture</a>
-            <!-- <button class="btnprofil" id="download"> download pdf</button> -->
+            <!-- <a id="mybtn" class="btnprofil">Télécharger ma facture</a> -->
+            <button class="btnprofil" id="download"> download pdf</button>
             <div id="window" class="facture-modal">
-
-            <!-- Modal content -->
-            <div class="facture-modal-content">
+                <div class="facture-modal-content">
                     <span class="facture-close">&times;</span>
-                    <h3 class="facture-text">Ceci est ma facture</h3>
-                    <a id="download" class="btnprofil">Télécharger ma facture</a>
+                    <div class="facture" id="facture">
+                        <div class="facture-header">
+                            <h6 class="facture-title text-primary">Facture</h6>
+                        </div>
+
+                        <div class="facture-body">
+                            <div class="left-facture top-facture">
+                                <div class="text-facture-left">
+                                    <ul class="list list-unstyled mb-0 facture-text-left">
+                                        <li>2269 Six Sigma</li>
+                                        <li>New york city</li>
+                                        <li>+1 474 44737 47 </li>
+                                    </ul>
+                                </div>
+
+                                <div class="text-sm-right">
+                                    <h4 class="facture-color mb-2 mt-md-2">Facture </h4>
+                                    <!-- #BBB1243 -->
+                                    <ul class="list list-unstyled mb-0">
+                                        <li>Date: <span class="font-weight-semibold">
+                                                <!-- <?php echo $particuliers->created_at; ?> -->
+                                            </span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="facture-name">
+                                <div class="facture-text-left">
+                                    <span class="text-muted">Facturé à:</span>
+                                    <ul class="list list-unstyled mb-0">
+                                        <li>
+                                            <h5 class="my-2">
+                                                <!-- <?php echo $particuliers->firstname . ' ' . $particuliers->lastname; ?> -->
+                                            </h5>
+                                        </li>
+                                        <li></li>
+                                        <li>
+                                            <!-- <?php echo $particuliers->adresse; ?> -->
+                                        </li>
+                                        <li>
+                                            <!-- <?php echo $particuliers->postal . ' ' . $particuliers->ville; ?> -->
+                                        </li>
+                                        <li><a href="#" data-abc="true">
+                                                <!-- <?php echo $particuliers->email; ?> -->
+                                            </a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="mb-2 ml-auto"> <span class="text-muted">Details du paiement:</span>
+                                    <div class="d-flex flex-wrap wmin-md-400">
+                                        <ul class="list list-unstyled mb-0 text-left">
+                                            <li>
+                                                <h5 class="my-2">Total Due:</h5>
+                                            </li>
+                                        </ul>
+                                        <ul class="list list-unstyled text-right mb-0 ml-auto">
+                                            <li>
+                                                <h5 class="font-weight-semibold my-2">$1,090</h5>
+                                            </li>
+                                            <li><span class="font-weight-semibold">Hong Kong Bank</span></li>
+                                            <li>Hong Kong</li>
+                                            <li>Thurnung street, 21</li>
+                                            <li>New standard</li>
+                                            <li><span class="font-weight-semibold">98574959485</span></li>
+                                            <li><span class="font-weight-semibold">BHDHD98273BER</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal content -->
+                        <!-- <div class="facture-modal-content">
+                        <span class="facture-close">&times;</span>
+                        <h3 class="facture-text">Ceci est ma facture</h3>
+                        <a id="download" class="btnprofil">Télécharger ma facture</a>
+                    </div> -->
+
+                    </div>
+
+                    <!-- FACTURE MODAL FIN -->
+
                 </div>
-
             </div>
-
-            <!-- FACTURE MODAL FIN -->
-
         </div>
         <div class="sheet-wrap">
             <div id="sheet-two" class="dash-sheet">

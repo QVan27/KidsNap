@@ -300,7 +300,7 @@ $(function () {
 
 
 var modal = document.getElementById("window");
-var btn = document.getElementById("mybtn");
+var btn = document.getElementById("download");
 var span = document.getElementsByClassName("facture-close")[0];
 
 btn.onclick = function () {
@@ -321,8 +321,8 @@ window.onclick = function (event) {
 window.onload = function () {
   document.getElementById("download")
     .addEventListener("click", () => {
-      const invoice = this.document.getElementById("invoice");
-      console.log(invoice);
+      const facture = this.document.getElementById("facture");
+      console.log(facture);
       console.log(window);
       var opt = {
         margin: 1,
@@ -331,6 +331,6 @@ window.onload = function () {
         html2canvas: { scale: 2 },
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
       };
-      html2pdf().from(invoice).set(opt).save();
+      html2pdf().from(facture).set(opt).save();
     })
 }
