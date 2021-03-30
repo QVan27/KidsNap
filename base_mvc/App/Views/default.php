@@ -29,6 +29,7 @@
                                 <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
                             </div>
                             <div class="right">
+                            <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
                                 <?php if (isset($_SESSION["user"])) : ?>
                                     <?php if ($_SESSION["user"]->user_parent == 1) : ?>
                                         <li><a href="index.php?page=dashboard-parents" class="margin-right">Profile</a></li>
@@ -37,9 +38,11 @@
                                         <li><a href="index.php?page=dashboard-pros" class="margin-right">Profile</a></li>
                                     <?php endif; ?>
                                     <a href="index.php?page=logout" class="margin-right">Déconnexion</a>
+                                    <?php else : ?>
+                                        <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
                                 <?php endif; ?>
-                                <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
-                                <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
+                                
+                                
                             </div>
                         </ul>
                     </nav>
@@ -111,7 +114,7 @@
                                 <!---->
                                 <div class="row mt-3 justify-content-end">
                                     <div class="col-auto px-0 px-md-1"><button role="btn-register" type="button" class="btn-modal">Créer mon compte</button></div>
-                                    <div class="col-auto pl-0"><button type="submit" class="btn-modal btn-secondary text-uppercase font-weight-bold"><a href="index.php?page=home&status=login">Se connecter</a></button></div>
+                                    <div class="col-auto pl-0"><button type="submit" class="btn-modal btn-secondary text-uppercase font-weight-bold">Se connecter</button></div>
                                 </div>
 
                                 <div class="row pt-3">

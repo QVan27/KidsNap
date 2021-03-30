@@ -39,7 +39,7 @@ class UserController extends Controller
     public function logout()
     {
         session_destroy();
-        header("Location:index.php");
+        header("Location:index.php?page=home");
     }
 
     public function registerParent($data)
