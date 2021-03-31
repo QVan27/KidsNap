@@ -92,13 +92,84 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="table-responsive">
+                            <table class="table table-lg">
+                                <thead>
+                                    <tr>
+                                        <th>Description</th>
+                                        <th>Rate</th>
+                                        <th>Hours</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h6 class="mb-0">Arts and design template</h6> <span class="text-muted">in
+                                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                                pariatur.Duis aute irure dolor in reprehenderit</span>
+                                        </td>
+                                        <td>$120</td>
+                                        <td>180</td>
+                                        <td><span class="font-weight-semibold">$300</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6 class="mb-0">Template for desnging the arts</h6> <span class="text-muted">Lorem
+                                                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor</span>
+                                        </td>
+                                        <td>$140</td>
+                                        <td>100</td>
+                                        <td><span class="font-weight-semibold">$240</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h6 class="mb-0">Technical support international</h6> <span class="text-muted">Lorem
+                                                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor</span>
+                                        </td>
+                                        <td>$250</td>
+                                        <td>$250</td>
+                                        <td><span class="font-weight-semibold">$500</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="facture-body">
+                            <div class="d-md-flex flex-md-wrap">
+                                <div class="pt-2 mb-3 wmin-md-400 ml-auto">
+                                    <h6 class="mb-3 text-left">Total due</h6>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <th class="text-left">Subtotal:</th>
+                                                    <td class="text-right">$1,090</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-left">Tax: <span class="font-weight-normal">(25%)</span></th>
+                                                    <td class="text-right">$27</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-left">Total:</th>
+                                                    <td class="text-right text-primary">
+                                                        <h5 class="font-weight-semibold">$1,160</h5>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Modal content -->
                         <!-- <div class="facture-modal-content">
                         <span class="facture-close">&times;</span>
-                        <h3 class="facture-text">Ceci est ma facture</h3>
+                        <h3 class="facture-text">Ceci est ma facture</h3> -->
                         <a id="download" class="btnprofil">Télécharger ma facture</a>
-                    </div> -->
+                    <!-- </div> -->
 
                     </div>
 
