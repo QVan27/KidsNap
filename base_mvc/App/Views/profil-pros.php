@@ -50,6 +50,11 @@
                 <input type="text" name="telephone" id="telephoneProfilPros" class="inputprofil" placeholder="Téléphone*">
             </div>
 
+            <!-- DESCRIPTION -->
+            <div class="form-group">
+                <label for="description"></label>
+                <textarea name="description" id="description-pros" placeholder="Description*"></textarea>
+            </div>
             <!-- ENVOYER -->
             <div class="submitButtonprofil">
                 <input type="submit" name="envoyer" id="enregistrerPros" value="Enregistrer" class="buttonprofil">
