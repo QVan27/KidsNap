@@ -32,7 +32,7 @@ $(document).ready(function () {
     const nextURL = str3 + '&status=login';
     const nextTitle = 'Kids\'nap';
     const nextState = { additionalInformation: 'Updated the URL with JS' };
-
+    
 
     // This will create a new entry in the browser's history, without reloading
     window.history.pushState(nextState, nextTitle, nextURL);
@@ -49,7 +49,7 @@ $(document).ready(function () {
     const nextURL = str3 + '&status=proRegister';
     const nextTitle = 'Kids\'nap';
     const nextState = { additionalInformation: 'Updated the URL with JS' };
-
+    
 
     // This will create a new entry in the browser's history, without reloading
     window.history.pushState(nextState, nextTitle, nextURL);
@@ -66,7 +66,7 @@ $(document).ready(function () {
     const nextURL = str3 + '&status=parentRegister';
     const nextTitle = 'Kids\'nap';
     const nextState = { additionalInformation: 'Updated the URL with JS' };
-
+    
 
     // This will create a new entry in the browser's history, without reloading
     window.history.pushState(nextState, nextTitle, nextURL);
@@ -357,9 +357,7 @@ $(function () {
 //     })
 // }
 // Affiche les modals en fonction des cartes
-$(".voirPlus").on("click", function () {
-  var id = this.id;
-  var modal = "#modalCard";
+
 // // Modal Card
 // $(".voirPlus").on("click", function () {
 //   var id = this.id;
@@ -654,4 +652,4 @@ $(".voirPlus").on("click", function () {
 //   securitycode.addEventListener("focus", function () {
 //     document.querySelector(".creditcard").classList.add("flipped");
 //   });
-// }
+// };
