@@ -179,7 +179,7 @@
                                 </div>
 
                                 <div class="input-group mb-3">
-                                    <select name="pro_type" id="selectMode" class="form-control input-light">
+                                    <select name="pro_type" id="selectModePro" class="form-control input-light">
                                     <option value="" disabled selected>Type de service</option>
                                         <option value="Creche">Crèche</option>
                                         <option value="Assistante maternelle">Assistant(e) Maternel(le)</option>
@@ -232,10 +232,13 @@
                 </div>
 
         </footer>
-        <script src="asset/js/map.js"></script>
+        
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+        <script src="asset/js/modal.js"></script>
+        <script src="asset/js/map.js"></script>
         <script src="asset/js/main.js"></script>
     </body>
 
