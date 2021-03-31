@@ -6,19 +6,25 @@
         <div class="boxHead">
             <h3>Recherche de garde pour enfants</h3>
             <div class="boxHead_bis">
-                <p>Du : <input type="text" id="fromDate" autocomplete="off"></p>
-                <p>Au : <input type="text" id="toDate" autocomplete="off"></p>
-                <p>
-                    <label for="champ-distance">Distance : </label>
-                    <input type="range" min="1" max="200" id="champ-distance">
-                </p>
-                <p id="valeur-distance"></p>
                 <form action="" method="post" id="form_map">
-                    <input type="text" placeholder="Adresse" id="adresse" value="">
-                    <button type="button"><i class="fas fa-paper-plane"></i></button>
+                    <div class="boxFormMap">
+                        <p>Du : <input type="text" id="fromDate" autocomplete="off"></p>
+                        <p>Au : <input type="text" id="toDate" autocomplete="off"></p>
+                    </div>
+                    <div class="boxFormMap">
+                        <p>
+                            <label for="champ-distance">Distance : </label>
+                            <input type="range" min="1" max="200" id="champ-distance">
+                        </p>
+                        <p id="valeur-distance"></p>
+                        <div class="boxFormBtn">
+                            <input type="text" placeholder="Adresse" id="adresse" value="">
+                            <button type="button"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                    <select name="Selection" id="select_adresse">
                 </form>
 
-                <select name="Selection" id="select_adresse">
                 </select>
             </div>
         </div>

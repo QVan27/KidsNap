@@ -25,11 +25,20 @@
                         <ul>
                             <div class="left">
                                 <a href="index.php?page=home"><img src="asset/image/logo-dark.png" alt=""></a>
-                                <li><a href="index.php?page=home">Parents</a></li>
-                                <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
+                                <?php if (isset($_SESSION["user"])) : ?>
+                                    <?php if ($_SESSION["user"]->user_parent == 1) : ?>
+                                        <li><a href="index.php?page=map">Trouver un Pro</a></li>
+                                    <?php endif; ?>
+                                    <?php if ($_SESSION["user"]->user_pro == 1) : ?>
+                                        <li><a href="index.php?page=dashboard-parents" class="">Profil</a></li>
+                                    <?php endif; ?>
+                                <?php else : ?>
+                                    <li><a href="index.php?page=home">Parent</a></li>
+                                    <li><a href="index.php?page=pro">Pro</a></li>
+                                <?php endif; ?>
                             </div>
                             <div class="right">
-                                <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
+                                <!-- <li><a href="index.php?page=contact" class="margin-right">Contact</a></li> -->
                                 <?php if (isset($_SESSION["user"])) : ?>
                                     <?php if ($_SESSION["user"]->user_parent == 1) : ?>
                                         <li><a href="index.php?page=dashboard-parents" class="margin-right">Profil</a></li>
@@ -37,8 +46,10 @@
                                     <?php if ($_SESSION["user"]->user_pro == 1) : ?>
                                         <li><a href="index.php?page=dashboard-pros" class="margin-right">Profil</a></li>
                                     <?php endif; ?>
-                                    <a href="index.php?page=logout" class="margin-right">Déconnexion</a>
+                                    <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
+                                    <li> <a href="index.php?page=logout" class="margin-right btn color-1">Déconnexion</a></li>
                                 <?php else : ?>
+                                    <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
                                     <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
                                 <?php endif; ?>
 
@@ -52,10 +63,26 @@
                 <div id="sideNav">
                     <nav>
                         <ul>
-                            <li><a href="index.php?page=home">Parents</a></li>
+                            <?php if (isset($_SESSION["user"])) : ?>
+                                <?php if ($_SESSION["user"]->user_parent == 1) : ?>
+                                    <li><a href="index.php?page=home">Accueil</a></li>
+                                    <li><a href="index.php?page=dashboard-parents">Profil</a></li>
+                                    <li><a href="index.php?page=map">Trouver un pro</a></li>
+                                <?php endif; ?>
+                                <?php if ($_SESSION["user"]->user_pro == 1) : ?>
+                                    <li><a href="index.php?page=home">Accueil</a></li>
+                                    <li><a href="index.php?page=dashboard-pros">Profil</a></li>
+                                <?php endif; ?>
+                                <li><a href="index.php?page=contact">Contact</a></li>
+                                <li> <a href="index.php?page=logout" class="btn color-1">Déconnexion</a></li>
+                            <?php else : ?>
+                                <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
+                            <?php endif; ?>
+
+                            <!-- <li><a href="index.php?page=home">Parents</a></li>
                             <li><a href="index.php?page=pro">Pro</a></li>
                             <li><a href="index.php?page=contact">Contact</a></li>
-                            <li><a href="" role="btn-modal-login" id="link_login" class="btn color-1">Connexion</a></li>
+                            <li><a href="" role="btn-modal-login" id="link_login" class="btn color-1">Connexion</a></li> -->
                         </ul>
                     </nav>
                 </div>
