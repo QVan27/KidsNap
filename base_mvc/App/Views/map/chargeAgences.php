@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     // On se connecte à la BDD
     require_once('connect.php');
 
-    $sql = 'SELECT id, nom, lat, lon, ( 6371 * acos( cos( radians(:lat) ) * cos( radians( lat ) ) * cos( radians( lon ) - radians(:lon) ) + sin( radians(:lat) ) * sin( radians( lat ) ) ) ) AS distance FROM `map` HAVING distance < :distance ORDER BY distance';
+    $sql = 'SELECT map_id, map_nom, lat, lon, ( 6371 * acos( cos( radians(:lat) ) * cos( radians( lat ) ) * cos( radians( lon ) - radians(:lon) ) + sin( radians(:lat) ) * sin( radians( lat ) ) ) ) AS distance FROM `map` HAVING distance < :distance ORDER BY distance';
 
     $query = $db->prepare($sql);
 

@@ -68,7 +68,7 @@
                         </div>
                         <img src="asset/image/community.svg" alt="">
                     </div>
-                    <a class="btn community" role="btn-modal-register" href="">Rejoindre la communauté Kids'Nap</a>
+                    <a class="btn community" role="btn-modal-register" id="link_login" href="">Rejoindre la communauté Kids'Nap</a>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
     </div>
     <div class="btn-job">
         <h2>Trouvez un job de garde d'enfants</h2>
-        <a href="" role="btn-modal-register" class="btn color-1 go">J'y vais !</a>
+        <a href="" role="btn-modal-register" id="link_login" class="btn color-1 go">J'y vais !</a>
     </div>
 </section>
 
