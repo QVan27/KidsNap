@@ -62,4 +62,14 @@ class DashboardController extends Controller{
                
         ]);
     }
+    
+    public function showReservation()
+    {
+    
+        $this->render(
+            "reservation",
+        [
+               
+        ]);
+    }
 }

@@ -14,6 +14,7 @@
             <p class="ppmail">pierrekiroule@gmail.com</p>
             <p class="ppmail">Crèche</p>
             <a href="index.php?page=profil-pros" class="btnprofil btnprofil1">Modifier profil</a>
+            <a href="index.php?page=reservation" class="btnprofil btnprofil1">Réserver un créneau</a>
         </div>
         <div class="sheet-wrap">
             <div id="sheet-two" class="dash-sheet">

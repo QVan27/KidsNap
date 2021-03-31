@@ -2084,3 +2084,71 @@ input[type="checkbox"] {
     margin-bottom: 30px;
 }
 /* PROFIL PARENTS - PROS*/
+
+
+
+/* FORMULAIRE RESERVATION ===================================================== */
+
+.section-form-reservation{
+    height: 100%;
+    margin-bottom: 20px;
+}
+.reservation-header, .fa-bookmark{
+    text-align: center;
+    color: var(--blue-btn);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.form-reservation-container{
+    
+    background-color: var(--white-cream);
+}
+.form-reservation{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-kid{
+    margin-bottom: 30px;
+}
+.label-kid{
+    margin-bottom: 5px;
+}
+
+#form-reservation input{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+#form-reservation textarea{
+    width: 50%;
+    height: 150px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    resize: none;
+    outline: none;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    font-size: 15px;
+}
+
+#submit-kid[type="submit"]{
+    width: 10%;
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    color: var(--white);
+    background-color: var(--blue-btn);
+    cursor: pointer;
+}
+
+
+
+
