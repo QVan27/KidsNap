@@ -17,7 +17,6 @@
                     <p class="ppmail">pierrekiroule@gmail.com</p>
                     <p class="ppmail">Crèche</p>
                     <a href="index.php?page=profil-pros" class="btnprofil btnprofil1">Modifier profil</a>
-                    <a href="index.php?page=reservation" class="btnprofil btnprofil1">Réserver un créneau</a>
                 </div>
                 <div class="sheet-wrap">
                     <div id="sheet-two" class="dash-sheet">
@@ -33,6 +32,7 @@
                             <p class="ppmail">pierrekiroule@gmail.com</p>
                             <p class="ppmail">Crèche</p>
                             <a href="index.php?page=profil-pros" class="btnprofil btnprofil1">Modifier profil</a>
+                            <a href="index.php?page=reservation" class="btnprofil btnprofil1">Réserver un créneau</a>
                         </div>
                         <div class="sheet-wrap">
                             <div id="sheet-two" class="dash-sheet">
@@ -41,6 +41,7 @@
                                     L'équipe éducative, qui est constituée d'un référent technique éducatrice de jeunes enfants et de deux animatrices petite enfance, veille à vous accueillir, vous et votre enfant dans la bienveillance et la confiance. La micro-crèche est un lieu ouvert aux parents, où il est possible pour eux de se poser avec leur enfant et de partager un temps de jeux pendant les transmissions du matin ou du soir.<br><br>
                                     Grâce à sa collaboration avec un site de gestion de crèche, notre équipe mettra tout en oeuvre pour vous rassurer durant la journée, via des photos par exemple.</p>
                             </div>
+
                         </div>
                     </div>
         </section>
