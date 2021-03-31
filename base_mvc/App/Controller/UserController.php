@@ -23,23 +23,23 @@ class UserController extends Controller
 
     public function login($data)
     {
-        if (isset($data["user_mail"])) {
-            $user = $this->userModel->getUserByMail($data["user_mail"]);
+        if (isset($data["user_email"])) {
+            $user = $this->userModel->getUserByMail($data["user_email"]);
 
             if ($user && password_verify($data["user_password"], $user->user_password)) {
                 $_SESSION["user"] = $user;
-                header("Location:index.php");
+                // header("Location:index.php");
             } else {
                 $error = "Utilisateur ou mot de passe incorrect.";
             }
         }
-        header("location:index.php?page=login");
+        // header("location:index.php?page=login");
     }
 
     public function logout()
     {
         session_destroy();
-        header("Location:index.php");
+        header("Location:index.php?page=home");
     }
 
     public function registerParent($data)
