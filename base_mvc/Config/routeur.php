@@ -11,11 +11,7 @@ if (!empty($_GET["page"])) {
 } else {
     $page = "home";
 }
-if (!empty($_GET["status"])) {
-    $status = $_GET["status"];
-} else {
-    $status = "";
-}
+
 
 if (!empty($_GET["status"])) {
     $status = $_GET["status"];
@@ -47,8 +43,10 @@ switch ($page) {
         $home->home();
         break;
     case 'map':
-        $locations = new MapController();
-        $locations->showLocation();
+        // $locations = new MapController();
+        // $locations->showLocation();
+        $pros = new ProController();
+        $pros->getPros();
         break;
     case 'pro':
         $pro = new ProController();
@@ -79,6 +77,10 @@ switch ($page) {
         $locations = new MapController();
         $locations->showco();
         break;
+    case 'logout':
+        $leave = new UserController();
+        $leave->logout();
+        break;
 
     case 'test':
         $test = new ProController();
@@ -99,7 +101,7 @@ switch ($page) {
         $disponibilite = new DashboardController();
         $disponibilite->showDisponibilite();
         break;
-
+        
     default:
         $home = new HomeController();
         $home->home();
