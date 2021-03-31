@@ -314,6 +314,50 @@ $(function () {
 });
 
 
+//   $(".opener").on("click", function () {
+//     $(".dialog").dialog("open");
+//   });
+// });
+
+
+
+// var modal = document.getElementById("window");
+// var btn = document.getElementById("download");
+// var span = document.getElementsByClassName("facture-close")[0];
+
+// btn.onclick = function () {
+//   modal.style.display = "block";
+// }
+
+// span.onclick = function () {
+//   modal.style.display = "none";
+// }
+
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
+
+
+// window.onload = function () {
+//   document.getElementById("download")
+//     .addEventListener("click", () => {
+//       const facture = this.document.getElementById("facture");
+//       console.log(facture);
+//       console.log(window);
+//       var opt = {
+//         margin: 1,
+//         filename: 'myfile.pdf',
+//         image: { type: 'jpeg', quality: 0.98 },
+//         html2canvas: { scale: 2 },
+//         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+//       };
+//       html2pdf().from(facture).set(opt).save();
+//     })
+// }
+// Affiche les modals en fonction des cartes
+
 // // Modal Card
 // $(".voirPlus").on("click", function () {
 //   var id = this.id;
