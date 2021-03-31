@@ -29,20 +29,20 @@
                                 <li><a href="index.php?page=pro" class="margin-left">Pro</a></li>
                             </div>
                             <div class="right">
-                            <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
+                                <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
                                 <?php if (isset($_SESSION["user"])) : ?>
                                     <?php if ($_SESSION["user"]->user_parent == 1) : ?>
-                                        <li><a href="index.php?page=dashboard-parents" class="margin-right">Profile</a></li>
+                                        <li><a href="index.php?page=dashboard-parents" class="margin-right">Profil</a></li>
                                     <?php endif; ?>
                                     <?php if ($_SESSION["user"]->user_pro == 1) : ?>
-                                        <li><a href="index.php?page=dashboard-pros" class="margin-right">Profile</a></li>
+                                        <li><a href="index.php?page=dashboard-pros" class="margin-right">Profil</a></li>
                                     <?php endif; ?>
                                     <a href="index.php?page=logout" class="margin-right">Déconnexion</a>
-                                    <?php else : ?>
-                                        <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
+                                <?php else : ?>
+                                    <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
                                 <?php endif; ?>
-                                
-                                
+
+
                             </div>
                         </ul>
                     </nav>
@@ -136,11 +136,11 @@
                             <form method="post">
                                 <div class="choose-type">
 
-                                    <button type="button" role="btn-parent" id="link_parent"class="btn-modal btn-block py-4 mb-2 parent">
+                                    <button type="button" role="btn-parent" id="link_parent" class="btn-modal btn-block py-4 mb-2 parent">
                                         <h6 class="h4">
                                             PARENT<br> <small>A la recherche de solutions de garde et plus</small></h6>
                                     </button>
-                                    <button type="button" role="btn-baby" id="link_pro"class="btn-modal btn-block py-4 mb-2 babysitter">
+                                    <button type="button" role="btn-baby" id="link_pro" class="btn-modal btn-block py-4 mb-2 babysitter">
                                         <h6 class="h4">
                                             BABYSITTER<br> <small>Pour garder des enfants</small></h6>
                                     </button>
@@ -177,7 +177,6 @@
                         </div>
                     </div>
                     <div class="modal-content" id="modal-baby">
-                        <!---->
                         <div class="modal-header px-4">
                             <h5 class="modal-title">Je m'inscris en tant que <span class="text-secondary text-uppercase">PROFESSIONNEL</span> <button type="button" role="btn-changer" class="btn-modal btn-sm btn-outline-secondary2">Changer</button></h5> <button type="button" class="modal-close"><span aria-hidden="true">×</span></button>
                         </div>
@@ -192,19 +191,14 @@
                                 </div>
                                 <div class="input-group mb-3"><input placeholder="Confirmation du mot de passe" name="password_confirmation" type="password" class="form-control input-light">
                                 </div>
-
+                                <div class="input-group mb-3"><textarea name="pro_content" placeholder="Description" id="" cols="30" rows="20" class="form-control input-light areaDesc"></textarea>
+                                </div>
                                 <div class="input-group mb-3">
                                     <select name="pro_type" id="selectModePro" class="form-control input-light">
-                                    <option value="" disabled selected>Type de service</option>
+                                        <option value="" disabled selected>Type de service</option>
                                         <option value="Creche">Crèche</option>
                                         <option value="Assistante maternelle">Assistant(e) Maternel(le)</option>
                                     </select>
-                                  
-                                </div>
-                                <div class="input-group mb-3">
-                                <textarea name="pro_content" placeholder="Description" id="" class="form-control input-light">
-                                </textarea>
-                               
                                 </div>
                                 <div class="input-group mb-3"><input placeholder="Tarif par heure" name="pro_tarif" type="text" class="form-control input-light">
                                 </div>
@@ -212,8 +206,6 @@
                                 </div>
                                 <div class="input-group mb-3"><input name="justificatif" type="file" class="form-control input-light" accept="application/pdf">
                                 </div>
-
-                                <!---->
                                 <div class="row mt-4 justify-content-end">
                                     <div class="col-auto"><button type="submit" class="btn-modal btn-secondary text-uppercase font-weight-bold">
                                             Créer mon compte
@@ -247,7 +239,7 @@
                 </div>
 
         </footer>
-        
+
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

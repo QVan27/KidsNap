@@ -853,6 +853,7 @@ textarea[name=pro_content]
  min-width : 100%;
  max-width : 100%;
  max-height : 200px;
+ height: 80px;
 }
 
 .form-control {
@@ -1209,7 +1210,7 @@ textarea[name=pro_content]
 .btnParents {
     width: 546px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
@@ -1319,7 +1320,7 @@ textarea[name=pro_content]
     box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
 }
 
-.toggle-state {
+.toggle-map/*, .toggle-type */{
     display: none;
 }
 
@@ -1333,9 +1334,13 @@ textarea[name=pro_content]
     box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
 }
 
-.toggle-state:checked~.indicator {
+.toggle-map:checked~.indicator {
     transform: translate3d(25%, 0, 0);
 }
+
+/* .toggle-type:checked~.indicator {
+    transform: translate3d(25%, 0, 0);
+} */
 
 .cardMap {
     width: 100%;

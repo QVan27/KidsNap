@@ -74,7 +74,7 @@ class UserController extends Controller
     {
         if (!empty($data["user_mail"]) && !empty($data["user_nom"]) && !empty($data["user_prenom"])) {
             if (!empty($data["pro_tarif"]) && !empty($data["pro_nb_place"])) {
-
+                
                 $userModel = new UserModel();
                 $proModel = new ProModel();
 
@@ -128,7 +128,7 @@ class UserController extends Controller
                         "pro_content" => $data["pro_content"],
                         "pro_type" => $data["pro_type"],
                     );
-
+                    // var_dump($dataPro);
 
                     $pro = $this->encodeChars($dataPro);
                     $proModel->create($pro);

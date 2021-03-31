@@ -30,10 +30,17 @@
                 <p>Classé selon la proximité à votre secteur</p>
                 <label class="label">
                     <div class="toggle">
-                        <input class="toggle-state" type="checkbox" name="check" value="check" />
+                        <input class="toggle-map" type="checkbox" name="check" value="check" />
                         <div class="indicator"></div>
                     </div>
                     <div class="label-text">Afficher la carte</div>
+                </label>
+                <label class="label">
+                    <div class="toggle">
+                        <input class="toggle-type" type="checkbox" name="check" value="check" />
+                        <div class="indicator"></div>
+                    </div>
+                    <div class="label-text">Assitante maternelle ou Crèche</div>
                 </label>
             </div>
         </div>
@@ -57,7 +64,7 @@
                             <label for="show" id="<?= $user->user_id ?>" class="voirPlus">Voir plus</label>
                             <div class="rightInfoCard">
                                 <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                                <p class="price"><?= $user->pro_tarif ?>€ / hr</p>
+                                <p class="price"><?= $user->pro_tarif ?> / hr</p>
                             </div>
                             <div id="modalCard<?= $user->user_id ?>" class="modalProfil">
                                 <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
@@ -66,7 +73,7 @@
                                     <img src="asset/image/jeanne.svg" alt="">
                                     <div class="nomCard">
                                         <h2><?= ucFirst($user->user_prenom) . ' ' . ucFirst($user->user_nom) ?></h2>
-                                        <h3><?= ucFirst($user->pro_type) ?></h3>
+                                        <h3 class="proType"><?= ucFirst($user->pro_type) ?></h3>
                                     </div>
                                     <p class="contentCardSearchProfil"><?= ucFirst($user->pro_content) ?></p>
                                     <div class="btnCardProfil">
