@@ -2101,7 +2101,6 @@ input[type="checkbox"] {
 }
 
 .form-reservation-container{
-    
     background-color: var(--white-cream);
 }
 .form-reservation{
@@ -2112,6 +2111,9 @@ input[type="checkbox"] {
 }
 .input-kid{
     margin-bottom: 30px;
+}
+.file-kid{
+    margin-bottom: 25px;
 }
 .label-kid{
     margin-bottom: 5px;

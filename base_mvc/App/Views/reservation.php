@@ -8,7 +8,7 @@
         <form action="" id="form-reservation" class="form-reservation">
 
             <label class="label-kid" for="nb-kids">Nombre d'enfants</label>
-            <input type="text" name="nb-kids" class="input-kid" id="nb-kids">
+            <input type="number" name="nb-kids" class="input-kid" id="nb-kids">
 
             <label class="label-kid" for="name-kid">Nom</label>
             <input type="text" name="name-kid" class="input-kid" id="name-kid">
@@ -25,10 +25,10 @@
             <label for="carnet-kid">Carnet de santé</label>
             <input type="file" name="carnet-kid" class="input-kid file-kid" id="carnet-kid" placeholder="">
 
-            <label for="file-kid">Fichier</label>
+            <label for="file-kid">Pièces jointes</label>
             <input type="file" name="file-kid" class="file-kid" id="file-kid">
 
-            <input type="submit" name="submit-kid" id="submit-kid">
+            <input type="submit" name="submit-kid" class="file-kid" id="submit-kid">
         </form>
     </div>
 </section>
