@@ -101,12 +101,7 @@ switch ($page) {
         $disponibilite = new DashboardController();
         $disponibilite->showDisponibilite();
         break;
-
-    case 'reservation':
-        $reservation = new DashboardController();
-        $reservation->showReservation();
-        break;
-
+        
     default:
         $home = new HomeController();
         $home->home();

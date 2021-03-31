@@ -80,6 +80,46 @@
                         </div>
                     </div>
 
+                    <div id="modalValid<?= $user->user_id ?>" class="modalValid modalValidReservation">
+                        <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
+                        <div class="reservation-header">
+                            <h1><i class="fas fa-bookmark"></i> Réservation</h1>
+                        </div>
+
+                        <div class="form-reservation-container">
+                            <form action="" id="form-reservation" class="form-reservation">
+                                <div class="reservation-left">
+                                    <label class="label-kid" for="nb-kids">Nombre d'enfants</label>
+                                    <input type="number" name="nb-kids" class="input-kid" id="nb-kids">
+
+                                    <label class="label-kid" for="name-kid">Nom</label>
+                                    <input type="text" name="name-kid" class="input-kid" id="name-kid">
+
+                                    <label class="label-kid" for="prenom-kid">Prénom</label>
+                                    <input type="text" name="prenom-kid" class="input-kid" id="prenom-kid">
+
+                                    <label class="label-kid" for="age-kid">Age</label>
+                                    <input type="text" name="age-kid" class="input-kid" id="age-kid">
+
+                                    <label class="label-kid" for="commentaires-kid">Commentaires (allergies, problèmes de santé...)</label>
+                                    <textarea name="commentaires-kid" class="input-kid" id="commentaires-kid"></textarea>
+                                </div>
+                                <div class="reservation-right">
+                                    <label for="carnet-kid">Carnet de santé</label>
+                                    <input type="file" name="carnet-kid" class="input-kid file-kid" id="carnet-kid" placeholder="">
+
+                                    <label for="file-kid">Pièces jointes</label>
+                                    <input type="file" name="file-kid" class="file-kid" id="file-kid">
+
+                                    <input type="submit" name="submit-kid" class="file-kid" id="submit-kid">
+
+                                    <input type="checkbox" id="valid">
+                                    <label for="show" id="<?= $user->user_id ?>" class="validModal validmodalbtn">Payer pour valider</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                     <div id="modalValid<?= $user->user_id ?>" class="modalValid">
                         <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
                         <h1>Validation</h1>
