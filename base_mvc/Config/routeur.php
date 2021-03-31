@@ -97,6 +97,11 @@ switch ($page) {
         $dashboard->showProfilPros();
         break;
 
+    case 'disponibilite':
+        $disponibilite = new DashboardController();
+        $disponibilite->showDisponibilite();
+        break;
+        
     default:
         $home = new HomeController();
         $home->home();

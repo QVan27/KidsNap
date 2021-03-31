@@ -52,4 +52,15 @@ class DashboardController extends Controller{
                
         ]);
     }
+
+    public function showDisponibilite()
+    {
+    
+        $this->render(
+            "disponibilite",
+        [
+               
+        ]);
+    }
+    
 }
