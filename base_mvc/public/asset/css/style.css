@@ -1536,7 +1536,9 @@ textarea[name=pro_content]
 .field-container {
     position: relative;
 }
-
+.field-container input[type="submit"]{
+    cursor: pointer;
+}
 .form-container {
     display: grid;
     grid-column-gap: 10px;
@@ -2207,6 +2209,9 @@ input[type="checkbox"] {
     justify-content: space-between;
     width: 90%;
     padding: 50px 0 0 0;
+}
+.btnCardProfil label{
+    cursor: pointer;
 }
 
 .modalProfil h1, .infoCardSearchProfil h2, .infoCardSearchProfil h3 {
