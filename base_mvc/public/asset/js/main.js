@@ -299,7 +299,7 @@ $(function () {
 
 
 
-var modal = document.getElementById("invoice");
+var modal = document.getElementById("facture");
 var btn = document.getElementById("download");
 var span = document.getElementsByClassName("facture-close")[0];
 
@@ -321,7 +321,7 @@ window.onclick = function (event) {
 window.onload = function () {
   document.getElementById("download")
     .addEventListener("click", () => {
-      const invoice = this.document.getElementById("invoice");
+      const invoice = this.document.getElementById("facture");
       console.log(invoice);
       console.log(window);
       var opt = {
