@@ -40,7 +40,7 @@
                 <div class="fullContent">
                     <div class="txtImg proCat">
                         <div class="txtCat">
-                            <p>Vous êtes une micro-crèche, MAM, Assistante maternelle ?</p>
+                            <p>Vous êtes une Crèche ou une Assistante maternelle ?</p>
                             <p>Optimisez vos places disponibles (vacances, mercredi, ...), remplissez vos plannings et aidez les parents de la communauté en répondant à tout ou une partie de leur besoin de garde !</p>
                         </div>
                         <img src="asset/image/boost.svg" alt="">

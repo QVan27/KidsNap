@@ -4,14 +4,12 @@
     <img src="asset/image/banner_children.svg" alt="" class="imgBannerThird">
     <div class="txtContent">
         <h1>La plateforme connectée pour parents débordés </h1>
-        <p>Trouvez une place en crèche, une nounoue ou unye babysitter. Trouvez et partagez des expériences et activités en famille. Accédez à un ensemble d’outils pour mieux gérer votre parentalité</p>
+        <p>Trouvez une place en crèche ou une assitante maternelle. Trouvez et partagez des expériences et activités en famille. Accédez à un ensemble d’outils pour mieux gérer votre parentalité</p>
         <form action="index.php?page=map" class="inputSelect" method="post">
             <select name="" id="selectMode">
                 <option value="">Trouver un mode de garde</option>
                 <option value="">Une place en crèche</option>
-                <option value="">Une nounou au top</option>
-                <option value="">Un super baby-sitter</option>
-                <option value="">Une agence de garde d'enfants</option>
+                <option value="">Une assistante au top</option>
             </select>
             <input type="text" name="" id="placeMap" placeholder="Mon secteur">
             <input type="submit" id="submitted" value="Chercher">
@@ -33,7 +31,7 @@
                 <div class="fullContent">
                     <div class="txtImg">
                         <div class="txtCat">
-                            <p>Retrouvez l’intégralité des professionnels sur Kids’Nap : Micro-crèches, assistant(e)s maternel(le)s, Maison d’assistantes maternelles, baby-sitters, nounous qualifiés, agence de services, ainsi que leur disponibilités en instantané sur une carte interractive.</p>
+                            <p>Retrouvez l’intégralité des professionnels sur Kids’Nap : Crèches, assistant(e)s maternel(le)s, ainsi que leur disponibilités en instantané sur une carte interractive.</p>
                             <p><i class="fas fa-check-double"></i> Tous les profils sont vérifiés, appelés et validés par notre équipe.</p>
                         </div>
                         <img src="asset/image/map.svg" alt="">
