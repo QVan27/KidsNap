@@ -20,60 +20,8 @@ const showRequiredCategory = (event) => {
   getCategory.classList.add("showCategory");
 };
 
-
 $(document).ready(function () {
   init();
-  const link = document.getElementById('link_login');
-  link.addEventListener('click', function () {
-    let selectedItem = window.location.href
-    var str1 = selectedItem.replace('&status=login', '');
-    var str2 = str1.replace('&status=proRegister', '');
-    var str3 = str2.replace('&status=parentRegister', '');
-    const nextURL = str3 + '&status=login';
-    const nextTitle = 'Kids\'nap';
-    const nextState = { additionalInformation: 'Updated the URL with JS' };
-    
-
-    // This will create a new entry in the browser's history, without reloading
-    window.history.pushState(nextState, nextTitle, nextURL);
-
-    // This will replace the current entry in the browser's history, without reloading
-    window.history.replaceState(nextState, nextTitle, nextURL);
-  })
-  const link_pro = document.getElementById('link_pro');
-  link_pro.addEventListener('click', function () {
-    let selectedItem = window.location.href
-    var str1 = selectedItem.replace('&status=login', '');
-    var str2 = str1.replace('&status=proRegister', '');
-    var str3 = str2.replace('&status=parentRegister', '');
-    const nextURL = str3 + '&status=proRegister';
-    const nextTitle = 'Kids\'nap';
-    const nextState = { additionalInformation: 'Updated the URL with JS' };
-    
-
-    // This will create a new entry in the browser's history, without reloading
-    window.history.pushState(nextState, nextTitle, nextURL);
-
-    // This will replace the current entry in the browser's history, without reloading
-    window.history.replaceState(nextState, nextTitle, nextURL);
-  })
-  const link_parent = document.getElementById('link_parent');
-  link_parent.addEventListener('click', function () {
-    let selectedItem = window.location.href
-    var str1 = selectedItem.replace('&status=login', '');
-    var str2 = str1.replace('&status=proRegister', '');
-    var str3 = str2.replace('&status=parentRegister', '');
-    const nextURL = str3 + '&status=parentRegister';
-    const nextTitle = 'Kids\'nap';
-    const nextState = { additionalInformation: 'Updated the URL with JS' };
-    
-
-    // This will create a new entry in the browser's history, without reloading
-    window.history.pushState(nextState, nextTitle, nextURL);
-
-    // This will replace the current entry in the browser's history, without reloading
-    window.history.replaceState(nextState, nextTitle, nextURL);
-  })
 });
 
 const init = () => {
@@ -204,11 +152,11 @@ menuBtn.onclick = function () {
   }
 };
 
-// toggleBtn check 1 / 2 if yes hide else fadeIn (MAP)
+// toggleBtn check 1 / 2 if yes hide else fadeIn (map)
 // https://qastack.fr/programming/5016313/how-to-determine-if-a-number-is-odd-in-javascript
 $(document).ready(function () {
   x = 0;
-  $(".toggle-map").click(function () {
+  $(".toggle-state").click(function () {
     x++;
     if (x % 2 == 1) {
       $("#map").hide();
@@ -220,26 +168,27 @@ $(document).ready(function () {
     } else {
       $("#map").fadeIn(500);
       $("#map").css("min-width", "50%");
+      // $(".cardSearch").css("width", "100%");
       $(".proCard").css("width", "99%");
     }
   });
 });
 
-// ASSITANTE OU CRECHE
-// $(document).ready(function () {
-//   x = 0;
-//   pro = $('.proType').value;
-//   aM = 'Assitante maternelle'
-//   c = 'Creche'
-//   console.log(pro)
-//   $(".toggle-type").click(function () {
-//     x++;
-//     if (x % 2 == 1 && pro == aM) {
-//       $('proCard')
-//     } else {
-    
-//     }
-//   });
+// $(window).resize(function () {
+//   var windowwidth = $(window).width();
+
+//   if (windowwidth < "400") {
+//     $(".cardSearch").css("display", "flex");
+//     $(".cardSearch").css("flex-wrap", "nowrap");
+//     $(".cardSearch").css("flex-direction", "column");
+//     $(".proCard").css("min-width", "100%");
+//     //  alert('see it works');
+//   } else if (windowwidth > "400") {
+//     $("#map").fadeIn(500);
+//     $("#map").css("min-width", "50%");
+//     $(".cardSearch").css("width", "100%");
+//     $(".proCard").css("width", "99%");
+//   }
 // });
 
 // Calendar datePicker from jQuery UI
@@ -330,7 +279,6 @@ $(function () {
   return datepicker.regional.fr;
 });
 
-
 // $(function () {
 //   $(".dialog").dialog({
 //     autoOpen: false,
@@ -350,8 +298,8 @@ $(function () {
 // });
 
 
-
-var modal = document.getElementById("facture");
+// MODULE FACTURE ET PDF ================================================== //
+var modal = document.getElementById("window");
 var btn = document.getElementById("download");
 var span = document.getElementsByClassName("facture-close")[0];
 
@@ -369,11 +317,10 @@ window.onclick = function (event) {
   }
 }
 
-
 window.onload = function () {
-  document.getElementById("download")
+  document.getElementById("download-file")
     .addEventListener("click", () => {
-      const invoice = this.document.getElementById("facture");
+      const invoice = this.document.getElementById("invoice");
       console.log(invoice);
       console.log(window);
       var opt = {
@@ -386,4 +333,3 @@ window.onload = function () {
       html2pdf().from(invoice).set(opt).save();
     })
 }
-

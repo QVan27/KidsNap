@@ -51,7 +51,7 @@
                     <div class="proCard">
 
                         <div class="infoCardSearch">
-                            <img src="asset/image/jeanne.svg" alt="">
+                            <img src="asset/image/user1.png" alt="">
                             <div class="nomCard">
                                 <p><?= ucFirst($user->user_prenom) . ' ' . ucFirst($user->user_nom) ?></p>
                                 <p><?= ucFirst($user->pro_type) ?></p>
@@ -69,7 +69,7 @@
                                 <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
                                 <h1 class="txtModalProfil">Profil</h1>
                                 <div class="infoCardSearchProfil">
-                                    <img src="asset/image/jeanne.svg" alt="">
+                                    <img src="asset/image/user1.png" alt="">
                                     <div class="nomCard">
                                         <h2><?= ucFirst($user->user_prenom) . ' ' . ucFirst($user->user_nom) ?></h2>
                                         <h3 class="proType"><?= ucFirst($user->pro_type) ?></h3>
@@ -89,7 +89,9 @@
                 <div id="modalValid" class="modalValid modalValidReservation">
                         <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
                         <div class="reservation-header">
-                            <h1><i class="fas fa-bookmark"></i>Réservation</h1>
+
+                            <h1><i class="far fa-bookmark"></i> Réservation</h1>
+
                         </div>
 
                         <div class="form-reservation-container">

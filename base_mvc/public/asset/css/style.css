@@ -2301,6 +2301,10 @@ table, th, td {
     margin-bottom: 20px;
 }
 
+
+.btn-facture{
+    width: 15%;
+}
 /* PROFIL PARENTS - PROS*/
 
 /* FORMULAIRE RESERVATION ===================================================== */
@@ -2321,7 +2325,7 @@ table, th, td {
 
 .reservation-header, .fa-bookmark {
     text-align: center;
-    color: var(--blue-btn);
+    /* color: var(--blue-btn); */
     text-transform: uppercase;
     margin-bottom: 30px;
 }
