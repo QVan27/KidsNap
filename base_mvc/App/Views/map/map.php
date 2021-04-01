@@ -32,7 +32,7 @@
     </div>
     <div class="contentSearch">
         <div class="searchPartners">
-            <h4>Plus de 1630 prestataires</h4>
+            <h4>Plus de 133 prestataires</h4>
             <div class="partnerTitle">
                 <p>Classé selon la proximité à votre secteur</p>
                 <label class="label">
@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="reservation-right">
                                     <label for="carnet-kid">Carnet de santé</label>
-                                    <input type="file" name="carnet-kid" class="input-kid file-kid" id="carnet-kid" placeholder="">
+                                    <input type="file" name="carnet-kid" class="file-kid" id="carnet-kid" placeholder="">
 
                                     <label for="file-kid">Pièces jointes</label>
                                     <input type="file" name="file-kid" class="file-kid" id="file-kid">
@@ -123,10 +123,10 @@
 
                                     <input type="submit" name="submit-kid" class="file-kid" id="submit-kid">
 
+                                    <input type="checkbox" id="valid">
+                                    <label for="show" id="<?= $user->user_id ?>" class="validModal validmodalbtn">Payer pour valider</label>
                                 </div>
                             </form>
-                            <input type="checkbox" id="valid">
-                            <label for="show" id="<?= $user->user_id ?>" class="validModal validmodalbtn">Payer pour valider</label>
                         </div>
                     </div>
 

@@ -2354,6 +2354,20 @@ table, th, td {
 
 .input-kid {
     margin-bottom: 30px;
+    width: 80%;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.281);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    resize: none;
+    outline: none;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+    font-size: 15px;
 }
 
 .file-kid {
@@ -2373,7 +2387,7 @@ table, th, td {
     border: 1px solid rgba(0, 0, 0, 0.281);
 }
 
-#form-reservation textarea {
+#commentaires-kid{
     width: 150%;
     height: 150px;
     background: #FFFFFF;
@@ -2389,10 +2403,10 @@ table, th, td {
     transition: 0.7s;
     font-size: 15px;
 }
-
-#submit-kid[type="submit"] {
+#submit-kid{
     width: 50%;
-    margin-top: 10px;
+    margin-top: 10%;
+    padding: 5% 10%;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     color: var(--white);
@@ -2400,14 +2414,15 @@ table, th, td {
     cursor: pointer;
 }
 
-#submit-kid[type="submit"]:hover {
+#submit-kid:hover {
     background-color: var(--violet);
 }
 
 .validmodalbtn {
     width: 50%;
-    margin-top: 10px;
-    padding: 10px;
+    text-align: center;
+    margin-top: 10%;
+    padding: 5% 10%;
     font-size: 15px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 10px;
