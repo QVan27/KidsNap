@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="form-reservation-container">
-                            <form action="" id="form-reservation" class="form-reservation">
+                            <form method="post" action="" id="form-reservation" class="form-reservation" enctype="multipart/form-data">
                                 <div class="reservation-left">
                                     <label class="label-kid" for="nb-kids">Nombre d'enfants</label>
                                     <input type="number" name="nb-kids" class="input-kid" id="nb-kids">
@@ -116,13 +116,15 @@
 
                                     <label for="file-kid">Pièces jointes</label>
                                     <input type="file" name="file-kid" class="file-kid" id="file-kid">
-                                    <input type="hidden" value="<?php $_SESSION["user"]->user_id ?>" name="user_id" class="hideId">
+
+                                    <input type="hidden" name="pro_id" value="<?= $user->user_id ?>" id="pro-hidden">
+
                                     <input type="submit" name="submit-kid" class="file-kid" id="submit-kid">
 
-                                    <input type="checkbox" id="valid">
-                                    <label for="show" id="" class="validModal validmodalbtn">Payer pour valider</label>
                                 </div>
                             </form>
+                            <input type="checkbox" id="valid">
+                            <label for="show" id="<?= $user->user_id ?>" class="validModal validmodalbtn">Payer pour valider</label>
                         </div>
                     </div>
 
