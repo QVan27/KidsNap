@@ -20,9 +20,9 @@
                     <!-- FACTURE MODAL -->
 
                     <!-- <a id="mybtn" class="btnprofil">Télécharger ma facture</a> -->
-                    <button class="btnprofil" id="download"> download pdf</button>
-                    <div id="facture" class="facture-modal">
-                        <div class="facture-modal-content">
+                    <button class="btnprofil" id="download">download pdf</button>
+                    <div id="window" class="facture-modal">
+                        <div id="facture" class="facture-modal-content">
                             <span class="facture-close">&times;</span>
                             <div class="facture" id="invoice">
                                 <div class="facture-header">
@@ -33,11 +33,12 @@
                                     <div class="left-facture top-facture">
                                         <div class="text-facture-left">
                                             <ul class="facture-text-left">
-                                                <li>Kids'Nap</li>
-                                                <li>21 rue du modèle</li>
-                                                <li>437 933 302</li>
-                                                <li>02 32 98 70 75</li>
-                                                <li>kidsnap@gmail.com</li>
+                                                <p>Kids'Nap</li>
+                                                    <li>21 rue du modèle</li>
+                                                    <li>437 933 302</li>
+                                                    <li>02 32 98 70 75</li>
+                                                    <li>kidsnap@gmail.com
+                                                </p>
                                                 <li>kidsnap.com</li>
                                             </ul>
                                         </div>
@@ -65,11 +66,11 @@
                                     </div>
                                 </div>
                                 <div class="table-responsive">
-                                    <table class="table table-lg">
+                                    <table id="table" class="table table-lg">
                                         <thead>
                                             <tr>
                                                 <th>Description</th>
-                                                <th>Qantité</th>
+                                                <th>nb enfants</th>
                                                 <th>Heures</th>
                                                 <th>Total HT</th>
                                             </tr>
@@ -143,14 +144,10 @@
                                     </div>
                                 </div>
 
-                                <!-- Modal content -->
-                                <!-- <div class="facture-modal-content">
-                        <span class="facture-close">&times;</span>
-                        <h3 class="facture-text">Ceci est ma facture</h3> -->
-                                <a id="download" class="btnprofil btn-facture">Télécharger ma facture</a>
-                                <!-- </div> -->
-
+                                <div id="editor"></div>
                             </div>
+                            <button id="download-file" class="btnprofil btn-facture">Télécharger ma facture</button>
+
 
                             <!-- FACTURE MODAL FIN -->
 

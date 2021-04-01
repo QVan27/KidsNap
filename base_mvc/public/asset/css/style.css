@@ -2509,6 +2509,10 @@ table, th, td {
     margin-bottom: 20px;
 }
 
+
+.btn-facture{
+    width: 15%;
+}
 /* PROFIL PARENTS - PROS*/
 
 
@@ -2532,16 +2536,14 @@ table, th, td {
 
 .reservation-header, .fa-bookmark{
     text-align: center;
-    color: var(--blue-btn);
+    /* color: var(--blue-btn); */
     text-transform: uppercase;
     margin-bottom: 30px;
 }
 
 .form-reservation-container{
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
-    /* background-color: var(--white-cream); */
 }
 .form-reservation{
     padding: 30px;
