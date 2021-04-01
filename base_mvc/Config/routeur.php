@@ -4,6 +4,7 @@ use App\Controller\HomeController;
 use App\Controller\UserController;
 use App\Controller\ProController;
 use App\Controller\DashboardController;
+use App\Controller\EnfantController;
 use App\Controller\MapController;
 
 if (!empty($_GET["page"])) {
@@ -32,6 +33,9 @@ switch ($status) {
         $parentRegist = new UserController;
         $parentRegist->registerParent($_POST);
         break;
+    case 'test':
+        $enfantRegist = new EnfantController;
+        $enfantRegist->registerKids($_POST);
     default:
         
         break;

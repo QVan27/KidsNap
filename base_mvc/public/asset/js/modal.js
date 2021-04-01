@@ -6,7 +6,7 @@ $(".voirPlus").on("click", function () {
   $(modal).fadeIn();
   var getId = document.getElementsByClassName('getId')
   getId.id = id
-  let hideId = document.getElementById('hideId')
+  let hideId = document.getElementById('pro-hidden')
   hideId.value = id
   console.log(hideId.value)
 });
