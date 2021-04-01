@@ -13,8 +13,9 @@
             <div class=" sheet-dash">
                 <div class="pp">
                     <img class="pp-size" src="asset/image/pp4.svg" alt="photo profil">
-                    <p class="ppmail">Jeanne Marie</p>
-                    <p class="ppmail">jeannemarie@gmail.com</p>
+                    <p class="ppmail">Donatienne Étiennette
+                    </p>
+                    <p class="ppmail">donatienne.etiennette@gmail.com</p>
                     <a href="index.php?page=profil-parents" class="btnprofil">Modifier profil</a>
 
                     <!-- FACTURE MODAL -->
@@ -48,10 +49,8 @@
                                         <div class="facture-text-right">
                                             <div class="info-client">
                                                 <ul class="list list-unstyled text-right mb-0 ml-auto">
-                                                    <li><span class="font-weight-semibold">Prendsmesenfants</span></li>
-                                                    <li>33 rue des abandonnés</li>
-                                                    <li>SAS</li>
-                                                    <li>FR12314428789</li>
+                                                    <li><span class="font-weight-semibold">Quentin Vannarath</span></li>
+                                                    <li>21 Rue Paul Verlaine</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -69,8 +68,8 @@
                                     <table id="table" class="table table-lg">
                                         <thead>
                                             <tr>
-                                                <th>Description</th>
-                                                <th>nb enfants</th>
+                                                <th>Enfants</th>
+                                                <th>Age</th>
                                                 <th>Heures</th>
                                                 <th>Total HT</th>
                                             </tr>
@@ -78,31 +77,25 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <p class="mb-0">Arts and design templatein
-                                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                        pariatur.Duis aute irure dolor in reprehenderit</p>
+                                                    <p class="mb-0">Yannick</p>
                                                 </td>
-                                                <td>120€</td>
+                                                <td>3</td>
                                                 <td>180</td>
                                                 <td><span class="font-weight-semibold">300€</span></td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <p class="mb-0">Template for desnging the arts Lorem
-                                                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor</p>
+                                                    <p class="mb-0">Sophie</p>
                                                 </td>
-                                                <td>140€</td>
+                                                <td>1</td>
                                                 <td>100</td>
                                                 <td><span class="font-weight-semibold">240€</span></td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <p class="mb-0">Technical support international Lorem
-                                                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor</p>
+                                                    <p class="mb-0">Debby</p>
                                                 </td>
-                                                <td>250€</td>
+                                                <td>1</td>
                                                 <td>250</td>
                                                 <td><span class="font-weight-semibold">500€</span></td>
                                             </tr>
