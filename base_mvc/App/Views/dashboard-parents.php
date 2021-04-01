@@ -1,4 +1,5 @@
-
+<?php if (isset($_SESSION["user"])) : ?>
+    <?php if ($_SESSION["user"]->user_pro == 1) : ?>
         <section class="dashboardParents">
             <div class="headParents">
                 <img src="asset/image/vector_dash.png" alt="">
@@ -145,4 +146,11 @@
                 </div>
             </div>
         </section>
-    
+    <?php else : ?>
+        <?php header('Location: index.php?page=home') ?>
+
+
+    <?php endif; ?>
+<?php else : ?>
+    <?php header('Location: index.php?page=home') ?>
+<?php endif; ?>
