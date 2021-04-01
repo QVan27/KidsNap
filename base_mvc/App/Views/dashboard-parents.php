@@ -34,12 +34,12 @@
                                     <div class="left-facture top-facture">
                                         <div class="text-facture-left">
                                             <ul class="facture-text-left">
-                                                <p>Kids'Nap</li>
-                                                    <li>21 rue du modèle</li>
-                                                    <li>437 933 302</li>
-                                                    <li>02 32 98 70 75</li>
-                                                    <li>kidsnap@gmail.com
-                                                </p>
+                                                <li>Kids'Nap</li>
+                                                <li>21 rue du modèle</li>
+                                                <li>437 933 302</li>
+                                                <li>02 32 98 70 75</li>
+                                                <li>kidsnap@gmail.com
+                                                </li>
                                                 <li>kidsnap.com</li>
                                             </ul>
                                         </div>
