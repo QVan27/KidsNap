@@ -30,7 +30,7 @@
                                         <li><a href="index.php?page=map">Trouver un Pro</a></li>
                                     <?php endif; ?>
                                     <?php if ($_SESSION["user"]->user_pro == 1) : ?>
-                                        <li><a href="index.php?page=dashboard-parents" class="">Profil</a></li>
+                                        <!-- <li><a href="index.php?page=dashboard-parents" class="">Profil</a></li> -->
                                     <?php endif; ?>
                                 <?php else : ?>
                                     <li><a href="index.php?page=home">Parent</a></li>
@@ -52,8 +52,6 @@
                                     <li><a href="index.php?page=contact" class="margin-right">Contact</a></li>
                                     <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
                                 <?php endif; ?>
-
-
                             </div>
                         </ul>
                     </nav>
@@ -78,11 +76,6 @@
                             <?php else : ?>
                                 <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
                             <?php endif; ?>
-
-                            <!-- <li><a href="index.php?page=home">Parents</a></li>
-                            <li><a href="index.php?page=pro">Pro</a></li>
-                            <li><a href="index.php?page=contact">Contact</a></li>
-                            <li><a href="" role="btn-modal-login" id="link_login" class="btn color-1">Connexion</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -90,6 +83,7 @@
                     <img src="asset/image/menu.png" id="menu" alt="icon-menu">
                 </div>
                 <!-- End -->
+
             </header>
 
 
