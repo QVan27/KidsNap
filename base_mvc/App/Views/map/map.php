@@ -1,4 +1,5 @@
-<!-- <?php var_dump($userPros); ?> -->
+<!-- <?php var_dump($_SESSION["user"]->user_id); ?> -->
+
 <section class="searchParents">
 
     <div class="headSearch">
@@ -41,13 +42,6 @@
                     </div>
                     <div class="label-text">Afficher la carte</div>
                 </label>
-                <label class="label">
-                    <div class="toggle">
-                        <input class="toggle-type" type="checkbox" name="check" value="check" />
-                        <div class="indicator"></div>
-                    </div>
-                    <div class="label-text">Assitante maternelle ou Crèche</div>
-                </label>
             </div>
         </div>
 
@@ -66,7 +60,6 @@
                         <p class="contentCardSearch"><?= ucFirst($user->pro_content) ?>
                         </p>
                         <div class="btnInfo">
-                            <input type="checkbox" id="show">
                             <label for="show" id="<?= $user->user_id ?>" class="voirPlus">Voir plus</label>
                             <div class="rightInfoCard">
                                 <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
@@ -84,7 +77,6 @@
                                     <p class="contentCardSearchProfil"><?= ucFirst($user->pro_content) ?></p>
                                     <div class="btnCardProfil">
                                         <a href="" class="phoneCard"><i class="fas fa-phone"></i></a>
-                                        <input type="checkbox" id="payment">
                                         <label for="show" id="<?= $user->user_id ?>" class="sendCard">Envoyer une demande</label>
                                     </div>
                                 </div>
@@ -93,10 +85,11 @@
                         </div>
                     </div>
 
-                    <div id="modalValid<?= $user->user_id ?>" class="modalValid modalValidReservation">
+                <?php endforeach; ?>
+                <div id="modalValid" class="modalValid modalValidReservation">
                         <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
                         <div class="reservation-header">
-                            <h1><i class="fas fa-bookmark"></i> Réservation</h1>
+                            <h1><i class="fas fa-bookmark"></i>Réservation</h1>
                         </div>
 
                         <div class="form-reservation-container">
@@ -127,22 +120,22 @@
                                     <input type="hidden" name="pro_id" value="<?= $user->user_id ?>" id="pro-hidden">
 
                                     <input type="submit" name="submit-kid" class="file-kid" id="submit-kid">
+
                                 </div>
                             </form>
                             <input type="checkbox" id="valid">
-                                    <label for="show" id="<?= $user->user_id ?>" class="validModal validmodalbtn">Payer pour valider</label>
+                            <label for="show" id="<?= $user->user_id ?>" class="validModal validmodalbtn">Payer pour valider</label>
                         </div>
                     </div>
 
-                    <div id="modalValid<?= $user->user_id ?>" class="modalValid">
+                    <!-- <div id="modalValid" class="modalValid">
                         <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
                         <h1>Validation</h1>
                         <P>Pour procéder à la validation de votre réservation veuillez procéder au paiement</P>
                         <input type="checkbox" id="valid">
-                        <label for="show" id="<?= $user->user_id ?>" class="validModal">Payer pour valider</label>
-                    </div>
+                        <label for="show" id="" class="validModal">Payer pour valider</label>
+                    </div> -->
 
-                <?php endforeach; ?>
                 <div id="modalPayment" class="modalPayment">
                     <label for="show" id="closeProfil" class="show-btn fas fa-times"></label>
                     <div class="boxPayment">
@@ -268,7 +261,7 @@
                                     </div>
                                     <div class="field-container">
                                         <label for="submit">Valider</label>
-                                        <input type="hidden" value="" name="user_id" id="hideId">
+                                        <input type="hidden" value="<?php $_SESSION["user"]->user_id ?>" name="user_id" class="hideId">
                                         <input id="submitted" type="submit" value="envoyer" name="submit" pattern="[0-9]*" inputmode="numeric">
                                     </div>
                                 </form>
