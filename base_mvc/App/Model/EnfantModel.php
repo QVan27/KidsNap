@@ -21,7 +21,6 @@ class EnfantModel extends Model
      */
     protected $table = "enfants";
 
-
     public function createReserv($data)
     {
         $statement = "INSERT INTO reservation (";
@@ -53,6 +52,21 @@ class EnfantModel extends Model
     {
         $statement = "INSERT INTO nbenfant VALUES (" . $idEnfant ."," . $idReserv . ")";
         $this->db->postData($statement); 
+    }
+
+    public function createDoc($data)
+    {
+        $statement = "INSERT INTO documents (";
+        $values = "VALUES (";
+        foreach ($data as $key => $value) {
+            $statement .= $key .",";
+            $values .= "'". $value ."',";
+        }
+        $statement = substr($statement,0,-1) . ") ";
+        $values = substr($values, 0, -1) . ")";
+
+        $statement .= $values;
+        $this->db->postData($statement);
     }
 
 

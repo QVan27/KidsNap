@@ -120,12 +120,14 @@ class UserController extends Controller
                         $justificatif = NULL;
                     }
 
+                    $proContent = addslashes($data["pro_content"]);
+
                     $dataPro = array(
                         "pro_tarif" => $data["pro_tarif"] . "€",
                         "pro_nb_place" => $data["pro_nb_place"],
                         "user_id" => $userID->user_id,
                         "justificatif" => $justificatif,
-                        "pro_content" => $data["pro_content"],
+                        "pro_content" => $proContent,
                         "pro_type" => $data["pro_type"],
                     );
                     // var_dump($dataPro);
