@@ -7,7 +7,6 @@ $(".voirPlus").on("click", function () {
   var getId = document.getElementsByClassName('getId')
   getId.id = id
   let hideId = document.getElementById('hideId')
-  hideId.value = id
   console.log(hideId.value)
 });
 
@@ -28,6 +27,11 @@ $(".validModal").on("click", function () {
   
   $('#modalPayment').fadeIn();
   $(".modalValid").fadeOut();
+});
+$(".btnCardProfil").on("click", function () {
+  
+  $('#modalValid').fadeIn();
+  $(".modalProfil").fadeOut();
 });
 //  close modal
 $(".fa-times").on("click", function () {
