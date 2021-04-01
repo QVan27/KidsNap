@@ -1,5 +1,4 @@
-<?php if (isset($_SESSION["user"])) : ?>
-    <?php if ($_SESSION["user"]->user_parent == 1) : ?>
+
         <section class="dashboardParents">
             <div class="headParents">
                 <img src="asset/image/vector_dash.png" alt="">
@@ -71,7 +70,7 @@
                                                 <th>Enfants</th>
                                                 <th>Age</th>
                                                 <th>Heures</th>
-                                                <th>Total HT</th>
+                                                <th>Coût</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -79,33 +78,25 @@
                                                 <td>
                                                     <p class="mb-0">Yannick</p>
                                                 </td>
-                                                <td>3</td>
-                                                <td>180</td>
+                                                <td>4</td>
+                                                <td>150</td>
                                                 <td><span class="font-weight-semibold">300€</span></td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <p class="mb-0">Sophie</p>
                                                 </td>
-                                                <td>1</td>
-                                                <td>100</td>
-                                                <td><span class="font-weight-semibold">240€</span></td>
+                                                <td>3</td>
+                                                <td>200</td>
+                                                <td><span class="font-weight-semibold">350€</span></td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <p class="mb-0">Debby</p>
                                                 </td>
-                                                <td>1</td>
-                                                <td>250</td>
-                                                <td><span class="font-weight-semibold">500€</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    TOTAL
-                                                </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td>1090€</td>
+                                                <td>3</td>
+                                                <td>200</td>
+                                                <td><span class="font-weight-semibold">350€</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -114,20 +105,20 @@
                                     <div class="d-md-flex flex-md-wrap">
                                         <div class="pt-2 mb-3 wmin-md-400 ml-auto">
                                             <div class="table-responsive">
-                                                <table class="table">
+                                                <table class="table1">
                                                     <tbody>
                                                         <tr>
-                                                            <th class="text-left">Total:</th>
-                                                            <td class="text-right">1,090€</td>
+                                                            <th class="text-left">Total HT</th>
+                                                            <td class="text-right">1,000€</td>
                                                         </tr>
                                                         <tr>
-                                                            <th class="text-left">Taxe:</th>
-                                                            <td class="text-right">25%</td>
+                                                            <th class="text-left">Taxe</th>
+                                                            <td class="text-right">20%</td>
                                                         </tr>
                                                         <tr>
-                                                            <th class="text-left">Total:</th>
+                                                            <th class="text-left">Total</th>
                                                             <td class="text-right text-primary">
-                                                                <h5 class="font-weight-semibold">1,160€</h5>
+                                                                <h5 class="font-weight-semibold">1,100€</h5>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -154,10 +145,4 @@
                 </div>
             </div>
         </section>
-    <?php else : ?>
-        <?php header('Location: index.php?page=home') ?>
-    <?php endif; ?>
-
-<?php else : ?>
-    <?php header('Location: index.php?page=home') ?>
-<?php endif; ?>
+    
