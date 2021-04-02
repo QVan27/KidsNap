@@ -5,18 +5,16 @@
                 <img src="asset/image/vector_dash_blue.png" alt="">
                 <h2 class="dash-pros-titre">Bienvenue sur votre profil !</h2>
                 <div class="btnParents">
-                    <!-- index.php?page=calendrier -->
                     <a href="index.php?page=disponibilite" class="btn color-2 btnPros"><i class="fas fa-calendar-alt" style="color: var(--white);"></i> Disponibilité</a>
                 </div>
                 <h3 class="dash-text">Profil</h3>
             </div>
             <div class=" sheet-dashPro">
                 <div class="pp">
-                    <p class="ppmail">Pierre Kiroule</p>
-                    <p class="ppmail">pierrekiroule@gmail.com</p>
+                    <p class="ppmail"><?= $_SESSION["user"]->user_prenom . ' ' . $_SESSION["user"]->user_nom ?></p>
+                    <p class="ppmail"><?= $_SESSION["user"]->user_mail ?></p>
                     <p class="ppmail">Crèche</p>
                     <a href="index.php?page=profil-pros" class="btnprofil btnprofil1">Modifier profil</a>
-                    <a href="index.php?page=reservation" class="btnprofil btnprofil1">Réserver un créneau</a>
                 </div>
                 <div class="sheet-wrap">
                     <div id="sheet-two" class="dash-sheetPro">

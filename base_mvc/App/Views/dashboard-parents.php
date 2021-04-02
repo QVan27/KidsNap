@@ -12,9 +12,8 @@
             <div class=" sheet-dash">
                 <div class="pp">
                     <img class="pp-size" src="asset/image/pp4.svg" alt="photo profil">
-                    <p class="ppmail">Donatienne Étiennette
-                    </p>
-                    <p class="ppmail">donatienne.etiennette@gmail.com</p>
+                    <p class="ppmail"><?= $_SESSION["user"]->user_nom . ' ' . $_SESSION["user"]->user_prenom ?></p>
+                    <p class="ppmail"><?= $_SESSION["user"]->user_mail ?></p>
                     <a href="index.php?page=profil-parents" class="btnprofil">Modifier profil</a>
 
                     <!-- FACTURE MODAL -->
@@ -46,7 +45,7 @@
                                         <div class="facture-text-right">
                                             <div class="info-client">
                                                 <ul class="list list-unstyled text-right mb-0 ml-auto">
-                                                    <li><span class="font-weight-semibold">Quentin Vannarath</span></li>
+                                                    <li><span class="font-weight-semibold"><?= $_SESSION["user"]->user_nom . ' ' . $_SESSION["user"]->user_prenom ?></span></li>
                                                     <li>21 Rue Paul Verlaine</li>
                                                 </ul>
                                             </div>

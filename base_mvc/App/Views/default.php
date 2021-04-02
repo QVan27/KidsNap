@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
         <link rel="stylesheet" href="asset/css/style.css">
 
     </head>
@@ -163,7 +162,7 @@
                                     </button>
                                     <button type="button" role="btn-baby" id="link_pro" class="btn-modal btn-block py-4 mb-2 babysitter">
                                         <h6 class="h4">
-                                            BABYSITTER<br> <small>Pour garder des enfants</small></h6>
+                                            PROFESSIONEL<br> <small>Pour garder des enfants</small></h6>
                                     </button>
                                     <a type="button" role="btn-login" id="link_login" class="btn-modal btn-block mt-3">J'ai déjà un compte</a>
 
