@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION["user"])) : ?>
-    <?php if ($_SESSION["user"]->user_pro == 1) : ?>
+    <?php if ($_SESSION["user"]->user_parent == 1) : ?>
         <section class="dashboardParents">
             <div class="headParents">
                 <img src="asset/image/vector_dash.png" alt="">

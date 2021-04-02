@@ -157,6 +157,7 @@ menuBtn.onclick = function () {
 $(document).ready(function () {
   x = 0;
   $(".toggle-state").click(function () {
+    console.log(x)
     x++;
     if (x % 2 == 1) {
       $("#map").hide();

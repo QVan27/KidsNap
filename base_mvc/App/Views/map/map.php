@@ -37,7 +37,7 @@
                 <p>Classé selon la proximité à votre secteur</p>
                 <label class="label">
                     <div class="toggle">
-                        <input class="toggle-map" type="checkbox" name="check" value="check" />
+                        <input class="toggle-state" type="checkbox" name="check" value="check" />
                         <div class="indicator"></div>
                     </div>
                     <div class="label-text">Afficher la carte</div>
