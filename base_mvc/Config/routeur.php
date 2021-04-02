@@ -36,6 +36,7 @@ switch ($status) {
     case 'test':
         $enfantRegist = new EnfantController;
         $enfantRegist->registerKids($_POST);
+        break;
     default:
         
         break;
@@ -68,8 +69,8 @@ switch ($page) {
         break;
 
     case 'dashboard-parents':
-        $dashboard = new DashboardController();
-        $dashboard->showParents();
+        $dashboardParent = new DashboardController();
+        $dashboardParent->showParents();
         break;
 
     case 'dashboard-pros':

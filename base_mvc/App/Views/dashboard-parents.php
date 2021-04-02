@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION["user"])) : ?>
-    <?php if ($_SESSION["user"]->user_pro == 1) : ?>
+    <?php if ($_SESSION["user"]->user_parent == 1) : ?>
         <section class="dashboardParents">
             <div class="headParents">
                 <img src="asset/image/vector_dash.png" alt="">
@@ -19,7 +19,7 @@
 
                     <!-- FACTURE MODAL -->
                     <button class="btnprofil" id="download"> download pdf</button>
-                    <div id="facture" class="facture-modal">
+                    <div id="window" class="facture-modal">
                         <div class="facture-modal-content">
                             <span class="facture-close">&times;</span>
                             <div class="facture" id="invoice">
