@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Model;
 
 use Core\Model\Model;
@@ -10,7 +11,8 @@ use Core\Model\Model;
  * @method create($data) | Enregistre un professionnels dans la BDD
  */
 
- class ProModel extends Model{
+class ProModel extends Model
+{
 
     /**
      * Nom de la table
@@ -28,16 +30,52 @@ use Core\Model\Model;
         return $this->db->getData($statement, true);
     }
 
-    public function getLocationOne($id)
+    
+
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function getAll()
     {
-        $statement = "SELECT pro_ville FROM pros WHERE id = $id";
+        $statement = "SELECT * FROM pros";
         return $this->db->getData($statement, true);
     }
 
-    public function getLocationAll()
+    public function countAllParents()
     {
-        $statement = "SELECT pro_ville FROM pros";
-        return $this->db->getData($statement);
+        $statement = "SELECT COUNT(*) AS allParents FROM users WHERE user_parent = 1";
+        return $this->db->getData($statement, true);
     }
 
- }
+    public function getLast()
+    {
+        $statement = "SELECT pro_id FROM pros ORDER BY pro_id DESC LIMIT 1";
+        return $this->db->getData($statement, true);
+    }
+
+    public function existingPro($email, $rolePro)
+    {
+        $statement = "SELECT * FROM users WHERE user_mail = '$email' AND user_pro = '$rolePro'";
+        return $this->db->getData($statement, true);
+    }
+
+    public function update($id, $rolePro)
+    {
+        $statement = "UPDATE users SET user_pro = '$rolePro' WHERE user_id = '$id'";
+        return $this->db->postData($statement, $rolePro);
+    }
+
+    public function getUserPro($id)
+    {
+        $statement = "SELECT * FROM users WHERE user_id = '$id'";
+        return $this->db->getData($statement, true);
+    }
+
+    public function getMapPro($id)
+    {
+        $statement = "SELECT * FROM map WHERE user_id = '$id'";
+        return $this->db->getData($statement, true);
+    }
+}

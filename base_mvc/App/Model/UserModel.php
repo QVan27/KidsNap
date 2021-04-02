@@ -28,4 +28,40 @@ use Core\Model\Model;
         return $this->db->getData($statement, true);
     }
 
+    public function getLast()
+    {
+        $statement = "SELECT user_id FROM users WHERE user_pro = true ORDER BY created_at DESC LIMIT 1 ";
+        return $this->db->getData($statement, true);
+    }
+
+    public function getAllPro()
+    {
+        $statement = "SELECT * FROM pros INNER JOIN users ON pros.user_id = users.user_id WHERE user_pro = 1";
+        return $this->db->getData($statement);
+    }
+
+    /**
+     * Récupère un utilisateur en fonction de son email
+     *
+     * @param string $email
+     * @return object
+     */
+    public function getUserByMail(string $email):object
+    {
+        $statement = "SELECT * FROM users WHERE user_mail = '$email'";
+        return $this->db->getData($statement, true);
+    }
+
+    public function existingUser($email, $roleParent)
+    {
+        $statement = "SELECT * FROM users WHERE user_mail = '$email' AND user_parent = '$roleParent'";
+        return $this->db->getData($statement, true);
+    }
+
+    public function update($id, $roleParent)
+    {
+        $statement = "UPDATE users SET user_parent = '$roleParent' WHERE user_id = '$id'";
+        return $this->db->postData($statement, $roleParent);
+    }
+
  }
