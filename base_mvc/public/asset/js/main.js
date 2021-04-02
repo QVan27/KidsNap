@@ -22,11 +22,60 @@ const showRequiredCategory = (event) => {
 
 $(document).ready(function () {
   init();
+  const link = document.getElementById("link_login");
+  link.addEventListener("click", function () {
+    let selectedItem = window.location.href;
+    var str1 = selectedItem.replace("&status=login", "");
+    var str2 = str1.replace("&status=proRegister", "");
+    var str3 = str2.replace("&status=parentRegister", "");
+    const nextURL = str3 + "&status=login";
+    const nextTitle = "Kids'nap";
+    const nextState = { additionalInformation: "Updated the URL with JS" };
+
+    // This will create a new entry in the browser's history, without reloading
+    window.history.pushState(nextState, nextTitle, nextURL);
+
+    // This will replace the current entry in the browser's history, without reloading
+    window.history.replaceState(nextState, nextTitle, nextURL);
+  });
+  const link_pro = document.getElementById("link_pro");
+  link_pro.addEventListener("click", function () {
+    let selectedItem = window.location.href;
+    var str1 = selectedItem.replace("&status=login", "");
+    var str2 = str1.replace("&status=proRegister", "");
+    var str3 = str2.replace("&status=parentRegister", "");
+    const nextURL = str3 + "&status=proRegister";
+    const nextTitle = "Kids'nap";
+    const nextState = { additionalInformation: "Updated the URL with JS" };
+
+    // This will create a new entry in the browser's history, without reloading
+    window.history.pushState(nextState, nextTitle, nextURL);
+
+    // This will replace the current entry in the browser's history, without reloading
+    window.history.replaceState(nextState, nextTitle, nextURL);
+  });
+  const link_parent = document.getElementById("link_parent");
+  link_parent.addEventListener("click", function () {
+    let selectedItem = window.location.href;
+    var str1 = selectedItem.replace("&status=login", "");
+    var str2 = str1.replace("&status=proRegister", "");
+    var str3 = str2.replace("&status=parentRegister", "");
+    const nextURL = str3 + "&status=parentRegister";
+    const nextTitle = "Kids'nap";
+    const nextState = { additionalInformation: "Updated the URL with JS" };
+
+    // This will create a new entry in the browser's history, without reloading
+    window.history.pushState(nextState, nextTitle, nextURL);
+
+    // This will replace the current entry in the browser's history, without reloading
+    window.history.replaceState(nextState, nextTitle, nextURL);
+  });
 });
 
 const init = () => {
   initModal();
 };
+
 const initModal = () => {
   const modalsWrapper = $(".modal-wrapper");
   const modalCloseButton = $(".modal-wrapper .modal-close");
@@ -157,7 +206,7 @@ menuBtn.onclick = function () {
 $(document).ready(function () {
   x = 0;
   $(".toggle-state").click(function () {
-    console.log(x)
+    console.log(x);
     x++;
     if (x % 2 == 1) {
       $("#map").hide();
@@ -298,7 +347,6 @@ $(function () {
 //   });
 // });
 
-
 // MODULE FACTURE ET PDF ================================================== //
 var modal = document.getElementById("window");
 var btn = document.getElementById("download");
@@ -306,31 +354,30 @@ var span = document.getElementsByClassName("facture-close")[0];
 
 btn.onclick = function () {
   modal.style.display = "block";
-}
+};
 
 span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 window.onload = function () {
-  document.getElementById("download-file")
-    .addEventListener("click", () => {
-      const invoice = this.document.getElementById("invoice");
-      console.log(invoice);
-      console.log(window);
-      var opt = {
-        margin: 1,
-        filename: 'myfile.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
-      html2pdf().from(invoice).set(opt).save();
-    })
-}
+  document.getElementById("download-file").addEventListener("click", () => {
+    const invoice = this.document.getElementById("invoice");
+    console.log(invoice);
+    console.log(window);
+    var opt = {
+      margin: 1,
+      filename: "myfile.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+    };
+    html2pdf().from(invoice).set(opt).save();
+  });
+};
