@@ -19,7 +19,7 @@
 
                     <!-- FACTURE MODAL -->
                     <button class="btnprofil" id="download"> download pdf</button>
-                    <div id="facture" class="facture-modal">
+                    <div id="window" class="facture-modal">
                         <div class="facture-modal-content">
                             <span class="facture-close">&times;</span>
                             <div class="facture" id="invoice">
