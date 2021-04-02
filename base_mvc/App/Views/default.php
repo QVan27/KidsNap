@@ -73,6 +73,8 @@
                                 <li><a href="index.php?page=contact">Contact</a></li>
                                 <li> <a href="index.php?page=logout" class="btn color-1">Déconnexion</a></li>
                             <?php else : ?>
+                                <li><a href="index.php?page=home">Parent</a></li>
+                                <li><a href="index.php?page=pro">Pro</a></li>
                                 <li><a href="" role="btn-modal-login" class="btn color-1" id="link_login">Connexion</a></li>
                             <?php endif; ?>
                         </ul>
